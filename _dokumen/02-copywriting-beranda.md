@@ -102,7 +102,7 @@ Kami menyebutnya ekonomi berbasis ekologi: hutan yang dipulihkan juga menjadi su
 | --- | --- |
 | Tanam yang menghidupi | Tanaman asli penjaga tanah ditanam berdampingan dengan komoditas bernilai ekonomi lewat pola agroforestri. |
 | Warga sebagai mitra | Warga setempat bekerja di proyek, dibimbing ahli, dan ikut menerima manfaat dari hasil hutan. |
-| Laba untuk memperluas pemulihan | Laba kami putar kembali untuk memulihkan lebih banyak lahan. Berapa besarnya, bisa Anda periksa di pembukuan kami. |
+| Tumbuh bersama lahan yang pulih | Usaha kami tumbuh bersama lahan yang pulih. Ke mana laba kami mengalir, bisa Anda periksa di pembukuan kami. |
 
 **Tombol:** Kenali Model Kami
 
@@ -184,7 +184,7 @@ Kami menyebutnya ekonomi berbasis ekologi: hutan yang dipulihkan juga menjadi su
 - [ ] Ganti angka lahan kritis 14,3 juta ha (pernyataan 2020) dengan data Kementerian Kehutanan yang lebih baru, jika ada.
 - [ ] Cek apakah sudah ada data deforestasi dan longsor 2025 dari Kementerian Kehutanan dan BNPB, lalu perbarui angka 2024.
 - [ ] Isi NIB dan alamat terdaftar PT di footer.
-- [ ] Pastikan kalimat soal laba di bagian 5 sesuai kebijakan perusahaan.
+- [ ] Setelah kebijakan alokasi laba ditetapkan, perbarui kalimat umum di bagian 5 dengan angkanya.
 - [ ] Pilih foto stok berlisensi bebas yang menampilkan lanskap Indonesia, dan beri keterangan "Foto ilustrasi".
 
 ## Sumber

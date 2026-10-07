@@ -126,7 +126,7 @@ Identitas badan hukum (nama PT, NIB, alamat terdaftar), tim, kontak per keperlua
 | 1. Arsitektur | Sitemap final dan wireframe | Kerangka tata letak | Sitemap selesai |
 | 2. Copywriting | Naskah per halaman | Draf teks | Beranda: draf 1 selesai |
 | 3. Desain UI | Design system + desain halaman | Desain HP & desktop | Belum |
-| 4. Development | Membangun halaman | Website multi-halaman | Belum (website v1 satu halaman sudah online) |
+| 4. Development | Membangun halaman | Website multi-halaman | Beranda v2 online; halaman lain belum |
 | 5. Integrasi data | Transparansi + formulir lapor lahan | Fitur berfungsi | Template Buku Kas siap |
 | 6. Uji kualitas | Kecepatan, HP, aksesibilitas, SEO | Daftar perbaikan selesai | Belum |
 | 7. Peluncuran | Domain, Pages, cara update data | Website online | Domain dareindo.com terpasang |
@@ -152,5 +152,5 @@ Identitas badan hukum (nama PT, NIB, alamat terdaftar), tim, kontak per keperlua
 
 - [ ] NIB dan alamat terdaftar PT
 - [ ] Logo Dareindo dan logo Benih
-- [ ] Kebijakan alokasi laba (berapa persen diputar kembali untuk pemulihan)
+- [ ] Kebijakan alokasi laba (sementara memakai kalimat umum)
 - [ ] Foto lapangan asli (pengganti foto stok)

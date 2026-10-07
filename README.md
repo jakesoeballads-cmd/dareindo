@@ -6,7 +6,7 @@ Website resmi PT Daya Reforestasi Indonesia, perusahaan impact-driven di bidang 
 
 | Lokasi | Isi |
 | --- | --- |
-| `index.html` | Website (versi 1, satu halaman) |
+| `index.html` | Beranda (versi 2, dari copywriting draf 1) |
 | `CNAME` | Domain kustom dareindo.com untuk GitHub Pages |
 | `_dokumen/01-sitemap-dan-workflow.md` | Sitemap, rencana workflow teknis, rekomendasi teknologi & pembukuan |
 | `_dokumen/02-copywriting-beranda.md` | Copywriting Beranda (draf 1) |

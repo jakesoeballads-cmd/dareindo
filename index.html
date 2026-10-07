@@ -4,433 +4,523 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daya Reforestasi Indonesia</title>
-<meta name="description" content="Daya Reforestasi Indonesia (Dareindo) adalah social enterprise yang memulihkan hutan Indonesia sambil memberdayakan masyarakat di sekitarnya.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231f4d3a'/%3E%3Cpath d='M16 6c-5 5-6 10-3 14l3 3 3-3c3-4 2-9-3-14z' fill='%23e9c46a'/%3E%3Crect x='15' y='20' width='2' height='7' fill='%23e9c46a'/%3E%3C/svg%3E">
+<meta name="description" content="PT Daya Reforestasi Indonesia memulihkan lahan kritis menjadi hutan yang menghidupi warga di sekitarnya, dan membuka seluruh pembukuannya untuk publik.">
+<meta property="og:title" content="Daya Reforestasi Indonesia">
+<meta property="og:description" content="Tidak ada ekonomi tanpa ruang hidup yang lestari.">
+<meta property="og:url" content="https://dareindo.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313281F'/%3E%3Cpath d='M5 23c4-7 8-10 11-10s7 3 11 10' fill='none' stroke='%23E3A72F' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M9 26c3-4 5-6 7-6s4 2 7 6' fill='none' stroke='%23EEF1EC' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
+  /* Layout: left-aligned editorial column; one signature element = the open ledger (Transparansi). */
   :root{
-    --forest:#1f4d3a; --forest-deep:#13332a; --moss:#5f8a4e; --leaf:#a7c48a;
-    --sun:#e9c46a; --clay:#c8643b; --paper:#f7f3ea; --sand:#ece4d3;
-    --ink:#1d2622; --muted:#5b6862; --white:#fff;
-    --radius:18px; --max:1160px;
+    --hutan:#13281F;      /* deep forest: text, dark bands */
+    --lumut:#2F5D3A;      /* moss: primary */
+    --kunyit:#E3A72F;     /* turmeric: the single bold accent (ledger, primary CTA) */
+    --tanah:#7A5C43;      /* soil: secondary text, rules */
+    --kabut:#EEF1EC;      /* mist: page ground */
+    --putih:#FFFFFF;
+    --garis:#CDD6CC;      /* hairline on mist */
+    --display:"Young Serif", Georgia, "Times New Roman", serif;
+    --body:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --max:1180px;
+    --gutter:clamp(20px,5vw,56px);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--hutan);background:var(--kabut);-webkit-font-smoothing:antialiased}
   img,svg{display:block;max-width:100%}
   a{color:inherit}
-  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;font-weight:700}
-  h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:.6rem}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:.8rem}
-  .lead{font-size:1.1rem;color:var(--muted);max-width:640px}
-  section{padding:96px 0}
-  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s ease, background .2s ease}
-  .btn:hover{transform:translateY(-2px)}
-  .btn-sun{background:var(--sun);color:var(--forest-deep)}
-  .btn-sun:hover{background:#f1d07f}
-  .btn-ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff}
-  .btn-ghost:hover{background:rgba(255,255,255,.1)}
-  .btn-forest{background:var(--forest);color:#fff}
-  .btn-forest:hover{background:var(--forest-deep)}
+  :focus-visible{outline:3px solid var(--kunyit);outline-offset:3px;border-radius:4px}
+  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;text-wrap:balance;letter-spacing:-.01em}
+  h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+  h3{font-size:1.45rem}
+  p{max-width:62ch}
+  .wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+  .band{padding-block:clamp(72px,10vw,128px)}
+  .lead{font-size:1.18rem;color:#33463C}
+  .muted{color:var(--tanah)}
+  .credit{font-size:.78rem;color:var(--tanah);margin-top:.5rem}
+  .credit a{text-decoration:none;border-bottom:1px solid currentColor}
 
-  /* NAV */
-  header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .25s ease, box-shadow .25s ease}
-  header.scrolled{background:rgba(19,51,42,.96);box-shadow:0 6px 24px rgba(0,0,0,.12)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-family:"Fraunces",serif;font-weight:700;font-size:1.25rem}
-  .brand small{display:block;font-family:"Plus Jakarta Sans",sans-serif;font-weight:500;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
-  .nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
-  .nav-links a{color:#fff;text-decoration:none;font-weight:500;font-size:.95rem;opacity:.9}
-  .nav-links a:hover{opacity:1}
-  .nav-links .btn{padding:.6rem 1.1rem;opacity:1}
-  .menu-btn{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:8px}
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:600 1rem/1 var(--body);padding:1rem 1.4rem;border-radius:6px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+  .btn-utama{background:var(--kunyit);color:var(--hutan)}
+  .btn-utama:hover{background:#ECB94F}
+  .btn-garis{border-color:var(--hutan);color:var(--hutan)}
+  .btn-garis:hover{background:var(--hutan);color:var(--kabut)}
+  .on-dark .btn-garis{border-color:var(--kabut);color:var(--kabut)}
+  .on-dark .btn-garis:hover{background:var(--kabut);color:var(--hutan)}
+  .tautan{font-weight:600;text-decoration:none;border-bottom:2px solid var(--kunyit);padding-bottom:2px}
+  .tautan:hover{border-color:currentColor}
+  .aksi{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(238,241,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--garis)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+  .merek{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .merek b{font:400 1.35rem/1 var(--display)}
+  .merek span{display:block;font-size:.72rem;color:var(--tanah);margin-top:3px}
+  .menu{display:flex;gap:28px;list-style:none;align-items:center}
+  .menu a{text-decoration:none;font-weight:500;font-size:.95rem}
+  .menu a:hover{color:var(--lumut)}
+  .menu .btn{padding:.7rem 1rem;font-size:.92rem}
+  .menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--hutan)}
   @media (max-width:860px){
     .menu-btn{display:block}
-    .nav-links{position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:flex-start;gap:0;background:var(--forest-deep);padding:8px 20px 24px;transform:translateY(-120%);transition:transform .3s ease;z-index:-1}
-    .nav-links.open{transform:translateY(0)}
-    .nav-links li{width:100%}
-    .nav-links a{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav-links .btn{margin-top:14px;justify-content:center;border-bottom:0}
+    .menu{display:none;position:absolute;left:0;right:0;top:68px;flex-direction:column;align-items:stretch;gap:0;background:var(--kabut);border-bottom:1px solid var(--garis);padding:8px var(--gutter) 20px}
+    .menu.buka{display:flex}
+    .menu a{display:block;padding:14px 0;border-bottom:1px solid var(--garis)}
+    .menu .btn{margin-top:14px;border-bottom:0}
   }
 
-  /* HERO */
-  .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
-    background:radial-gradient(1200px 600px at 80% 10%, rgba(233,196,106,.22), transparent 60%),linear-gradient(160deg,var(--forest) 0%,var(--forest-deep) 70%);padding:140px 0 120px}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);margin-bottom:1.2rem}
-  .hero h1 em{font-style:italic;color:var(--sun)}
-  .hero p{font-size:1.15rem;opacity:.88;max-width:560px;margin-bottom:2rem}
-  .hero .actions{display:flex;flex-wrap:wrap;gap:12px}
-  .hero-art{position:relative}
-  .hills{position:absolute;left:0;right:0;bottom:-1px}
-  @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:360px;margin:0 auto}}
+  /* 1 Hero */
+  .hero{padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,112px)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:end}
+  .hero .label{font-size:.9rem;font-weight:600;color:var(--lumut);margin-bottom:1.4rem}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,5.1rem);max-width:13ch}
+  .hero .lead{margin-top:1.6rem;max-width:46ch}
+  .foto{background:#9DB09A;border-radius:4px;overflow:hidden}
+  .foto img{width:100%;height:100%;object-fit:cover}
+  .hero .foto{aspect-ratio:4/5}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero .foto{aspect-ratio:4/3}}
 
-  /* ABOUT */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-  .pillars{display:grid;gap:18px}
-  .pillar{display:flex;gap:16px;background:var(--white);padding:22px;border-radius:var(--radius);box-shadow:0 1px 0 rgba(0,0,0,.04)}
-  .pillar .ic{flex:0 0 46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--sand);color:var(--forest)}
-  .pillar h3{font-size:1.15rem;margin-bottom:.2rem}
-  .pillar p{color:var(--muted);font-size:.97rem}
-  @media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}}
+  /* 2 Pergeseran */
+  .gelap{background:var(--hutan);color:var(--kabut)}
+  .gelap .lead{color:#C9D4CA}
+  .geser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+  .geser p+p{margin-top:1.1rem}
+  .kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end}
+  .kontur path{fill:none;stroke:var(--kunyit);stroke-width:1.4;opacity:.9}
+  .kontur path:nth-child(even){stroke:#7FA07F}
+  .kontur text{font:500 11px var(--body);fill:#9FB3A2;font-variant-numeric:tabular-nums}
+  @media (max-width:860px){.geser{grid-template-columns:1fr}.kontur{justify-self:start;max-width:380px}}
 
-  /* PROGRAMS */
-  .programs{background:var(--sand)}
-  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
-  .card{background:var(--paper);border-radius:var(--radius);padding:28px 24px;display:flex;flex-direction:column;gap:.6rem;border-top:5px solid var(--moss);transition:transform .2s ease, box-shadow .2s ease}
-  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,77,58,.12)}
-  .card:nth-child(2){border-color:var(--sun)}
-  .card:nth-child(3){border-color:var(--clay)}
-  .card:nth-child(4){border-color:var(--forest)}
-  .card .num{font-family:"Fraunces",serif;font-size:.95rem;color:var(--muted)}
-  .card h3{font-size:1.3rem}
-  .card p{color:var(--muted);font-size:.96rem}
-  @media (max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:560px){.cards{grid-template-columns:1fr}}
+  /* 3 Krisis */
+  .angka{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:2px solid var(--hutan)}
+  .angka > div{padding:1.6rem 1.6rem 0 0}
+  .angka > div + div{padding-left:1.6rem;border-left:1px solid var(--garis)}
+  .angka b{display:block;font:400 clamp(2.4rem,4.6vw,3.6rem)/1 var(--display);font-variant-numeric:tabular-nums}
+  .angka .ket{margin-top:.7rem;font-weight:500}
+  .angka .sumber{margin-top:.5rem;font-size:.8rem;color:var(--tanah)}
+  .angka .sumber a{text-decoration:none;border-bottom:1px solid currentColor}
+  .penutup{margin-top:2.6rem;font:400 1.35rem/1.4 var(--display);max-width:34ch}
+  @media (max-width:760px){.angka{grid-template-columns:1fr}.angka > div,.angka > div + div{padding:1.4rem 0;border-left:0;border-bottom:1px solid var(--garis)}}
 
-  /* MODEL */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;counter-reset:s}
-  .step{padding:0 22px 0 0;position:relative}
-  .step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--forest);color:var(--sun);font-family:"Fraunces",serif;font-weight:700;margin-bottom:16px;position:relative;z-index:1}
-  .step::after{content:"";position:absolute;top:22px;left:44px;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--leaf) 0 8px,transparent 8px 14px)}
-  .step:last-child::after{display:none}
-  .step h3{font-size:1.15rem;margin-bottom:.3rem}
-  .step p{color:var(--muted);font-size:.95rem}
-  @media (max-width:860px){.steps{grid-template-columns:1fr;gap:28px}.step::after{display:none}}
+  /* 4 Ironi */
+  .ironi{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,80px);align-items:start}
+  .ironi .foto{aspect-ratio:3/4}
+  .ironi p{margin-top:1.1rem}
+  blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--kunyit);font:400 clamp(1.6rem,3vw,2.2rem)/1.25 var(--display);max-width:22ch}
+  @media (max-width:860px){.ironi{grid-template-columns:1fr}.ironi .foto{aspect-ratio:4/3;order:2}}
 
-  /* IMPACT */
-  .impact{background:var(--forest-deep);color:#fff}
-  .impact .lead{color:rgba(255,255,255,.75)}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
-  .stat{border-left:3px solid var(--sun);padding:6px 0 6px 20px}
-  .stat b{display:block;font-family:"Fraunces",serif;font-size:clamp(2.2rem,4vw,3rem);color:var(--sun);line-height:1.1}
-  .stat span{opacity:.8;font-size:.95rem}
-  .note{margin-top:28px;font-size:.82rem;opacity:.55}
-  @media (max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+  /* 5 Jawaban */
+  .jawaban{background:var(--putih)}
+  .jawaban p+p{margin-top:1rem}
+  .prinsip{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);margin-top:3.2rem;list-style:none}
+  .prinsip li{border-top:2px solid var(--lumut);padding-top:1.2rem}
+  .prinsip h3{margin-bottom:.5rem}
+  .prinsip p{font-size:1rem;color:#33463C}
+  @media (max-width:860px){.prinsip{grid-template-columns:1fr}}
 
-  /* INVOLVE */
-  .involve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-  .involve{background:var(--white);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;gap:.7rem}
-  .involve.featured{background:var(--forest);color:#fff}
-  .involve.featured p{color:rgba(255,255,255,.8)}
-  .involve h3{font-size:1.35rem}
-  .involve p{color:var(--muted);flex:1}
-  .involve .btn{align-self:flex-start;margin-top:.6rem}
-  @media (max-width:860px){.involve-grid{grid-template-columns:1fr}}
+  /* 6 Proyek */
+  .proyek-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;margin-top:3rem}
+  .proyek{border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+  .akar{background:var(--putih)}
+  .akar .foto{aspect-ratio:16/9;border-radius:0}
+  .benih{background:var(--lumut);color:var(--kabut)}
+  .proyek .isi{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:.9rem;flex:1}
+  .status{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600}
+  .status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--kunyit)}
+  .akar .status{color:var(--tanah)}
+  .proyek h3{font-size:2rem}
+  .proyek .aksi{margin-top:auto;padding-top:.6rem;align-items:center;gap:20px}
+  .benih .logo-benih{width:84px;height:84px}
+  .benih .tautan{border-color:var(--kunyit)}
+  @media (max-width:860px){.proyek-grid{grid-template-columns:1fr}}
 
-  /* CONTACT */
-  .contact{background:var(--sand)}
-  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
-  .info{list-style:none;display:grid;gap:18px;margin-top:28px}
-  .info li{display:flex;gap:14px;align-items:flex-start}
-  .info .ic{flex:0 0 40px;height:40px;border-radius:10px;background:var(--paper);display:grid;place-items:center;color:var(--forest)}
-  .info strong{display:block;font-size:.85rem;color:var(--muted);font-weight:600}
-  form{background:var(--paper);padding:32px;border-radius:var(--radius);display:grid;gap:16px}
-  label{font-size:.88rem;font-weight:600;display:grid;gap:6px}
-  input,select,textarea{font:inherit;padding:.8rem 1rem;border:1.5px solid #d8cfbc;border-radius:12px;background:#fff;color:var(--ink)}
-  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--moss);box-shadow:0 0 0 3px rgba(95,138,78,.2)}
-  textarea{min-height:120px;resize:vertical}
-  form .btn{justify-content:center;border:0;cursor:pointer;font-size:1rem}
-  .form-msg{display:none;padding:12px 14px;border-radius:10px;background:#e3efd8;color:var(--forest);font-weight:500}
-  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}form{padding:22px}}
+  /* 7 Transparansi: the ledger */
+  .buku{margin-top:3rem;background:#FBFAF5;color:var(--hutan);border-radius:4px;box-shadow:0 1px 0 #0000000d, 0 24px 48px -28px #13281F80;position:relative;overflow:hidden}
+  .buku-kepala{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:20px clamp(20px,3vw,36px);border-bottom:2px solid var(--hutan)}
+  .buku-kepala b{font:400 1.25rem var(--display)}
+  .buku-kepala span{font-size:.85rem;color:var(--tanah)}
+  .baris{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:18px clamp(20px,3vw,36px);border-bottom:1px solid #DCE2D8;background-image:linear-gradient(90deg,transparent 0 calc(100% - 1px),transparent 0)}
+  .baris:last-of-type{border-bottom:0}
+  .baris dt{font-weight:500}
+  .baris dt small{display:block;font-weight:400;font-size:.82rem;color:var(--tanah)}
+  .baris dd{font:400 clamp(1.5rem,3vw,2.1rem)/1 var(--display);font-variant-numeric:tabular-nums;text-align:right;color:var(--hutan)}
+  .baris dd.kosong{color:#A9B3A6}
+  .buku-kaki{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding:18px clamp(20px,3vw,36px);background:#F1EFE6;font-size:.88rem;color:var(--tanah)}
+  .stempel{display:inline-block;transform:rotate(-4deg);border:2px solid var(--kunyit);color:#B07F17;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.8rem;letter-spacing:.04em;opacity:.85;pointer-events:none}
 
-  /* FOOTER */
-  footer{background:var(--forest-deep);color:rgba(255,255,255,.75);padding:56px 0 32px;font-size:.93rem}
-  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)}
-  .foot p{max-width:380px;margin-top:10px}
-  .foot ul{list-style:none;display:grid;gap:8px}
-  .foot a{text-decoration:none}
-  .foot a:hover{color:var(--sun)}
-  .copy{padding-top:22px;font-size:.82rem;opacity:.7}
+  /* 8 Kolaborasi */
+  .mitra{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);margin-top:3rem;list-style:none}
+  .mitra li{display:flex;flex-direction:column;gap:.7rem;padding-top:1.2rem;border-top:1px solid var(--hutan)}
+  .mitra p{flex:1;color:#33463C}
+  @media (max-width:860px){.mitra{grid-template-columns:1fr}}
 
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+  /* 9 CTA */
+  .ajak{background:var(--lumut);color:var(--kabut)}
+  .ajak h2{max-width:20ch}
+  .ajak .lead{color:#DCE6DA}
+  .darurat{margin-top:1.6rem;font-size:.9rem;color:#DCE6DA;max-width:60ch}
+  .darurat b{color:var(--putih)}
+
+  /* Footer */
+  footer{background:var(--hutan);color:#C9D4CA;padding-block:56px 32px;font-size:.93rem}
+  .kaki{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid #2C4237}
+  .kaki .slogan{font:400 1.5rem/1.3 var(--display);color:var(--kabut);max-width:20ch}
+  .kaki h4{font-size:.85rem;font-weight:600;color:var(--kabut);margin-bottom:.8rem}
+  .kaki ul{list-style:none;display:grid;gap:.45rem}
+  .kaki a{text-decoration:none}
+  .kaki a:hover{color:var(--kunyit)}
+  .legal{padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.82rem;color:#93A597}
+  @media (max-width:760px){.kaki{grid-template-columns:1fr}}
+
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<header id="top">
+<header>
   <div class="wrap nav">
-    <a class="brand" href="#top">
-      <svg width="38" height="38" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#e9c46a"/><path d="M16 6c-5 5-6 10-3 14l3 3 3-3c3-4 2-9-3-14z" fill="#1f4d3a"/><rect x="15" y="20" width="2" height="7" fill="#1f4d3a"/></svg>
-      <span>Dareindo<small>Daya Reforestasi Indonesia</small></span>
+    <a class="merek" href="#top" aria-label="Daya Reforestasi Indonesia, ke atas">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#13281F"/><path d="M5 23c4-7 8-10 11-10s7 3 11 10" fill="none" stroke="#E3A72F" stroke-width="2.4" stroke-linecap="round"/><path d="M9 26c3-4 5-6 7-6s4 2 7 6" fill="none" stroke="#EEF1EC" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <div><b>Dareindo</b><span>Daya Reforestasi Indonesia</span></div>
     </a>
-    <button class="menu-btn" aria-label="Buka menu" aria-expanded="false">
+    <button class="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
-    <ul class="nav-links">
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#model">Cara Kerja</a></li>
-      <li><a href="#dampak">Dampak</a></li>
-      <li><a class="btn btn-sun" href="#terlibat">Ikut Terlibat</a></li>
+    <ul class="menu" id="menu">
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#transparansi">Transparansi</a></li>
+      <li><a href="#kolaborasi">Kolaborasi</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <li><a class="btn btn-utama" href="#lapor">Laporkan Lahan</a></li>
     </ul>
   </div>
 </header>
 
+<main id="top">
+
+<!-- 1. Hero -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow" style="color:var(--sun)">Social Enterprise · Indonesia</span>
-      <h1>Memulihkan hutan, <em>menguatkan</em> masyarakat.</h1>
-      <p>Daya Reforestasi Indonesia menanam kembali lahan kritis bersama warga desa, lalu menjadikan hutan yang tumbuh sebagai sumber penghidupan yang adil dan berkelanjutan.</p>
-      <div class="actions">
-        <a class="btn btn-sun" href="#terlibat">Adopsi Pohon
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" href="#program">Lihat Program</a>
+      <p class="label">PT Daya Reforestasi Indonesia</p>
+      <h1>Tidak ada ekonomi tanpa ruang hidup yang lestari.</h1>
+      <p class="lead">Kami memulihkan lahan kritis menjadi hutan yang menghidupi warga di sekitarnya. Setiap rupiah dan setiap pohon kami buka untuk diperiksa publik.</p>
+      <div class="aksi">
+        <a class="btn btn-utama" href="#proyek">Lihat Proyek Kami</a>
+        <a class="btn btn-garis" href="#transparansi">Buka Pembukuan Kami</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 400 400">
-        <circle cx="200" cy="200" r="170" fill="rgba(255,255,255,.05)"/>
-        <circle cx="280" cy="120" r="44" fill="#e9c46a"/>
-        <g fill="#5f8a4e">
-          <path d="M120 300 L160 180 L200 300Z"/><path d="M135 250 L160 160 L185 250Z" fill="#7aa364"/>
-          <rect x="156" y="296" width="8" height="26" fill="#6b4a33"/>
-        </g>
-        <g>
-          <path d="M190 310 L250 140 L310 310Z" fill="#a7c48a"/><path d="M210 250 L250 120 L290 250Z" fill="#bcd6a0"/>
-          <rect x="245" y="306" width="10" height="30" fill="#6b4a33"/>
-        </g>
-        <g fill="#7aa364">
-          <circle cx="110" cy="300" r="22"/><circle cx="305" cy="315" r="18"/>
-        </g>
-        <path d="M30 330 Q200 290 370 330 L370 360 L30 360Z" fill="#13332a" opacity=".6"/>
-        <g stroke="#e9c46a" stroke-width="3" stroke-linecap="round" fill="none">
-          <path d="M60 120c10-10 20-10 30 0"/><path d="M90 95c8-8 16-8 24 0"/>
-        </g>
-      </svg>
-    </div>
-  </div>
-  <svg class="hills" viewBox="0 0 1440 90" preserveAspectRatio="none" height="70" width="100%" aria-hidden="true"><path d="M0 60 Q360 0 720 40 T1440 30 V90 H0Z" fill="#f7f3ea"/></svg>
-</section>
-
-<section id="tentang">
-  <div class="wrap about-grid">
-    <div class="reveal">
-      <span class="eyebrow">Tentang Kami</span>
-      <h2>Hutan yang pulih dimulai dari masyarakat yang berdaya.</h2>
-      <p class="lead">Daya Reforestasi Indonesia (Dareindo) adalah social enterprise yang bergerak di bidang pelestarian lingkungan dan pemberdayaan masyarakat. Kami percaya reforestasi hanya bertahan jika warga di sekitar hutan ikut merasakan manfaatnya.</p>
-      <p class="lead" style="margin-top:1rem">Karena itu setiap pohon yang kami tanam terhubung dengan pelatihan, lapangan kerja, dan rantai usaha yang dikelola bersama komunitas lokal.</p>
-    </div>
-    <div class="pillars reveal">
-      <div class="pillar">
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12C12 7 8 4 4 4c0 5 3 8 8 8z"/><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/></svg></div>
-        <div><h3>Misi Lingkungan</h3><p>Memulihkan lahan kritis dengan spesies lokal yang tepat dan memantau pertumbuhannya secara berkala.</p></div>
+    <figure>
+      <div class="foto">
+        <img src="https://images.unsplash.com/photo-1510611280575-f007416f59f2?w=1200&q=70&fm=jpg&fit=crop" alt="Perbukitan hijau berkabut dengan hutan dan rumah warga di lerengnya" width="1200" height="1500" fetchpriority="high">
       </div>
-      <div class="pillar">
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c2.8-.6 6 1.3 6 4.5"/></svg></div>
-        <div><h3>Misi Sosial</h3><p>Membuka penghasilan baru bagi petani dan pemuda desa melalui pembibitan, agroforestri, dan produk hutan.</p></div>
-      </div>
-      <div class="pillar">
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
-        <div><h3>Model Berkelanjutan</h3><p>Pendapatan usaha diputar kembali untuk menanam lebih banyak dan memperluas manfaat bagi komunitas.</p></div>
-      </div>
-    </div>
+      <figcaption class="credit">Foto ilustrasi: Bandung, Jawa Barat. Rifqi Ali Ridho / <a href="https://unsplash.com/photos/1ftrPzqRMTo">Unsplash</a></figcaption>
+    </figure>
   </div>
 </section>
 
-<section id="program" class="programs">
+<!-- 2. Pergeseran makna ekonomi -->
+<section class="band gelap on-dark">
+  <div class="wrap geser">
+    <div>
+      <h2>Ekonomi bukan lagi sekadar angka.</h2>
+      <p class="lead" style="margin-top:1.6rem">Selama puluhan tahun, kemajuan diukur dari seberapa banyak yang bisa kita ambil dari alam. Hutan dihitung dalam meter kubik kayu. Lahan dihitung dalam ton panen per musim.</p>
+      <p class="lead">Hari ini ukurannya berubah. Ekonomi adalah nilai keseimbangan dan ukuran kelestarian: berapa lama tanah tetap subur, air tetap mengalir, dan sebuah desa tetap aman untuk ditinggali.</p>
+    </div>
+    <svg class="kontur" id="kontur" viewBox="0 0 500 500" role="img" aria-label="Garis kontur sebuah bukit"></svg>
+  </div>
+</section>
+
+<!-- 3. Krisis -->
+<section class="band">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Program</span>
-      <h2>Empat cara kami bekerja di lapangan</h2>
-      <p class="lead">Setiap program saling terhubung: dari bibit di persemaian hingga produk yang dijual di pasar.</p>
-    </div>
-    <div class="cards">
-      <article class="card reveal">
-        <span class="num">01</span>
-        <h3>Penanaman &amp; Restorasi</h3>
-        <p>Menanam kembali lahan kritis, daerah aliran sungai, dan kawasan pesisir dengan spesies asli setempat.</p>
-      </article>
-      <article class="card reveal">
-        <span class="num">02</span>
-        <h3>Persemaian Desa</h3>
-        <p>Warga mengelola pembibitan sendiri, sehingga bibit tersedia dekat lokasi tanam dan menjadi sumber pendapatan.</p>
-      </article>
-      <article class="card reveal">
-        <span class="num">03</span>
-        <h3>Agroforestri</h3>
-        <p>Memadukan pohon hutan dengan tanaman bernilai ekonomi seperti kopi, kakao, atau buah, agar lahan tetap produktif.</p>
-      </article>
-      <article class="card reveal">
-        <span class="num">04</span>
-        <h3>Edukasi Lingkungan</h3>
-        <p>Pelatihan untuk petani, sekolah, dan pemuda tentang konservasi, pengelolaan lahan, dan kewirausahaan hijau.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="model">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Cara Kerja</span>
-      <h2>Dari satu bibit menjadi siklus kebaikan</h2>
-      <p class="lead">Sebagai social enterprise, kami menggabungkan dampak lingkungan dengan model usaha yang bisa berdiri sendiri.</p>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><h3>Dukungan masuk</h3><p>Individu dan perusahaan mengadopsi pohon atau menjalin kemitraan.</p></div>
-      <div class="step reveal"><h3>Warga menanam</h3><p>Komunitas lokal dibayar untuk menyemai, menanam, dan merawat pohon.</p></div>
-      <div class="step reveal"><h3>Hutan menghasilkan</h3><p>Hasil agroforestri diolah dan dipasarkan bersama kelompok tani.</p></div>
-      <div class="step reveal"><h3>Manfaat diputar ulang</h3><p>Keuntungan kembali ke desa dan ke penanaman berikutnya.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="dampak" class="impact">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow" style="color:var(--sun)">Dampak</span>
-      <h2>Bertumbuh bersama, terukur bersama</h2>
-      <p class="lead">Kami melaporkan setiap pohon dan setiap keluarga yang terlibat secara terbuka kepada para pendukung.</p>
-    </div>
-    <div class="stats">
-      <div class="stat reveal"><b data-count="10000">0</b><span>pohon ditanam</span></div>
-      <div class="stat reveal"><b data-count="25">0</b><span>hektare lahan dipulihkan</span></div>
-      <div class="stat reveal"><b data-count="5">0</b><span>desa mitra</span></div>
-      <div class="stat reveal"><b data-count="150">0</b><span>keluarga terlibat</span></div>
-    </div>
-    <p class="note">* Angka contoh. Ganti dengan data terbaru Dareindo.</p>
-  </div>
-</section>
-
-<section id="terlibat">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Ikut Terlibat</span>
-      <h2>Ada peran untuk setiap orang</h2>
-      <p class="lead">Pilih cara yang paling sesuai untuk ikut memulihkan hutan Indonesia.</p>
-    </div>
-    <div class="involve-grid">
-      <div class="involve reveal">
-        <h3>Relawan</h3>
-        <p>Bergabung dalam aksi tanam, kegiatan edukasi, atau bantu kami lewat keahlian Anda seperti desain, foto, dan media sosial.</p>
-        <a class="btn btn-forest" href="#kontak" data-topic="Relawan">Daftar Relawan</a>
-      </div>
-      <div class="involve featured reveal">
-        <h3>Adopsi Pohon</h3>
-        <p>Tanam pohon atas nama Anda atau orang tersayang. Anda akan menerima kabar lokasi dan perkembangan pohonnya.</p>
-        <a class="btn btn-sun" href="#kontak" data-topic="Adopsi Pohon">Adopsi Sekarang</a>
-      </div>
-      <div class="involve reveal">
-        <h3>Kemitraan &amp; CSR</h3>
-        <p>Program penanaman dan pemberdayaan yang disesuaikan untuk perusahaan, lengkap dengan laporan dampak.</p>
-        <a class="btn btn-forest" href="#kontak" data-topic="Kemitraan / CSR">Ajukan Kemitraan</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="kontak" class="contact">
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <span class="eyebrow">Kontak</span>
-      <h2>Mari tanam bersama</h2>
-      <p class="lead">Punya pertanyaan, ide kolaborasi, atau ingin berkunjung ke lokasi tanam? Kirim pesan kepada kami.</p>
-      <ul class="info">
-        <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><strong>Email</strong>halo@dareindo.com</div></li>
-        <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><strong>WhatsApp</strong>+62 812-0000-0000</div></li>
-        <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div><strong>Alamat</strong>Indonesia</div></li>
-      </ul>
-    </div>
-    <form class="reveal" id="contactForm">
-      <label>Nama<input name="nama" required placeholder="Nama lengkap"></label>
-      <label>Email<input name="email" type="email" required placeholder="nama@email.com"></label>
-      <label>Keperluan
-        <select name="keperluan" id="topic">
-          <option>Adopsi Pohon</option>
-          <option>Relawan</option>
-          <option>Kemitraan / CSR</option>
-          <option>Lainnya</option>
-        </select>
-      </label>
-      <label>Pesan<textarea name="pesan" required placeholder="Ceritakan sedikit tentang rencana Anda"></textarea></label>
-      <button class="btn btn-forest" type="submit">Kirim Pesan</button>
-      <p class="form-msg" id="formMsg">Terima kasih! Aplikasi email Anda akan terbuka untuk mengirim pesan.</p>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="foot">
+    <h2>Ruang hidup kita menyusut setiap tahun.</h2>
+    <p class="lead" style="margin-top:1.4rem">Hutan terus dibuka untuk berbagai kebutuhan. Lahan hijau beralih fungsi. Setiap hektare yang hilang membawa pergi keanekaragaman hayati, sumber air, dan akar-akar yang selama ini menahan tanah di lereng.</p>
+    <p class="lead" style="margin-top:1rem">Akibatnya tidak berhenti di hutan. Ketika tanah kehilangan penahannya, hujan berubah menjadi longsor dan banjir yang menimpa rumah, sawah, dan jalan desa.</p>
+    <div class="angka">
       <div>
-        <a class="brand" href="#top" style="color:#fff">Dareindo</a>
-        <p>Daya Reforestasi Indonesia — social enterprise untuk pelestarian lingkungan dan pemberdayaan masyarakat.</p>
+        <b>175.400 ha</b>
+        <p class="ket">Hutan Indonesia yang hilang (bersih) sepanjang 2024</p>
+        <p class="sumber">Kementerian Kehutanan, via <a href="https://www.thejakartapost.com/indonesia/2025/03/25/deforestation-climbed-to-175000-ha-in-2024-ministry-admits">The Jakarta Post</a></p>
       </div>
-      <ul>
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#program">Program</a></li>
-        <li><a href="#dampak">Dampak</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-      <ul>
-        <li><a href="#" aria-label="Instagram">Instagram</a></li>
-        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-        <li><a href="#" aria-label="YouTube">YouTube</a></li>
-      </ul>
+      <div>
+        <b>933</b>
+        <p class="ket">Kejadian tanah longsor di Indonesia sepanjang 2024</p>
+        <p class="sumber">BNPB, via <a href="https://www.antaranews.com/berita/4569674/banjir-dan-longsor-dominasi-5593-kejadian-bencana-sepanjang-2024">Antara</a></p>
+      </div>
+      <div>
+        <b>14,3 juta ha</b>
+        <p class="ket">Lahan kritis yang perlu ditanami kembali</p>
+        <p class="sumber">Menteri LHK (2020), via <a href="https://www.suarasurabaya.net/?p=478695">Suara Surabaya</a></p>
+      </div>
     </div>
-    <p class="copy">© <span id="yr"></span> Daya Reforestasi Indonesia. Hak cipta dilindungi.</p>
+    <p class="penutup">Di balik setiap angka ada desa yang hidupnya bergantung pada tanah yang sama.</p>
+  </div>
+</section>
+
+<!-- 4. Ironi di lapangan -->
+<section class="band" style="padding-top:0">
+  <div class="wrap ironi">
+    <figure>
+      <div class="foto">
+        <img src="https://images.unsplash.com/photo-1597868165956-03a6827955b1?w=900&q=70&fm=jpg&fit=crop" alt="Tangan menanam bibit di tanah" width="900" height="1200" loading="lazy">
+      </div>
+      <figcaption class="credit">Foto ilustrasi: Jonathan Kemper / <a href="https://unsplash.com/photos/hands-planting-seedling-in-garden-4z3lnwEvZQw">Unsplash</a></figcaption>
+    </figure>
+    <div>
+      <h2>Menanam pohon ternyata bukan bagian tersulitnya.</h2>
+      <p class="lead">Memulihkan lahan kritis melibatkan banyak pihak dan banyak kendala. Ironisnya, kendala yang paling sering kami temui datang dari tempat yang paling dekat: warga yang hidupnya sudah bergantung pada lahan itu.</p>
+      <p>Lereng yang seharusnya dilindungi ditanami komoditas semusim. Tanaman asli penjaga struktur tanah diganti tanaman berakar dangkal. Ini terjadi bukan karena warga tidak peduli. Dapur harus tetap mengepul hari ini, sementara manfaat hutan baru terasa bertahun-tahun lagi.</p>
+      <blockquote>Melarang tanpa memberi pilihan hanya memindahkan masalah.</blockquote>
+      <p style="margin-top:2rem">Selama menjaga hutan dianggap lawan dari mencari nafkah, lahan kritis akan terus bertambah.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Jawaban kami -->
+<section class="band jawaban">
+  <div class="wrap">
+    <h2 style="max-width:22ch">Kami hadir agar menjaga hutan dan mencari nafkah bisa berjalan searah.</h2>
+    <div style="margin-top:1.6rem">
+      <p class="lead">Daya Reforestasi Indonesia adalah perseroan terbatas yang bergerak di bidang sosial-ekologis. Kami bukan yayasan dan bukan NGO. Kami memilih jalan bisnis karena pemulihan yang bisa menghidupi dirinya sendiri akan bertahan lebih lama daripada program yang menunggu bantuan berikutnya.</p>
+      <p class="lead">Kami menyebutnya ekonomi berbasis ekologi: hutan yang dipulihkan juga menjadi sumber penghasilan yang adil bagi warga di sekitarnya.</p>
+    </div>
+    <ul class="prinsip">
+      <li><h3>Tanam yang menghidupi</h3><p>Tanaman asli penjaga tanah ditanam berdampingan dengan komoditas bernilai ekonomi lewat pola agroforestri.</p></li>
+      <li><h3>Warga sebagai mitra</h3><p>Warga setempat bekerja di proyek, dibimbing ahli, dan ikut menerima manfaat dari hasil hutan.</p></li>
+      <li><h3>Tumbuh bersama lahan yang pulih</h3><p>Usaha kami tumbuh bersama lahan yang pulih. Ke mana laba kami mengalir, bisa Anda periksa di pembukuan kami.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. Proyek -->
+<section class="band" id="proyek">
+  <div class="wrap">
+    <h2>Dua proyek, satu tujuan.</h2>
+    <div class="proyek-grid">
+      <article class="proyek akar">
+        <figure class="foto">
+          <img src="https://images.unsplash.com/photo-1685604957746-fcce91338d81?w=1200&q=70&fm=jpg&fit=crop" alt="Jalan tanah di antara rumpun bambu tinggi" width="1200" height="675" loading="lazy">
+        </figure>
+        <div class="isi">
+          <span class="status">Agroforestri, mencari lokasi pertama</span>
+          <h3>Akar Bambu</h3>
+          <p>Lahan terlantar yang rawan longsor kami ubah menjadi hutan komoditas. Bambu membantu mengikat tanah di lereng, katuk dan vanili memberi penghasilan, dan tanaman asli setempat memulihkan ekosistemnya. Warga sekitar bekerja di sana, dibimbing ahli agroforestri.</p>
+          <div class="aksi">
+            <a class="btn btn-garis" href="#lapor">Tahu lahan rawan longsor? Laporkan</a>
+          </div>
+          <p class="credit">Foto ilustrasi: Hutan Surodadu, Mojokerto, Jawa Timur. Muhammad Faris Afif Putra / <a href="https://unsplash.com/photos/a-dirt-road-surrounded-by-tall-bamboo-trees-zAPdgbiVTz0">Unsplash</a></p>
+        </div>
+      </article>
+      <article class="proyek benih on-dark">
+        <div class="isi">
+          <svg class="logo-benih" viewBox="0 0 84 84" role="img" aria-label="Logo Benih: benih yang mulai tumbuh">
+            <ellipse cx="42" cy="62" rx="15" ry="11" fill="#B88A5A"/>
+            <path d="M33 60c5-3 13-3 18 0" stroke="#7A5C43" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M42 52V30" stroke="#E3A72F" stroke-width="3" stroke-linecap="round"/>
+            <path d="M42 36c-2-9-9-13-17-12 1 8 8 13 17 12z" fill="#A9CFA0"/>
+            <path d="M42 31c2-10 10-15 19-14-1 9-9 15-19 14z" fill="#E3A72F"/>
+          </svg>
+          <span class="status">Aplikasi web, segera hadir</span>
+          <h3>Benih</h3>
+          <p>Ruang temu bagi para penggiat lingkungan. Dari hutan, laut, hingga sampah, Benih membantu komunitas saling menemukan dan menyelenggarakan kegiatan bersama.</p>
+          <div class="aksi">
+            <a class="btn btn-utama" href="mailto:halo@dareindo.com?subject=Daftar%20kabar%20peluncuran%20Benih">Daftar untuk kabar peluncuran</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Transparansi radikal -->
+<section class="band gelap on-dark" id="transparansi">
+  <div class="wrap">
+    <h2>Setiap rupiah dan setiap pohon bisa Anda periksa.</h2>
+    <p class="lead" style="margin-top:1.4rem">Seluruh pembukuan dan capaian dampak kami terbuka untuk publik, termasuk pengeluaran yang belum berjalan sesuai rencana. Kepercayaan tidak kami minta. Kami tunjukkan buktinya.</p>
+
+    <div class="buku" aria-labelledby="buku-judul">
+      <div class="buku-kepala">
+        <b id="buku-judul">Buku Kas Publik</b>
+        <span id="buku-status">Pencatatan publik dimulai Oktober 2026</span>
+      </div>
+      <dl>
+        <div class="baris"><dt>Total uang masuk<small>Pendapatan usaha, modal, dan investasi</small></dt><dd class="kosong" data-kunci="masuk">Menunggu</dd></div>
+        <div class="baris"><dt>Porsi pengeluaran untuk proyek<small>Dari seluruh uang keluar</small></dt><dd class="kosong" data-kunci="porsi">Menunggu</dd></div>
+        <div class="baris"><dt>Pohon ditanam<small>Batang, terverifikasi</small></dt><dd class="kosong" data-kunci="pohon">Menunggu</dd></div>
+        <div class="baris"><dt>Pekerja lokal terlibat<small>Orang, terverifikasi</small></dt><dd class="kosong" data-kunci="pekerja">Menunggu</dd></div>
+      </dl>
+      <div class="buku-kaki">
+        <span class="stempel" aria-hidden="true">Hanya data terverifikasi</span>
+        <span id="buku-catatan" style="flex:1;min-width:200px">Angka akan tampil di sini setelah entri pertama diverifikasi.</span>
+        <a class="tautan" href="mailto:halo@dareindo.com?subject=Permintaan%20Buku%20Kas%20Publik">Minta salinan pembukuan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Kolaborasi -->
+<section class="band" id="kolaborasi">
+  <div class="wrap">
+    <h2 style="max-width:20ch">Kami tidak memulai dari nol, dan tidak bekerja sendiri.</h2>
+    <p class="lead" style="margin-top:1.4rem">Banyak warga, badan usaha, dan organisasi non-profit sudah lebih dulu menjaga hutan Indonesia. Kami hadir untuk berjalan bersama mereka, bukan menggantikan.</p>
+    <ul class="mitra">
+      <li><h3>Masyarakat</h3><p>Laporkan lahan kritis, bekerja di proyek, atau kelola persemaian di desa Anda.</p><a class="tautan" href="#lapor">Laporkan Lahan</a></li>
+      <li><h3>Badan usaha</h3><p>Kemitraan penanaman dan pembelian hasil hutan, dengan laporan dampak yang bisa diperiksa siapa saja.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Pengajuan%20kemitraan">Ajukan Kemitraan</a></li>
+      <li><h3>Organisasi non-profit</h3><p>Berbagi data, lokasi, dan keahlian. Terhubung dengan penggiat lain lewat Benih.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Kolaborasi%20organisasi">Mari Berkolaborasi</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9. Ajakan penutup -->
+<section class="band ajak on-dark" id="lapor">
+  <div class="wrap">
+    <h2>Lahan kritis di dekat Anda bisa menjadi hutan berikutnya.</h2>
+    <p class="lead" style="margin-top:1.4rem">Laporkan lahan gundul atau rawan longsor. Tim kami akan memverifikasi laporan Anda dan meneliti cara terbaik untuk memulihkannya bersama warga.</p>
+    <p class="lead" style="margin-top:1rem">Sertakan lokasi (atau titik Google Maps), foto lahan, dan perkiraan luasnya.</p>
+    <div class="aksi">
+      <a class="btn btn-utama" href="mailto:halo@dareindo.com?subject=Laporan%20lahan%20kritis&body=Lokasi%20(desa%2C%20kecamatan%2C%20kabupaten%20atau%20link%20Google%20Maps)%3A%0A%0APerkiraan%20luas%3A%0A%0AKondisi%20lahan%3A%0A%0A(Lampirkan%20foto%20lahan)">Laporkan Lahan</a>
+      <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Pengajuan%20kemitraan">Ajukan Kemitraan</a>
+    </div>
+    <p class="darurat"><b>Ada tanda longsor yang mengancam saat ini?</b> Segera hubungi BPBD setempat atau 112. Formulir ini bukan layanan darurat.</p>
+  </div>
+</section>
+
+</main>
+
+<footer id="kontak">
+  <div class="wrap">
+    <div class="kaki">
+      <div>
+        <p class="slogan">Tidak ada ekonomi tanpa ruang hidup yang lestari.</p>
+        <p style="margin-top:1rem">Seluruh pembukuan kami terbuka untuk publik. <a class="tautan" href="#transparansi">Periksa di sini</a></p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li>Alamat terdaftar: segera diumumkan</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <ul>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#transparansi">Transparansi</a></li>
+          <li><a href="#lapor">Laporkan Lahan</a></li>
+          <li><a href="#kolaborasi">Kolaborasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="tahun">2026</span> PT Daya Reforestasi Indonesia</span>
+      <span>Foto ilustrasi dari Unsplash, sampai foto lapangan kami tersedia.</span>
+    </div>
   </div>
 </footer>
 
 <script>
-  // Header background on scroll
-  const header = document.querySelector('header');
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
-  window.addEventListener('scroll', onScroll); onScroll();
+/* ---------- Pengaturan ----------
+   Setelah Buku Kas Publik dipublikasikan dari Google Sheets
+   (File → Bagikan → Publikasikan ke web → tab "Ringkasan" → CSV),
+   tempel tautan CSV-nya di bawah ini. Kosong = tampil "Menunggu". */
+const RINGKASAN_CSV = "";
 
-  // Mobile menu
-  const menuBtn = document.querySelector('.menu-btn');
-  const links = document.querySelector('.nav-links');
-  menuBtn.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', open);
-  });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false);
-  }));
+/* Menu HP */
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.getElementById('menu');
+menuBtn.addEventListener('click', () => {
+  const buka = menu.classList.toggle('buka');
+  menuBtn.setAttribute('aria-expanded', buka);
+});
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  menu.classList.remove('buka'); menuBtn.setAttribute('aria-expanded', false);
+}));
+document.getElementById('tahun').textContent = new Date().getFullYear();
 
-  // Pre-select form topic from "Ikut Terlibat" buttons
-  document.querySelectorAll('[data-topic]').forEach(btn => btn.addEventListener('click', () => {
-    document.getElementById('topic').value = btn.dataset.topic;
-  }));
+/* Garis kontur bukit (bagian 2): digambar sekali saat terlihat */
+(function kontur(){
+  const svg = document.getElementById('kontur');
+  const NS = 'http://www.w3.org/2000/svg';
+  const cx = 250, cy = 265, rings = 9;
+  const paths = [];
+  for (let i = 0; i < rings; i++) {
+    const r = 34 + i * 25, pts = [];
+    for (let a = 0; a <= 64; a++) {
+      const t = a / 64 * Math.PI * 2;
+      const wob = 1 + 0.10 * Math.sin(3 * t + i * .5) + 0.06 * Math.cos(5 * t - i * .3) + 0.04 * Math.sin(7 * t + i);
+      pts.push([cx + Math.cos(t) * r * wob * 1.08, cy + Math.sin(t) * r * wob * .86 - i * 2]);
+    }
+    let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+    for (let k = 1; k < pts.length; k++) d += `L${pts[k][0].toFixed(1)},${pts[k][1].toFixed(1)}`;
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', d + 'Z');
+    svg.appendChild(p); paths.push(p);
+  }
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  paths.forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; });
+  const io = new IntersectionObserver(es => {
+    if (!es[0].isIntersecting) return;
+    paths.forEach((p, i) => {
+      p.style.transition = `stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) ${i * 0.12}s`;
+      p.style.strokeDashoffset = 0;
+    });
+    io.disconnect();
+  }, { threshold: .35 });
+  io.observe(svg);
+})();
 
-  // Reveal on scroll + count-up numbers
-  const fmt = n => n.toLocaleString('id-ID');
-  const countUp = el => {
-    const target = +el.dataset.count, dur = 1400, t0 = performance.now();
-    const tick = t => {
-      const p = Math.min((t - t0) / dur, 1);
-      el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - p, 3)))) + (p === 1 ? '+' : '');
-      if (p < 1) requestAnimationFrame(tick);
+/* Buku Kas Publik: isi angka dari CSV tab Ringkasan */
+(async function bukuKas(){
+  if (!RINGKASAN_CSV) return;
+  try {
+    const res = await fetch(RINGKASAN_CSV, { cache: 'no-store' });
+    if (!res.ok) throw new Error(res.status);
+    const rows = parseCSV(await res.text());
+    const cari = (kol, label, ambil) => {
+      const r = rows.find(r => (r[kol] || '').trim().toLowerCase() === label.toLowerCase());
+      return r ? (r[ambil] || '').trim() : '';
     };
-    requestAnimationFrame(tick);
-  };
-  const io = new IntersectionObserver(entries => entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add('in');
-    e.target.querySelectorAll('[data-count]').forEach(countUp);
-    io.unobserve(e.target);
-  }), { threshold: .15 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // Contact form: open the visitor's email app (static site, no server needed)
-  document.getElementById('contactForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const f = e.target;
-    const subject = encodeURIComponent('[' + f.keperluan.value + '] Pesan dari ' + f.nama.value);
-    const body = encodeURIComponent(f.pesan.value + '\n\n— ' + f.nama.value + ' (' + f.email.value + ')');
-    document.getElementById('formMsg').style.display = 'block';
-    window.location.href = 'mailto:halo@dareindo.com?subject=' + subject + '&body=' + body;
-  });
-
-  document.getElementById('yr').textContent = new Date().getFullYear();
+    const nilai = {
+      masuk:   cari(0, 'Total uang masuk', 1),
+      porsi:   cari(0, 'Porsi pengeluaran untuk proyek', 1),
+      pohon:   cari(3, 'Pohon ditanam', 6),
+      pekerja: cari(3, 'Pekerja lokal terlibat (baru)', 6),
+    };
+    let ada = false;
+    document.querySelectorAll('[data-kunci]').forEach(dd => {
+      const v = nilai[dd.dataset.kunci];
+      if (v) { dd.textContent = v; dd.classList.remove('kosong'); ada = true; }
+    });
+    if (ada) {
+      const tgl = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+      document.getElementById('buku-catatan').textContent = 'Diambil langsung dari Buku Kas Publik, dibuka ' + tgl + '.';
+    }
+  } catch (e) {
+    document.getElementById('buku-catatan').textContent = 'Data belum bisa dimuat. Coba muat ulang halaman ini.';
+  }
+  function parseCSV(text){
+    const out = []; let row = [], cell = '', q = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (q) { if (c === '"') { if (text[i+1] === '"') { cell += '"'; i++; } else q = false; } else cell += c; }
+      else if (c === '"') q = true;
+      else if (c === ',') { row.push(cell); cell = ''; }
+      else if (c === '\n') { row.push(cell); out.push(row); row = []; cell = ''; }
+      else if (c !== '\r') cell += c;
+    }
+    if (cell || row.length) { row.push(cell); out.push(row); }
+    return out;
+  }
+})();
 </script>
 </body>
 </html>
