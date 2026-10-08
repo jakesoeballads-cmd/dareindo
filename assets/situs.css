@@ -46,6 +46,7 @@ p{max-width:62ch}
 header{position:sticky;top:0;z-index:20;background:rgba(238,241,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--garis)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
 .merek{display:flex;align-items:center;gap:10px;text-decoration:none}
+.merek-logo{display:block;height:49px;width:auto;border-radius:8px}
 .merek b{font:400 1.35rem/1 var(--display)}
 .merek span{display:block;font-size:.72rem;color:var(--tanah);margin-top:3px}
 .menu{display:flex;gap:24px;list-style:none;align-items:center}
