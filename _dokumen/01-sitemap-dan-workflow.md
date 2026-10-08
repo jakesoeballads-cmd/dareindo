@@ -50,13 +50,13 @@ Kebijakan Privasi wajib ada karena formulir lapor lahan dan kontak mengumpulkan 
 
 ### 1. Beranda (storytelling)
 
-Alur: krisis → ironi → jawaban → bukti → ajakan. Copywriting lengkap ada di `02-copywriting-beranda.md`.
+Alur: visi → siapa kami → filosofi dan fakta → tantangan di lapangan → model dan bukti kami → ajakan berkolaborasi. Copywriting lengkap ada di `02-copywriting-beranda.md`.
 
 | # | Bagian | Isi & tujuan |
 | --- | --- | --- |
-| 1 | Hero | "Tidak ada ekonomi tanpa ruang hidup yang lestari." Tombol: Lihat Proyek / Buka Pembukuan Kami |
-| 2 | Pergeseran makna ekonomi | Ekonomi bukan lagi angka, melainkan nilai keseimbangan dan ukuran kelestarian |
-| 3 | Krisis | Deforestasi, alih fungsi lahan, bencana, dengan data bersumber |
+| 1 | Hero | "Tidak ada ekonomi tanpa ruang hidup yang lestari." Subjudul: membangun hubungan harmonis manusia dan alam |
+| 2 | Tentang Daya | Siapa PT Daya Reforestasi Indonesia dan perannya sebagai penggerak, fasilitator, dan ruang kolaborasi |
+| 3 | Manusia dan Alam | Filosofi Daya, lalu data kerusakan yang bersumber |
 | 4 | Ironi di lapangan | Warga yang bergantung pada alih fungsi lahan, ditulis dengan empati |
 | 5 | Jawaban kami | Ekonomi berbasis ekologi; PT impact-driven, bukan yayasan |
 | 6 | Proyek | Kartu Akar Bambu dan Benih |

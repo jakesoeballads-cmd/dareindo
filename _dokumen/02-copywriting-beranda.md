@@ -6,7 +6,16 @@ Draf 2 · 8 Oktober 2026 (revisi dari tim)
 
 ## Catatan untuk tim
 
-Beranda bercerita dalam lima langkah: **krisis → ironi di lapangan → jawaban kami → bukti → ajakan**. Setiap bagian di bawah berisi teks final, tombol, dan catatan desain.
+Beranda bercerita dalam enam langkah: **visi → siapa kami → filosofi dan fakta → tantangan di lapangan → model dan bukti kami → ajakan berkolaborasi**. Setiap bagian di bawah berisi teks final, tombol, dan catatan desain.
+
+| Langkah | Bagian | Tugas bagian ini |
+| --- | --- | --- |
+| Visi | 1. Hero | Menyatakan keyakinan utama: tidak ada ekonomi tanpa ruang hidup yang lestari, dan tujuan membangun hubungan harmonis manusia dengan alam |
+| Siapa kami | 2. Tentang Daya | Memperkenalkan PT Daya Reforestasi Indonesia dan perannya sebagai penggerak, fasilitator, dan ruang kolaborasi |
+| Filosofi dan fakta | 3. Manusia dan Alam | Menjelaskan cara pandang Daya (manusia bagian dari alam), lalu menunjukkan data kerusakan sebagai bukti mengapa ini penting |
+| Tantangan di lapangan | 4. Ironi di lapangan | Menunjukkan dengan empati bahwa masalahnya terkait penghidupan warga, bukan sekadar menanam pohon |
+| Model dan bukti kami | 5. Jawaban kami, 6. Proyek, 7. Transparansi radikal | Menjawab tantangan dengan model usaha berbasis ekologi, dua proyek nyata, dan pembukuan yang terbuka |
+| Ajakan berkolaborasi | 8. Kolaborasi, 9. Ajakan penutup | Mengajak masyarakat, badan usaha, dan organisasi untuk ikut berkontribusi, dimulai dari menginformasikan lahan kritis |
 
 **Nada suara:** tegas soal masalah, hangat kepada warga, jujur soal angka. Kalimat pendek. Tidak menggurui.
 
