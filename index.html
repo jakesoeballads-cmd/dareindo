@@ -13,83 +13,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/situs.css">
 <style>
-  /* Layout: left-aligned editorial column; one signature element = the open ledger (Transparansi). */
-  :root{
-    --hutan:#13281F;      /* deep forest: text, dark bands */
-    --lumut:#2F5D3A;      /* moss: primary */
-    --kunyit:#E3A72F;     /* turmeric: the single bold accent (ledger, primary CTA) */
-    --tanah:#7A5C43;      /* soil: secondary text, rules */
-    --kabut:#EEF1EC;      /* mist: page ground */
-    --putih:#FFFFFF;
-    --garis:#CDD6CC;      /* hairline on mist */
-    --display:"Young Serif", Georgia, "Times New Roman", serif;
-    --body:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --max:1180px;
-    --gutter:clamp(20px,5vw,56px);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;scroll-padding-top:84px}
-  body{font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--hutan);background:var(--kabut);-webkit-font-smoothing:antialiased}
-  img,svg{display:block;max-width:100%}
-  a{color:inherit}
-  :focus-visible{outline:3px solid var(--kunyit);outline-offset:3px;border-radius:4px}
-  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;text-wrap:balance;letter-spacing:-.01em}
-  h2{font-size:clamp(2rem,4.2vw,3.1rem)}
-  h3{font-size:1.45rem}
-  p{max-width:62ch}
-  .wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
-  .band{padding-block:clamp(72px,10vw,128px)}
-  .lead{font-size:1.18rem;color:#33463C}
-  .muted{color:var(--tanah)}
-  .credit{font-size:.78rem;color:var(--tanah);margin-top:.5rem}
-  .credit a{text-decoration:none;border-bottom:1px solid currentColor}
-
-  /* Buttons */
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:600 1rem/1 var(--body);padding:1rem 1.4rem;border-radius:6px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
-  .btn-utama{background:var(--kunyit);color:var(--hutan)}
-  .btn-utama:hover{background:#ECB94F}
-  .btn-garis{border-color:var(--hutan);color:var(--hutan)}
-  .btn-garis:hover{background:var(--hutan);color:var(--kabut)}
-  .on-dark .btn-garis{border-color:var(--kabut);color:var(--kabut)}
-  .on-dark .btn-garis:hover{background:var(--kabut);color:var(--hutan)}
-  .tautan{font-weight:600;text-decoration:none;border-bottom:2px solid var(--kunyit);padding-bottom:2px}
-  .tautan:hover{border-color:currentColor}
-  .aksi{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
-
-  /* Header */
-  header{position:sticky;top:0;z-index:20;background:rgba(238,241,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--garis)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
-  .merek{display:flex;align-items:center;gap:10px;text-decoration:none}
-  .merek b{font:400 1.35rem/1 var(--display)}
-  .merek span{display:block;font-size:.72rem;color:var(--tanah);margin-top:3px}
-  .menu{display:flex;gap:28px;list-style:none;align-items:center}
-  .menu a{text-decoration:none;font-weight:500;font-size:.95rem}
-  .menu a:hover{color:var(--lumut)}
-  .menu .btn{padding:.7rem 1rem;font-size:.92rem}
-  .menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--hutan)}
-  @media (max-width:860px){
-    .menu-btn{display:block}
-    .menu{display:none;position:absolute;left:0;right:0;top:68px;flex-direction:column;align-items:stretch;gap:0;background:var(--kabut);border-bottom:1px solid var(--garis);padding:8px var(--gutter) 20px}
-    .menu.buka{display:flex}
-    .menu a{display:block;padding:14px 0;border-bottom:1px solid var(--garis)}
-    .menu .btn{margin-top:14px;border-bottom:0}
-  }
-
   /* 1 Hero */
   .hero{padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,112px)}
   .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:end}
   .hero .label{font-size:.9rem;font-weight:600;color:var(--lumut);margin-bottom:1.4rem}
   .hero h1{font-size:clamp(2.6rem,6.4vw,5.1rem);max-width:13ch}
   .hero .lead{margin-top:1.6rem;max-width:46ch}
-  .foto{background:#9DB09A;border-radius:4px;overflow:hidden}
-  .foto img{width:100%;height:100%;object-fit:cover}
   .hero .foto{aspect-ratio:4/5}
   @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero .foto{aspect-ratio:4/3}}
 
   /* 2 Pergeseran */
-  .gelap{background:var(--hutan);color:var(--kabut)}
-  .gelap .lead{color:#C9D4CA}
   .geser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
   .geser p+p{margin-top:1.1rem}
   .kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end;align-self:start;position:sticky;top:120px}
@@ -109,8 +44,6 @@
   .pernyataan{margin-top:1.6rem;font:400 clamp(1.5rem,3vw,2.2rem)/1.25 var(--display);max-width:26ch;color:var(--lumut)}
   .filosofi{margin-top:2rem;columns:2 30ch;column-gap:clamp(32px,5vw,64px)}
   .filosofi p{margin-bottom:1rem;break-inside:avoid}
-  .catatan{font-size:.85rem;color:var(--tanah)}
-  .on-dark .catatan{color:#C9D4CA}
   .akar .isi p a{color:var(--tanah);text-decoration:none}
   .penutup{margin-top:2.6rem;font:400 1.35rem/1.4 var(--display);max-width:34ch}
   @media (max-width:760px){.angka{grid-template-columns:1fr}.angka > div,.angka > div + div{padding:1.4rem 0;border-left:0;border-bottom:1px solid var(--garis)}}
@@ -138,8 +71,6 @@
   .akar .foto{aspect-ratio:16/9;border-radius:0}
   .benih{background:var(--lumut);color:var(--kabut)}
   .proyek .isi{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:.9rem;flex:1}
-  .status{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600}
-  .status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--kunyit)}
   .akar .status{color:var(--tanah)}
   .proyek h3{font-size:2rem}
   .proyek .aksi{margin-top:auto;padding-top:.6rem;align-items:center;gap:20px}
@@ -147,19 +78,6 @@
   .benih .tautan{border-color:var(--kunyit)}
   @media (max-width:860px){.proyek-grid{grid-template-columns:1fr}}
 
-  /* 7 Transparansi: the ledger */
-  .buku{margin-top:3rem;background:#FBFAF5;color:var(--hutan);border-radius:4px;box-shadow:0 1px 0 #0000000d, 0 24px 48px -28px #13281F80;position:relative;overflow:hidden}
-  .buku-kepala{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:20px clamp(20px,3vw,36px);border-bottom:2px solid var(--hutan)}
-  .buku-kepala b{font:400 1.25rem var(--display)}
-  .buku-kepala span{font-size:.85rem;color:var(--tanah)}
-  .baris{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:18px clamp(20px,3vw,36px);border-bottom:1px solid #DCE2D8;background-image:linear-gradient(90deg,transparent 0 calc(100% - 1px),transparent 0)}
-  .baris:last-of-type{border-bottom:0}
-  .baris dt{font-weight:500}
-  .baris dt small{display:block;font-weight:400;font-size:.82rem;color:var(--tanah)}
-  .baris dd{font:400 clamp(1.5rem,3vw,2.1rem)/1 var(--display);font-variant-numeric:tabular-nums;text-align:right;color:var(--hutan)}
-  .baris dd.kosong{color:#A9B3A6}
-  .buku-kaki{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding:18px clamp(20px,3vw,36px);background:#F1EFE6;font-size:.88rem;color:var(--tanah)}
-  .stempel{display:inline-block;transform:rotate(-4deg);border:2px solid var(--kunyit);color:#B07F17;border-radius:6px;padding:6px 12px;font-weight:700;font-size:.8rem;letter-spacing:.04em;opacity:.85;pointer-events:none}
 
   /* 8 Kolaborasi */
   .mitra{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);margin-top:3rem;list-style:none}
@@ -174,18 +92,7 @@
   .darurat{margin-top:1.6rem;font-size:.9rem;color:#DCE6DA;max-width:60ch}
   .darurat b{color:var(--putih)}
 
-  /* Footer */
-  footer{background:var(--hutan);color:#C9D4CA;padding-block:56px 32px;font-size:.93rem}
-  .kaki{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid #2C4237}
-  .kaki .slogan{font:400 1.5rem/1.3 var(--display);color:var(--kabut);max-width:20ch}
-  .kaki h4{font-size:.85rem;font-weight:600;color:var(--kabut);margin-bottom:.8rem}
-  .kaki ul{list-style:none;display:grid;gap:.45rem}
-  .kaki a{text-decoration:none}
-  .kaki a:hover{color:var(--kunyit)}
-  .legal{padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.82rem;color:#93A597}
-  @media (max-width:760px){.kaki{grid-template-columns:1fr}}
 
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -200,11 +107,11 @@
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <ul class="menu" id="menu">
-      <li><a href="#proyek">Proyek</a></li>
-      <li><a href="#transparansi">Transparansi</a></li>
-      <li><a href="#kolaborasi">Kolaborasi</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-      <li><a class="btn btn-utama" href="#lapor">Laporkan Lahan</a></li>
+      <li><a href="/proyek/">Proyek</a></li>
+      <li><a href="/transparansi/">Transparansi</a></li>
+      <li><a href="/#kolaborasi">Kolaborasi</a></li>
+      <li><a href="/kontak/">Kontak</a></li>
+      <li><a class="btn btn-utama" href="/lapor-lahan/">Laporkan Lahan</a></li>
     </ul>
   </div>
 </header>
@@ -328,7 +235,7 @@
           <p>Mengembalikan lahan gundul, terutama di area perbukitan yang rawan longsor, menjadi hutan komoditas. Bambu, selain menyerap dan menahan air, juga membantu mengikat tanah di lereng. Katuk dan vanili<a href="#catatan-komoditas" aria-label="lihat catatan">*</a> memberi penghasilan, dan tanaman asli setempat memulihkan ekosistemnya.</p>
           <p class="catatan" id="catatan-komoditas">*Tanaman komoditas (selain bambu) akan disesuaikan dengan keadaan alami lahan tersebut dan kebutuhan masyarakat sekitar.</p>
           <div class="aksi">
-            <a class="btn btn-garis" href="#lapor">Tahu lahan rawan longsor? Beritahu kami</a>
+            <a class="btn btn-garis" href="/lapor-lahan/">Tahu lahan rawan longsor? Beritahu kami</a>
           </div>
           <p class="catatan">Setiap kontribusi akan sangat berarti.</p>
           <p class="credit">Foto ilustrasi: Hutan Surodadu, Mojokerto, Jawa Timur. Muhammad Faris Afif Putra / <a href="https://unsplash.com/photos/a-dirt-road-surrounded-by-tall-bamboo-trees-zAPdgbiVTz0">Unsplash</a></p>
@@ -402,7 +309,7 @@
     <p class="lead" style="margin-top:1.4rem">Infokan kepada kami keberadaan lahan gundul atau rawan longsor. Tim kami akan memverifikasi laporan Anda dan meneliti cara terbaik untuk memulihkannya bersama warga.</p>
     <p class="lead" style="margin-top:1rem">Sertakan lokasi (atau titik Google Maps), foto lahan, dan perkiraan luasnya.</p>
     <div class="aksi">
-      <a class="btn btn-utama" href="mailto:halo@dareindo.com?subject=Laporan%20lahan%20kritis&body=Lokasi%20(desa%2C%20kecamatan%2C%20kabupaten%20atau%20link%20Google%20Maps)%3A%0A%0APerkiraan%20luas%3A%0A%0AKondisi%20lahan%3A%0A%0A(Lampirkan%20foto%20lahan)">Laporkan Lahan</a>
+      <a class="btn btn-utama" href="/lapor-lahan/">Laporkan Lahan</a>
       <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Pengajuan%20kemitraan">Ajukan Kemitraan</a>
     </div>
     <p class="darurat"><b>Ada tanda longsor yang mengancam saat ini?</b> Segera hubungi BPBD setempat atau 112. Formulir ini bukan layanan darurat.</p>
@@ -411,27 +318,28 @@
 
 </main>
 
-<footer id="kontak">
+<footer>
   <div class="wrap">
     <div class="kaki">
       <div>
         <p class="slogan">Tidak ada ekonomi tanpa ruang hidup yang lestari.</p>
-        <p style="margin-top:1rem">Seluruh pembukuan kami terbuka untuk publik. <a class="tautan" href="#transparansi">Periksa di sini</a></p>
+        <p style="margin-top:1rem">Seluruh pembukuan kami terbuka untuk publik. <a class="tautan" href="/transparansi/">Periksa di sini</a></p>
       </div>
       <div>
         <h4>Kontak</h4>
         <ul>
           <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
           <li>Alamat terdaftar: segera diumumkan</li>
+          <li><a href="/kontak/">Kontak &amp; Perusahaan</a></li>
         </ul>
       </div>
       <div>
         <h4>Jelajahi</h4>
         <ul>
-          <li><a href="#proyek">Proyek</a></li>
-          <li><a href="#transparansi">Transparansi</a></li>
-          <li><a href="#lapor">Laporkan Lahan</a></li>
-          <li><a href="#kolaborasi">Kolaborasi</a></li>
+          <li><a href="/proyek/">Proyek</a></li>
+          <li><a href="/transparansi/">Transparansi</a></li>
+          <li><a href="/lapor-lahan/">Laporkan Lahan</a></li>
+          <li><a href="/#kolaborasi">Kolaborasi</a></li>
         </ul>
       </div>
     </div>
@@ -442,25 +350,8 @@
   </div>
 </footer>
 
+<script src="/assets/situs.js"></script>
 <script>
-/* ---------- Pengaturan ----------
-   Setelah Buku Kas Publik dipublikasikan dari Google Sheets
-   (File → Bagikan → Publikasikan ke web → tab "Ringkasan" → CSV),
-   tempel tautan CSV-nya di bawah ini. Kosong = tampil "Menunggu". */
-const RINGKASAN_CSV = "";
-
-/* Menu HP */
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.getElementById('menu');
-menuBtn.addEventListener('click', () => {
-  const buka = menu.classList.toggle('buka');
-  menuBtn.setAttribute('aria-expanded', buka);
-});
-menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  menu.classList.remove('buka'); menuBtn.setAttribute('aria-expanded', false);
-}));
-document.getElementById('tahun').textContent = new Date().getFullYear();
-
 /* Garis kontur bukit (bagian 2): digambar sekali saat terlihat */
 (function kontur(){
   const svg = document.getElementById('kontur');
@@ -492,50 +383,6 @@ document.getElementById('tahun').textContent = new Date().getFullYear();
     io.disconnect();
   }, { threshold: .35 });
   io.observe(svg);
-})();
-
-/* Buku Kas Publik: isi angka dari CSV tab Ringkasan */
-(async function bukuKas(){
-  if (!RINGKASAN_CSV) return;
-  try {
-    const res = await fetch(RINGKASAN_CSV, { cache: 'no-store' });
-    if (!res.ok) throw new Error(res.status);
-    const rows = parseCSV(await res.text());
-    const cari = (kol, label, ambil) => {
-      const r = rows.find(r => (r[kol] || '').trim().toLowerCase() === label.toLowerCase());
-      return r ? (r[ambil] || '').trim() : '';
-    };
-    const nilai = {
-      masuk:   cari(0, 'Total uang masuk', 1),
-      porsi:   cari(0, 'Porsi pengeluaran untuk proyek', 1),
-      pohon:   cari(3, 'Pohon ditanam', 6),
-      pekerja: cari(3, 'Pekerja lokal terlibat (baru)', 6),
-    };
-    let ada = false;
-    document.querySelectorAll('[data-kunci]').forEach(dd => {
-      const v = nilai[dd.dataset.kunci];
-      if (v) { dd.textContent = v; dd.classList.remove('kosong'); ada = true; }
-    });
-    if (ada) {
-      const tgl = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
-      document.getElementById('buku-catatan').textContent = 'Diambil langsung dari Buku Kas Publik, dibuka ' + tgl + '.';
-    }
-  } catch (e) {
-    document.getElementById('buku-catatan').textContent = 'Data belum bisa dimuat. Coba muat ulang halaman ini.';
-  }
-  function parseCSV(text){
-    const out = []; let row = [], cell = '', q = false;
-    for (let i = 0; i < text.length; i++) {
-      const c = text[i];
-      if (q) { if (c === '"') { if (text[i+1] === '"') { cell += '"'; i++; } else q = false; } else cell += c; }
-      else if (c === '"') q = true;
-      else if (c === ',') { row.push(cell); cell = ''; }
-      else if (c === '\n') { row.push(cell); out.push(row); row = []; cell = ''; }
-      else if (c !== '\r') cell += c;
-    }
-    if (cell || row.length) { row.push(cell); out.push(row); }
-    return out;
-  }
 })();
 </script>
 </body>

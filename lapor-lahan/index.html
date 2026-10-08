@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laporkan Lahan Kritis · Daya Reforestasi Indonesia</title>
+<meta name="description" content="Tahu lahan gundul atau rawan longsor di dekat Anda? Laporkan kepada Dareindo. Laporan warga bisa menjadi lokasi Akar Bambu berikutnya.">
+<meta property="og:title" content="Laporkan Lahan Kritis · Daya Reforestasi Indonesia">
+<meta property="og:description" content="Tahu lahan gundul atau rawan longsor di dekat Anda? Laporkan kepada Dareindo. Laporan warga bisa menjadi lokasi Akar Bambu berikutnya.">
+<meta property="og:url" content="https://dareindo.com/lapor-lahan/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313281F'/%3E%3Cpath d='M5 23c4-7 8-10 11-10s7 3 11 10' fill='none' stroke='%23E3A72F' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M9 26c3-4 5-6 7-6s4 2 7 6' fill='none' stroke='%23EEF1EC' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/situs.css">
+<style>
+  .lapor-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,80px);align-items:start;padding-block:clamp(48px,7vw,88px)}
+  .lapor-samping{position:sticky;top:100px;display:grid;gap:1.6rem}
+  .lapor-samping h2{font-size:1.5rem}
+  .lapor-samping .langkah{grid-template-columns:1fr}
+  .lapor-samping .langkah li{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;padding-right:0}
+  .lapor-samping .langkah li::before{grid-row:span 2;margin:0}
+  .lapor-samping .langkah span{margin:0}
+  .gps{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .gps .btn{padding:.7rem 1rem;font-size:.92rem}
+  #teks-laporan{font:.9rem/1.5 ui-monospace,Menlo,Consolas,monospace;min-height:220px;background:#FBFAF5}
+  @media (max-width:860px){.lapor-grid{grid-template-columns:1fr}.lapor-samping{position:static;order:-1}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="merek" href="/" aria-label="Daya Reforestasi Indonesia, ke Beranda">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#13281F"/><path d="M5 23c4-7 8-10 11-10s7 3 11 10" fill="none" stroke="#E3A72F" stroke-width="2.4" stroke-linecap="round"/><path d="M9 26c3-4 5-6 7-6s4 2 7 6" fill="none" stroke="#EEF1EC" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <div><b>Dareindo</b><span>Daya Reforestasi Indonesia</span></div>
+    </a>
+    <button class="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="/proyek/">Proyek</a></li>
+      <li><a href="/transparansi/">Transparansi</a></li>
+      <li><a href="/#kolaborasi">Kolaborasi</a></li>
+      <li><a href="/kontak/">Kontak</a></li>
+      <li><a class="btn btn-utama" href="/lapor-lahan/" aria-current="page">Laporkan Lahan</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="kepala">
+  <div class="wrap">
+    <p class="label">Laporkan Lahan Kritis</p>
+    <h1>Lahan kritis di dekat Anda bisa menjadi hutan berikutnya.</h1>
+    <p class="lead">Infokan kepada kami lahan gundul atau rawan longsor di sekitar Anda. Tim kami akan memverifikasi laporan Anda dan meneliti cara terbaik untuk memulihkannya bersama warga. Laporan warga bisa menjadi lokasi Akar Bambu berikutnya.</p>
+  </div>
+</section>
+
+<div class="wrap lapor-grid">
+  <div>
+    <div class="peringatan" role="note">
+      <b>Ada tanda longsor yang mengancam saat ini?</b>
+      Segera hubungi BPBD setempat atau 112. Formulir ini bukan layanan darurat.
+    </div>
+
+    <form class="formulir" id="form-lapor" style="margin-top:2.4rem" novalidate>
+      <fieldset>
+        <legend>Di mana lahannya?</legend>
+        <div class="kolom">
+          <label for="lokasi">Lokasi lahan</label>
+          <input type="text" id="lokasi" name="lokasi" required placeholder="Desa, kecamatan, kabupaten/kota, provinsi">
+          <small>Wajib diisi.</small>
+        </div>
+        <div class="kolom">
+          <span class="judul-kolom">Titik koordinat</span>
+          <div class="gps">
+            <button type="button" class="btn btn-garis" id="tombol-gps">Pakai lokasi saya sekarang</button>
+            <small id="status-gps" aria-live="polite">Pakai ini jika Anda sedang berada di lahan tersebut.</small>
+          </div>
+          <input type="text" id="koordinat" name="koordinat" placeholder="Contoh: -6.9175, 107.6191" aria-label="Titik koordinat">
+        </div>
+        <div class="kolom">
+          <label for="peta">Tautan Google Maps (opsional)</label>
+          <input type="url" id="peta" name="peta" placeholder="https://maps.app.goo.gl/...">
+          <small>Di Google Maps, tekan lama titik lahannya, lalu pilih Bagikan.</small>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Seperti apa kondisinya?</legend>
+        <div class="kolom">
+          <span class="judul-kolom" id="judul-kondisi">Kondisi lahan</span>
+          <div class="pilihan" role="group" aria-labelledby="judul-kondisi">
+            <label><input type="checkbox" name="kondisi" value="Gundul / tanpa pohon"> Gundul / tanpa pohon</label>
+            <label><input type="checkbox" name="kondisi" value="Lereng rawan longsor"> Lereng rawan longsor</label>
+            <label><input type="checkbox" name="kondisi" value="Pernah longsor"> Pernah longsor</label>
+            <label><input type="checkbox" name="kondisi" value="Terlantar / tidak digarap"> Terlantar / tidak digarap</label>
+            <label><input type="checkbox" name="kondisi" value="Ditanami tanaman semusim"> Ditanami tanaman semusim</label>
+            <label><input type="checkbox" name="kondisi" value="Bekas tambang / galian"> Bekas tambang / galian</label>
+          </div>
+        </div>
+        <div class="kolom-dua">
+          <div class="kolom">
+            <label for="luas">Perkiraan luas</label>
+            <input type="text" id="luas" name="luas" placeholder="Contoh: 2 hektare, atau 1 lapangan bola">
+          </div>
+          <div class="kolom">
+            <label for="kepemilikan">Status kepemilikan</label>
+            <select id="kepemilikan" name="kepemilikan">
+              <option value="">Pilih jika tahu</option>
+              <option>Milik saya / keluarga saya</option>
+              <option>Milik warga lain</option>
+              <option>Tanah desa / kas desa</option>
+              <option>Tanah adat / ulayat</option>
+              <option>Kawasan hutan negara</option>
+              <option>Milik perusahaan</option>
+              <option>Tidak tahu</option>
+            </select>
+          </div>
+        </div>
+        <div class="kolom">
+          <label for="cerita">Ceritakan kondisinya</label>
+          <textarea id="cerita" name="cerita" placeholder="Sejak kapan lahannya seperti ini? Apa yang terjadi saat hujan deras? Apakah warga sekitar menggarapnya?"></textarea>
+        </div>
+        <p class="kosong-info" style="margin:0"><b>Foto lahan sangat membantu.</b> Lampirkan foto di email yang akan terbuka setelah Anda menekan tombol kirim.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Kontak Anda (opsional)</legend>
+        <label class="cek"><input type="checkbox" id="anonim" name="anonim"> <span>Saya ingin melapor tanpa nama. Kami tidak bisa menghubungi Anda untuk survei lanjutan.</span></label>
+        <div class="kolom-dua" id="kolom-kontak">
+          <div class="kolom">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" autocomplete="name">
+          </div>
+          <div class="kolom">
+            <label for="telepon">Nomor HP / WhatsApp</label>
+            <input type="tel" id="telepon" name="telepon" autocomplete="tel">
+          </div>
+        </div>
+        <p class="catatan">Nama dan kontak pelapor tidak pernah ditampilkan ke publik. Kami hanya memakainya untuk menindaklanjuti laporan ini.</p>
+      </fieldset>
+
+      <div class="pesan-form" id="galat" role="alert" hidden></div>
+      <div class="aksi" style="margin-top:0">
+        <button type="submit" class="btn btn-utama">Kirim laporan lewat email</button>
+      </div>
+      <p class="catatan">Tombol ini membuka aplikasi email Anda dengan laporan yang sudah terisi, dikirim ke halo@dareindo.com.</p>
+
+      <div id="cadangan" hidden>
+        <div class="pesan-form">Email tidak terbuka? Salin teks di bawah ini dan kirim ke <a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a>.</div>
+        <textarea id="teks-laporan" readonly aria-label="Teks laporan" style="margin-top:1rem"></textarea>
+        <div class="aksi" style="margin-top:1rem"><button type="button" class="btn btn-garis" id="tombol-salin">Salin teks laporan</button></div>
+      </div>
+    </form>
+  </div>
+
+  <aside class="lapor-samping">
+    <div>
+      <h2>Setelah Anda melapor</h2>
+      <ol class="langkah" style="margin-top:1rem">
+        <li><b>Diterima</b><span>Laporan masuk dan dicatat.</span></li>
+        <li><b>Diverifikasi</b><span>Kami mencocokkan lokasi dan foto.</span></li>
+        <li><b>Disurvei</b><span>Tim datang ke lahan bersama warga.</span></li>
+        <li><b>Dirumuskan solusi</b><span>Bersama pemilik lahan dan warga sekitar.</span></li>
+        <li><b>Ditanam</b><span>Lahan mulai dipulihkan.</span></li>
+      </ol>
+    </div>
+  </aside>
+</div>
+
+<section class="band gelap on-dark" id="peta-laporan">
+  <div class="wrap">
+    <h2>Peta laporan publik</h2>
+    <p class="lead" style="margin-top:1.2rem">Laporan yang sudah diverifikasi akan tampil di peta ini beserta statusnya, tanpa data pribadi pelapor.</p>
+    <p class="kosong-info" style="margin-top:2rem;background:transparent;color:#C9D4CA;border-color:#4A6455"><b style="color:var(--kabut)">Belum ada laporan terverifikasi.</b> Jumlah laporan yang diterima dan disurvei juga tercatat di halaman <a class="tautan" href="/transparansi/#dampak">Transparansi</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="kaki">
+      <div>
+        <p class="slogan">Tidak ada ekonomi tanpa ruang hidup yang lestari.</p>
+        <p style="margin-top:1rem">Seluruh pembukuan kami terbuka untuk publik. <a class="tautan" href="/transparansi/">Periksa di sini</a></p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li>Alamat terdaftar: segera diumumkan</li>
+          <li><a href="/kontak/">Kontak &amp; Perusahaan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <ul>
+          <li><a href="/proyek/">Proyek</a></li>
+          <li><a href="/transparansi/">Transparansi</a></li>
+          <li><a href="/lapor-lahan/">Laporkan Lahan</a></li>
+          <li><a href="/#kolaborasi">Kolaborasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="tahun">2026</span> PT Daya Reforestasi Indonesia</span>
+      <span>Foto ilustrasi dari Unsplash, sampai foto lapangan kami tersedia.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/situs.js"></script>
+<script>
+const form = document.getElementById('form-lapor');
+const $ = id => document.getElementById(id);
+
+/* GPS perangkat */
+$('tombol-gps').addEventListener('click', () => {
+  if (!('geolocation' in navigator)) { $('status-gps').textContent = 'Perangkat ini tidak mendukung GPS. Isi koordinat secara manual.'; return; }
+  $('status-gps').textContent = 'Mencari lokasi...';
+  navigator.geolocation.getCurrentPosition(p => {
+    $('koordinat').value = p.coords.latitude.toFixed(6) + ', ' + p.coords.longitude.toFixed(6);
+    $('status-gps').textContent = 'Lokasi ditemukan (akurasi sekitar ' + Math.round(p.coords.accuracy) + ' m).';
+  }, () => {
+    $('status-gps').textContent = 'Lokasi tidak bisa diambil. Izinkan akses lokasi, atau isi koordinat secara manual.';
+  }, { enableHighAccuracy: true, timeout: 15000 });
+});
+
+/* Tanpa nama: sembunyikan kolom kontak */
+$('anonim').addEventListener('change', e => {
+  $('kolom-kontak').hidden = e.target.checked;
+  if (e.target.checked) { $('nama').value = ''; $('telepon').value = ''; }
+});
+
+/* Susun laporan menjadi email */
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const galat = $('galat');
+  if (!$('lokasi').value.trim()) {
+    galat.textContent = 'Isi lokasi lahan terlebih dahulu.'; galat.hidden = false; $('lokasi').focus(); return;
+  }
+  galat.hidden = true;
+  const kondisi = [...form.querySelectorAll('[name=kondisi]:checked')].map(c => c.value).join(', ');
+  const baris = [
+    ['Lokasi', $('lokasi').value],
+    ['Koordinat', $('koordinat').value],
+    ['Google Maps', $('peta').value],
+    ['Kondisi', kondisi],
+    ['Perkiraan luas', $('luas').value],
+    ['Status kepemilikan', $('kepemilikan').value],
+    ['Cerita', $('cerita').value],
+    ['Pelapor', $('anonim').checked ? 'Tanpa nama' : [$('nama').value, $('telepon').value].filter(v => v.trim()).join(' / ')],
+  ].filter(([, v]) => v && v.trim()).map(([k, v]) => `${k}: ${v.trim()}`);
+  const teks = 'LAPORAN LAHAN KRITIS\n\n' + baris.join('\n\n') + '\n\n(Foto lahan dilampirkan di email ini)';
+  $('teks-laporan').value = teks;
+  $('cadangan').hidden = false;
+  location.href = 'mailto:halo@dareindo.com?subject=' + encodeURIComponent('Laporan lahan kritis: ' + $('lokasi').value.trim()) +
+                  '&body=' + encodeURIComponent(teks);
+});
+
+$('tombol-salin').addEventListener('click', async () => {
+  const t = $('teks-laporan');
+  try { await navigator.clipboard.writeText(t.value); } catch { t.select(); document.execCommand('copy'); }
+  $('tombol-salin').textContent = 'Tersalin';
+});
+</script>
+</body>
+</html>
