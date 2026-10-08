@@ -1,0 +1,364 @@
+<!doctype html>
+<!-- Dibuat otomatis oleh _src/build.py. Jangan edit file ini langsung: ubah _src/, lalu jalankan python3 _src/build.py -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitmachen · Daya Reforestasi Indonesia</title>
+<meta name="description" content="Helfen Sie Dareindo, Land wiederherzustellen: Geben Sie uns Hinweise auf kahle oder rutschgefährdete Flächen oder registrieren Sie sich als Mitwirkende.">
+<meta property="og:title" content="Mitmachen · Daya Reforestasi Indonesia">
+<meta property="og:description" content="Helfen Sie Dareindo, Land wiederherzustellen: Geben Sie uns Hinweise auf kahle oder rutschgefährdete Flächen oder registrieren Sie sich als Mitwirkende.">
+<meta property="og:url" content="https://dareindo.com/de/kontribusi/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://dareindo.com/de/kontribusi/">
+<link rel="alternate" hreflang="id" href="https://dareindo.com/kontribusi/">
+<link rel="alternate" hreflang="en" href="https://dareindo.com/en/kontribusi/">
+<link rel="alternate" hreflang="de" href="https://dareindo.com/de/kontribusi/">
+<link rel="alternate" hreflang="x-default" href="https://dareindo.com/kontribusi/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313281F'/%3E%3Cpath d='M5 23c4-7 8-10 11-10s7 3 11 10' fill='none' stroke='%238CD94A' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M9 26c3-4 5-6 7-6s4 2 7 6' fill='none' stroke='%23EEF1EC' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/situs.css">
+<style>
+.lapor-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,80px);align-items:start;padding-block:clamp(48px,7vw,88px)}
+.lapor-samping{position:sticky;top:100px;display:grid;gap:1.6rem}
+.lapor-samping h2{font-size:1.5rem}
+.lapor-samping .langkah{grid-template-columns:1fr}
+.lapor-samping .langkah li{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;padding-right:0}
+.lapor-samping .langkah li::before{grid-row:span 2;margin:0}
+.lapor-samping .langkah span{margin:0}
+.gps{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.gps .btn{padding:.7rem 1rem;font-size:.92rem}
+#teks-laporan{font:.9rem/1.5 ui-monospace,Menlo,Consolas,monospace;min-height:220px;background:#FBFAF5}
+@media (max-width:860px){.lapor-grid{grid-template-columns:1fr}.lapor-samping{position:static;order:-1}}
+.bab{padding-block:clamp(48px,7vw,88px);border-bottom:1px solid var(--garis)}
+.bab > h2{max-width:24ch}
+.bab > .lead{margin-top:1rem}
+.bab .lapor-grid{padding-block:2rem 0}
+.darurat-kecil{font-size:.88rem;color:var(--tanah);border-left:3px solid var(--garis);padding-left:.9rem}
+.darurat-kecil b{color:var(--hutan)}
+.peran{display:grid;grid-template-columns:repeat(3,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan);margin-top:2rem}
+.peran li{padding:1rem 1rem 1rem 0;border-bottom:1px solid var(--garis)}
+.peran b{display:block;font:400 1.2rem var(--display)}
+.peran span{font-size:.93rem;color:#33463C}
+@media (max-width:860px){.peran{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="merek" href="/de/" aria-label="Daya Reforestasi Indonesia, zur Startseite">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#13281F"/><path d="M5 23c4-7 8-10 11-10s7 3 11 10" fill="none" stroke="#8CD94A" stroke-width="2.4" stroke-linecap="round"/><path d="M9 26c3-4 5-6 7-6s4 2 7 6" fill="none" stroke="#EEF1EC" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <div><b>Dareindo</b><span>Daya Reforestasi Indonesia</span></div>
+    </a>
+    <button class="menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="/de/akar-bambu/">Akar Bambu</a></li>
+      <li><a href="/de/benih/">Benih</a></li>
+      <li><a href="/de/transparansi/">Transparenz</a></li>
+      <li><a href="/de/kontak/">Kontakt</a></li>
+      <li><a class="btn btn-utama" href="/de/kontribusi/" aria-current="page">Mitmachen</a></li>
+      <li class="bahasa" aria-label="Sprache wählen"><a href="/kontribusi/" hreflang="id" lang="id" title="Bahasa Indonesia">ID</a><a href="/en/kontribusi/" hreflang="en" lang="en" title="English">EN</a><a href="/de/kontribusi/" hreflang="de" lang="de" aria-current="true" title="Deutsch">DE</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="kepala">
+  <div class="wrap">
+    <p class="label">Mitmachen</p>
+    <h1>Jeder Beitrag zählt.</h1>
+    <p class="lead">Sie müssen kein Profi sein, um bei der Wiederherstellung von Land zu helfen. Geben Sie uns einen Hinweis auf eine Fläche, oder machen Sie mit, so wie es Ihre Zeit und Ihr Können erlauben.</p>
+    <ul class="lompat">
+      <li><a href="#lahan">Hinweis auf kahles oder rutschgefährdetes Land</a></li>
+      <li><a href="#kontributor">Als Mitwirkende registrieren</a></li>
+      <li><a href="#kemitraan">Partnerschaften</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap bab" id="lahan">
+  <h2>Sagen Sie uns, wo es kahle oder rutschgefährdete Flächen gibt.</h2>
+  <p class="lead">Eine Fläche in Ihrer Nähe könnte der nächste Standort von Akar Bambu werden. Unser Team prüft Ihren Hinweis und erarbeitet mit den Menschen vor Ort den besten Weg, sie wiederherzustellen.</p>
+
+  <div class="lapor-grid">
+    <form class="formulir" id="form-lahan" novalidate
+          data-judul="Hinweis auf eine Fläche" data-pelapor="Absender" data-anonim="Anonym" data-foto="(Fotos der Fläche sind dieser E-Mail angehängt)">
+      <fieldset>
+        <legend>Wo liegt die Fläche?</legend>
+        <div class="kolom">
+          <label for="lokasi">Ort</label>
+          <input type="text" id="lokasi" required placeholder="Dorf, Bezirk, Regierungsbezirk/Stadt, Provinz">
+          <small>Pflichtfeld.</small>
+        </div>
+        <div class="kolom">
+          <label for="koordinat">Koordinaten</label>
+          <div class="gps">
+            <button type="button" class="btn btn-garis" id="tombol-gps">Meinen Standort verwenden</button>
+            <small id="status-gps" aria-live="polite">Nutzen Sie dies, wenn Sie gerade auf der Fläche stehen.</small>
+          </div>
+          <input type="text" id="koordinat" placeholder="Beispiel: -6.9175, 107.6191">
+        </div>
+        <div class="kolom">
+          <label for="peta">Google-Maps-Link (optional)</label>
+          <input type="url" id="peta" placeholder="https://maps.app.goo.gl/...">
+          <small>Halten Sie in Google Maps die Stelle gedrückt und wählen Sie Teilen.</small>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Wie ist der Zustand?</legend>
+        <div class="kolom">
+          <span class="judul-kolom" id="judul-kondisi">Zustand</span>
+          <div class="pilihan" role="group" aria-labelledby="judul-kondisi">
+            <label><input type="checkbox" name="kondisi" value="Kahl / ohne Bäume"> Kahl / ohne Bäume</label>
+            <label><input type="checkbox" name="kondisi" value="Rutschgefährdeter Hang"> Rutschgefährdeter Hang</label>
+            <label><input type="checkbox" name="kondisi" value="Schon einmal abgerutscht"> Schon einmal abgerutscht</label>
+            <label><input type="checkbox" name="kondisi" value="Brachliegend / nicht bewirtschaftet"> Brachliegend / nicht bewirtschaftet</label>
+            <label><input type="checkbox" name="kondisi" value="Mit einjährigen Kulturen bepflanzt"> Mit einjährigen Kulturen bepflanzt</label>
+            <label><input type="checkbox" name="kondisi" value="Ehemaliger Tagebau / Grube"> Ehemaliger Tagebau / Grube</label>
+          </div>
+        </div>
+        <div class="kolom-dua">
+          <div class="kolom">
+            <label for="luas">Ungefähre Größe</label>
+            <input type="text" id="luas" placeholder="Beispiel: 2 Hektar oder ein Fußballfeld">
+          </div>
+          <div class="kolom">
+            <label for="kepemilikan">Eigentum</label>
+            <select id="kepemilikan">
+              <option value="">Auswählen, falls bekannt</option>
+              <option>Meins / meiner Familie</option>
+              <option>Gehört anderen Anwohnern</option>
+              <option>Gemeindeland</option>
+              <option>Gewohnheitsrechtliches Land (adat)</option>
+              <option>Staatliches Waldgebiet</option>
+              <option>Firmeneigentum</option>
+              <option>Weiß nicht</option>
+            </select>
+          </div>
+        </div>
+        <div class="kolom">
+          <label for="cerita">Beschreiben Sie die Fläche</label>
+          <textarea id="cerita" placeholder="Seit wann ist sie so? Was passiert bei Starkregen? Wird sie von Anwohnern bewirtschaftet?"></textarea>
+        </div>
+        <p class="kosong-info" style="margin:0"><b>Fotos helfen sehr.</b> Hängen Sie sie an die E-Mail an, die sich nach dem Absenden öffnet.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ihre Kontaktdaten (optional)</legend>
+        <label class="cek"><input type="checkbox" id="anonim"> <span>Ich möchte anonym bleiben. Wir können Sie dann nicht für eine Erkundung kontaktieren.</span></label>
+        <div class="kolom-dua" id="kolom-kontak">
+          <div class="kolom">
+            <label for="nama">Name</label>
+            <input type="text" id="nama" autocomplete="name">
+          </div>
+          <div class="kolom">
+            <label for="telepon">Telefon / WhatsApp</label>
+            <input type="tel" id="telepon" autocomplete="tel">
+          </div>
+        </div>
+        <p class="catatan">Ihr Name und Ihre Kontaktdaten werden nie veröffentlicht. Wir nutzen sie nur, um Ihrem Hinweis nachzugehen.</p>
+      </fieldset>
+
+      <div class="pesan-form" id="galat" role="alert" hidden></div>
+      <div class="aksi" style="margin-top:0">
+        <button type="submit" class="btn btn-utama">Per E-Mail senden</button>
+      </div>
+      <p class="catatan">Die Schaltfläche öffnet Ihr E-Mail-Programm mit allen Angaben, adressiert an halo@dareindo.com.</p>
+      <p class="darurat-kecil"><b>Sehen Sie gerade Anzeichen eines Erdrutsches?</b> Wenden Sie sich sofort an die örtliche Katastrophenschutzbehörde (BPBD) oder wählen Sie 112. Dieses Formular ist kein Notdienst.</p>
+
+      <div id="cadangan" hidden>
+        <div class="pesan-form">Keine E-Mail geöffnet? Kopieren Sie den Text unten und senden Sie ihn an <a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a>.</div>
+        <textarea id="teks-laporan" readonly aria-label="Zu sendender Text" style="margin-top:1rem"></textarea>
+        <div class="aksi" style="margin-top:1rem"><button type="button" class="btn btn-garis" id="tombol-salin">Text kopieren</button></div>
+      </div>
+    </form>
+
+    <aside class="lapor-samping">
+      <div>
+        <h2>Nach Ihrem Hinweis</h2>
+        <ol class="langkah" style="margin-top:1rem">
+          <li><b>Eingegangen</b><span>Ihr Hinweis kommt an und wird erfasst.</span></li>
+          <li><b>Geprüft</b><span>Wir gleichen Ort und Fotos ab.</span></li>
+          <li><b>Erkundet</b><span>Unser Team besucht die Fläche mit den Menschen vor Ort.</span></li>
+          <li><b>Gemeinsam geplant</b><span>Mit den Eigentümern und den Menschen vor Ort.</span></li>
+          <li><b>Bepflanzt</b><span>Die Wiederherstellung beginnt.</span></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap bab" id="kontributor">
+  <h2>Als Mitwirkende registrieren.</h2>
+  <p class="lead">Mitwirkende bringen die Wiederherstellung von Land voran, mit der Zeit und dem Können, das sie haben. Füllen Sie dieses kurze Formular aus und senden Sie es per E-Mail. Wir melden uns, wenn eine passende Aktion ansteht.</p>
+  <ul class="peran">
+    <li><b>Im Feld</b><span>Pflanzen, Flächen pflegen und bei Erkundungen in Ihrer Gegend helfen.</span></li>
+    <li><b>Fachwissen teilen</b><span>Agroforst, Landwirtschaft, Kartierung, Bodenrecht oder anderes Können.</span></li>
+    <li><b>Geschichten erzählen</b><span>Fotos, Videos, Texte und Menschen in Ihrem Umfeld begeistern.</span></li>
+  </ul>
+
+  <form class="formulir" id="form-kontributor" novalidate style="margin-top:2.4rem" data-judul="Anmeldung als Mitwirkende">
+    <div class="kolom-dua">
+      <div class="kolom"><label for="k-nama">Name</label><input type="text" id="k-nama" autocomplete="name" required></div>
+      <div class="kolom"><label for="k-email">E-Mail</label><input type="email" id="k-email" autocomplete="email" required></div>
+    </div>
+    <div class="kolom-dua">
+      <div class="kolom"><label for="k-telepon">Telefon / WhatsApp (optional)</label><input type="tel" id="k-telepon" autocomplete="tel"></div>
+      <div class="kolom"><label for="k-domisili">Wohnort</label><input type="text" id="k-domisili" placeholder="Stadt oder Bezirk, Provinz / Land"></div>
+    </div>
+    <div class="kolom">
+      <span class="judul-kolom" id="judul-bidang">Ich möchte helfen bei</span>
+      <div class="pilihan" role="group" aria-labelledby="judul-bidang">
+        <label><input type="checkbox" name="bidang" value="Pflanzen und Pflege"> Pflanzen und Pflege</label>
+        <label><input type="checkbox" name="bidang" value="Erkundung und Kartierung"> Erkundung und Kartierung</label>
+        <label><input type="checkbox" name="bidang" value="Fachwissen teilen"> Fachwissen teilen</label>
+        <label><input type="checkbox" name="bidang" value="Fotos, Videos und Texte"> Fotos, Videos und Texte</label>
+        <label><input type="checkbox" name="bidang" value="Kontakte zu Anwohnern oder Gruppen"> Kontakte zu Anwohnern oder Gruppen</label>
+      </div>
+    </div>
+    <div class="kolom"><label for="k-pesan">Ein paar Worte über Sie (optional)</label><textarea id="k-pesan"></textarea></div>
+    <div class="pesan-form" id="k-galat" role="alert" hidden></div>
+    <div class="aksi" style="margin-top:0">
+      <button type="submit" class="btn btn-utama">Per E-Mail anmelden</button>
+      <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Anmeldung%20als%20Mitwirkende">Eigene E-Mail schreiben</a>
+    </div>
+  </form>
+</section>
+
+<section class="wrap bab" id="kemitraan" style="border-bottom:0">
+  <h2>Partnerschaften für Unternehmen und Organisationen.</h2>
+  <p class="lead">Pflanzpartnerschaften, Impact-Investitionen, der Kauf von Waldprodukten oder das Teilen von Daten und Fachwissen, mit Wirkungsberichten, die jeder prüfen kann.</p>
+  <div class="aksi">
+    <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Partnerschaftsanfrage">Partnerschaft anfragen</a>
+    <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Zusammenarbeit%20Organisation">Als Organisation zusammenarbeiten</a>
+  </div>
+</section>
+
+<section class="band gelap on-dark" id="peta">
+  <div class="wrap">
+    <h2>Karte der Flächen, denen wir nachgehen</h2>
+    <p class="lead" style="margin-top:1.2rem">Geprüfte Flächen erscheinen hier mit ihrem Status, ohne persönliche Daten der Hinweisgeber.</p>
+    <p class="kosong-info" style="margin-top:2rem;background:transparent;color:#C9D4CA;border-color:#4A6455"><b style="color:var(--kabut)">Noch keine Fläche geprüft.</b> Die Zahl der eingegangenen Hinweise und erkundeten Flächen steht auch auf der Seite <a class="tautan" href="/de/transparansi/#dampak">Transparenz</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="kaki">
+      <div>
+        <p class="slogan">Keine Wirtschaft ohne einen Lebensraum, der Bestand hat.</p>
+        <p style="margin-top:1rem">Unsere gesamte Buchhaltung ist öffentlich einsehbar. <a class="tautan" href="/de/transparansi/">Hier prüfen</a></p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li>Eingetragene Anschrift: wird bekanntgegeben</li>
+          <li><a href="/de/kontak/">Kontakt &amp; Unternehmen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Entdecken</h4>
+        <ul>
+          <li><a href="/de/akar-bambu/">Akar Bambu</a></li>
+          <li><a href="/de/benih/">Benih</a></li>
+          <li><a href="/de/transparansi/">Transparenz</a></li>
+          <li><a href="/de/kontribusi/">Mitmachen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="tahun">2026</span> PT Daya Reforestasi Indonesia</span>
+      <span>Illustrative Fotos von Unsplash, bis eigene Fotos aus dem Feld vorliegen.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/situs.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+/* Label kolom diambil dari halaman, jadi email ikut bahasa halaman. */
+const label = id => (document.querySelector(`label[for="${id}"]`)?.textContent || id).replace(/\s*\(.*\)\s*$/, '').trim();
+const kirimEmail = (subjek, isi) => {
+  location.href = 'mailto:halo@dareindo.com?subject=' + encodeURIComponent(subjek) + '&body=' + encodeURIComponent(isi);
+};
+const susun = baris => baris.filter(([, v]) => v && v.trim()).map(([k, v]) => `${k}: ${v.trim()}`).join('\n\n');
+
+/* GPS perangkat */
+$('tombol-gps').addEventListener('click', () => {
+  if (!('geolocation' in navigator)) { $('status-gps').textContent = t('gps_tidak_didukung'); return; }
+  $('status-gps').textContent = t('gps_mencari');
+  navigator.geolocation.getCurrentPosition(p => {
+    $('koordinat').value = p.coords.latitude.toFixed(6) + ', ' + p.coords.longitude.toFixed(6);
+    $('status-gps').textContent = t('gps_ditemukan', { m: Math.round(p.coords.accuracy) });
+  }, () => {
+    $('status-gps').textContent = t('gps_gagal');
+  }, { enableHighAccuracy: true, timeout: 15000 });
+});
+
+/* Tanpa nama: sembunyikan kolom kontak */
+$('anonim').addEventListener('change', e => {
+  $('kolom-kontak').hidden = e.target.checked;
+  if (e.target.checked) { $('nama').value = ''; $('telepon').value = ''; }
+});
+
+/* Informasi lahan → email */
+const formLahan = $('form-lahan');
+formLahan.addEventListener('submit', e => {
+  e.preventDefault();
+  if (!$('lokasi').value.trim()) {
+    $('galat').textContent = t('isi_lokasi'); $('galat').hidden = false; $('lokasi').focus(); return;
+  }
+  $('galat').hidden = true;
+  const kondisi = [...formLahan.querySelectorAll('[name=kondisi]:checked')].map(c => c.value).join(', ');
+  const teks = formLahan.dataset.judul.toUpperCase() + '\n\n' + susun([
+    [label('lokasi'), $('lokasi').value],
+    [label('koordinat'), $('koordinat').value],
+    [label('peta'), $('peta').value],
+    [$('judul-kondisi').textContent, kondisi],
+    [label('luas'), $('luas').value],
+    [label('kepemilikan'), $('kepemilikan').value],
+    [label('cerita'), $('cerita').value],
+    [formLahan.dataset.pelapor, $('anonim').checked ? formLahan.dataset.anonim : [$('nama').value, $('telepon').value].filter(v => v.trim()).join(' / ')],
+  ]) + '\n\n' + formLahan.dataset.foto;
+  $('teks-laporan').value = teks;
+  $('cadangan').hidden = false;
+  kirimEmail(formLahan.dataset.judul + ': ' + $('lokasi').value.trim(), teks);
+});
+
+$('tombol-salin').addEventListener('click', async () => {
+  const el = $('teks-laporan');
+  try { await navigator.clipboard.writeText(el.value); } catch { el.select(); document.execCommand('copy'); }
+  $('tombol-salin').textContent = t('tersalin');
+});
+
+/* Pendaftaran kontributor → email */
+const formKontributor = $('form-kontributor');
+formKontributor.addEventListener('submit', e => {
+  e.preventDefault();
+  if (!$('k-nama').value.trim() || !$('k-email').value.trim()) {
+    $('k-galat').textContent = t('isi_nama_email'); $('k-galat').hidden = false; return;
+  }
+  $('k-galat').hidden = true;
+  const bidang = [...formKontributor.querySelectorAll('[name=bidang]:checked')].map(c => c.value).join(', ');
+  kirimEmail(formKontributor.dataset.judul + ': ' + $('k-nama').value.trim(), susun([
+    [label('k-nama'), $('k-nama').value],
+    [label('k-email'), $('k-email').value],
+    [label('k-telepon'), $('k-telepon').value],
+    [label('k-domisili'), $('k-domisili').value],
+    [$('judul-bidang').textContent, bidang],
+    [label('k-pesan'), $('k-pesan').value],
+  ]));
+});
+</script>
+</body>
+</html>

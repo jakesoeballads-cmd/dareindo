@@ -2,7 +2,8 @@
 :root{
   --hutan:#13281F;      /* deep forest: text, dark bands */
   --lumut:#2F5D3A;      /* moss: primary */
-  --kunyit:#E3A72F;     /* turmeric: the single bold accent (ledger, primary CTA) */
+  --kunyit:#E3A72F;     /* turmeric: accent for the ledger and link underlines */
+  --daun:#8CD94A;       /* young leaf: primary buttons */
   --tanah:#7A5C43;      /* soil: secondary text, rules */
   --kabut:#EEF1EC;      /* mist: page ground */
   --putih:#FFFFFF;
@@ -31,8 +32,8 @@ p{max-width:62ch}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:600 1rem/1 var(--body);padding:1rem 1.4rem;border-radius:6px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
-.btn-utama{background:var(--kunyit);color:var(--hutan)}
-.btn-utama:hover{background:#ECB94F}
+.btn-utama{background:var(--daun);color:var(--hutan)}
+.btn-utama:hover{background:#A3E46B}
 .btn-garis{border-color:var(--hutan);color:var(--hutan)}
 .btn-garis:hover{background:var(--hutan);color:var(--kabut)}
 .on-dark .btn-garis{border-color:var(--kabut);color:var(--kabut)}
@@ -47,7 +48,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(238,241,236,.94);backdro
 .merek{display:flex;align-items:center;gap:10px;text-decoration:none}
 .merek b{font:400 1.35rem/1 var(--display)}
 .merek span{display:block;font-size:.72rem;color:var(--tanah);margin-top:3px}
-.menu{display:flex;gap:28px;list-style:none;align-items:center}
+.menu{display:flex;gap:24px;list-style:none;align-items:center}
 .menu a{text-decoration:none;font-weight:500;font-size:.95rem}
 .menu a:hover{color:var(--lumut)}
 .menu .btn{padding:.7rem 1rem;font-size:.92rem}
@@ -177,3 +178,12 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--kunyit);outline-
 .peringatan{padding:1.2rem 1.4rem;border-radius:4px;background:#FBEFD5;border-left:4px solid var(--kunyit)}
 .peringatan b{display:block}
 .menu .btn[aria-current="page"]{color:var(--hutan);box-shadow:none}
+
+/* Pilihan bahasa */
+.menu .bahasa{display:flex;gap:2px;font-size:.8rem;font-weight:600;border:1px solid var(--garis);border-radius:6px;padding:2px}
+.menu .bahasa a{padding:.35rem .5rem;border-radius:4px;font-size:.8rem;color:var(--tanah)}
+.menu .bahasa a[aria-current="true"]{background:var(--hutan);color:var(--kabut)}
+@media (max-width:860px){
+  .menu .bahasa{order:-1;align-self:flex-start;margin:6px 0 10px;border:1px solid var(--garis)}
+  .menu .bahasa a{border-bottom:0;padding:.5rem .8rem}
+}

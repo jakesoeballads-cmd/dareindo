@@ -1,0 +1,20 @@
+.sikap{columns:2 30ch;column-gap:clamp(32px,5vw,64px);margin-top:2rem}
+.sikap p{margin-bottom:1rem;break-inside:avoid}
+.buku{margin-top:0}
+.baris.total dt{font-weight:700}
+@media (min-width:1000px){
+  .buku dl{display:grid;grid-template-columns:1fr 1fr}
+  .buku .baris{border-right:1px solid #DCE2D8}
+  .buku .baris:nth-child(2n){border-right:0}
+}
+.saring{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-bottom:1rem}
+.saring label{font-size:.85rem;font-weight:600;display:grid;gap:.3rem}
+@media (max-width:760px){.saring{grid-template-columns:1fr}}
+.jenis-masuk{color:var(--lumut);font-weight:600}
+.jenis-keluar{color:#9A4B22;font-weight:600}
+.dampak{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;border-top:2px solid var(--hutan)}
+.dampak div{padding:1rem 1rem 1rem 0;border-bottom:1px solid var(--garis)}
+.dampak dt{font-size:.9rem;color:var(--tanah)}
+.dampak dd{font:400 1.9rem/1.2 var(--display);font-variant-numeric:tabular-nums;margin-top:.2rem}
+.dampak dd small{font:400 .9rem var(--body);color:var(--tanah);margin-left:.3rem}
+.dampak dd.kosong{color:#A9B3A6}

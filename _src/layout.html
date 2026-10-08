@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- Dibuat otomatis oleh _src/build.py. Jangan edit file ini langsung: ubah _src/, lalu jalankan python3 _src/build.py -->
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{judul}}</title>
+<meta name="description" content="{{deskripsi}}">
+<meta property="og:title" content="{{judul}}">
+<meta property="og:description" content="{{deskripsi}}">
+<meta property="og:url" content="{{url}}">
+<meta property="og:type" content="website">
+<link rel="canonical" href="{{url}}">
+{{alternatif}}
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313281F'/%3E%3Cpath d='M5 23c4-7 8-10 11-10s7 3 11 10' fill='none' stroke='%238CD94A' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M9 26c3-4 5-6 7-6s4 2 7 6' fill='none' stroke='%23EEF1EC' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/situs.css">
+{{gaya}}</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="merek" href="{{base}}/" aria-label="{{t.ke_beranda}}">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#13281F"/><path d="M5 23c4-7 8-10 11-10s7 3 11 10" fill="none" stroke="#8CD94A" stroke-width="2.4" stroke-linecap="round"/><path d="M9 26c3-4 5-6 7-6s4 2 7 6" fill="none" stroke="#EEF1EC" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <div><b>Dareindo</b><span>Daya Reforestasi Indonesia</span></div>
+    </a>
+    <button class="menu-btn" aria-label="{{t.buka_menu}}" aria-expanded="false" aria-controls="menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+{{menu}}
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+{{isi}}
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="kaki">
+      <div>
+        <p class="slogan">{{t.slogan}}</p>
+        <p style="margin-top:1rem">{{t.pembukuan_terbuka}} <a class="tautan" href="{{base}}/transparansi/">{{t.periksa}}</a></p>
+      </div>
+      <div>
+        <h4>{{t.kontak}}</h4>
+        <ul>
+          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li>{{t.alamat}}</li>
+          <li><a href="{{base}}/kontak/">{{t.kontak_perusahaan}}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>{{t.jelajahi}}</h4>
+        <ul>
+          <li><a href="{{base}}/akar-bambu/">Akar Bambu</a></li>
+          <li><a href="{{base}}/benih/">Benih</a></li>
+          <li><a href="{{base}}/transparansi/">{{t.transparansi}}</a></li>
+          <li><a href="{{base}}/kontribusi/">{{t.kontribusi}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="tahun">2026</span> PT Daya Reforestasi Indonesia</span>
+      <span>{{t.foto}}</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/situs.js"></script>
+{{skrip}}</body>
+</html>

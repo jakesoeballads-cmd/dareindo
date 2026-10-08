@@ -1,37 +1,43 @@
 <!doctype html>
+<!-- Dibuat otomatis oleh _src/build.py. Jangan edit file ini langsung: ubah _src/, lalu jalankan python3 _src/build.py -->
 <html lang="id">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Proyek · Daya Reforestasi Indonesia</title>
-<meta name="description" content="Dua proyek Dareindo: Akar Bambu memulihkan lahan rawan longsor lewat agroforestri bersama warga, dan Benih menghubungkan para penggiat lingkungan.">
-<meta property="og:title" content="Proyek · Daya Reforestasi Indonesia">
-<meta property="og:description" content="Dua proyek Dareindo: Akar Bambu memulihkan lahan rawan longsor lewat agroforestri bersama warga, dan Benih menghubungkan para penggiat lingkungan.">
-<meta property="og:url" content="https://dareindo.com/proyek/">
+<title>Akar Bambu · Daya Reforestasi Indonesia</title>
+<meta name="description" content="Akar Bambu memulihkan lahan gundul dan rawan longsor menjadi hutan komoditas yang dirawat dan dipanen bersama warga.">
+<meta property="og:title" content="Akar Bambu · Daya Reforestasi Indonesia">
+<meta property="og:description" content="Akar Bambu memulihkan lahan gundul dan rawan longsor menjadi hutan komoditas yang dirawat dan dipanen bersama warga.">
+<meta property="og:url" content="https://dareindo.com/akar-bambu/">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313281F'/%3E%3Cpath d='M5 23c4-7 8-10 11-10s7 3 11 10' fill='none' stroke='%23E3A72F' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M9 26c3-4 5-6 7-6s4 2 7 6' fill='none' stroke='%23EEF1EC' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://dareindo.com/akar-bambu/">
+<link rel="alternate" hreflang="id" href="https://dareindo.com/akar-bambu/">
+<link rel="alternate" hreflang="en" href="https://dareindo.com/en/akar-bambu/">
+<link rel="alternate" hreflang="de" href="https://dareindo.com/de/akar-bambu/">
+<link rel="alternate" hreflang="x-default" href="https://dareindo.com/akar-bambu/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313281F'/%3E%3Cpath d='M5 23c4-7 8-10 11-10s7 3 11 10' fill='none' stroke='%238CD94A' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M9 26c3-4 5-6 7-6s4 2 7 6' fill='none' stroke='%23EEF1EC' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/situs.css">
 <style>
-  .proyek-kepala{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,7vw,88px)}
-  .proyek-kepala .foto{aspect-ratio:4/3}
-  .proyek-kepala h2{font-size:clamp(2.4rem,5vw,3.8rem)}
-  .proyek-kepala .lead{margin-top:1.2rem}
-  .proyek-kepala .status{margin-bottom:1rem;color:var(--tanah)}
-  .gelap .proyek-kepala .status{color:var(--kunyit)}
-  .tanaman{display:grid;grid-template-columns:repeat(2,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan)}
-  .tanaman li{padding:1rem 1rem 1rem 0;border-bottom:1px solid var(--garis)}
-  .tanaman b{display:block;font:400 1.3rem var(--display)}
-  .tanaman span{font-size:.95rem;color:#33463C}
-  .angka-proyek{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--hutan)}
-  .angka-proyek div{padding:1rem 1rem 0 0}
-  .angka-proyek dt{font-size:.88rem;color:var(--tanah)}
-  .angka-proyek dd{font:400 clamp(1.4rem,2.6vw,1.9rem)/1.2 var(--display);font-variant-numeric:tabular-nums;margin-top:.3rem}
-  .angka-proyek dd.kosong{color:#A9B3A6}
-  .logo-benih{width:120px;height:120px}
-  @media (max-width:860px){.proyek-kepala{grid-template-columns:1fr}.tanaman,.angka-proyek{grid-template-columns:1fr}}
+.proyek-kepala{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,7vw,88px)}
+.proyek-kepala .foto{aspect-ratio:4/3}
+.proyek-kepala h1{font-size:clamp(2.4rem,5vw,3.8rem)}
+.proyek-kepala .lead{margin-top:1.2rem}
+.proyek-kepala .status{margin-bottom:1rem;color:var(--tanah)}
+.gelap .proyek-kepala .status{color:var(--kunyit)}
+.tanaman{display:grid;grid-template-columns:repeat(2,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan)}
+.tanaman li{padding:1rem 1rem 1rem 0;border-bottom:1px solid var(--garis)}
+.tanaman b{display:block;font:400 1.3rem var(--display)}
+.tanaman span{font-size:.95rem;color:#33463C}
+.angka-proyek{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--hutan)}
+.angka-proyek div{padding:1rem 1rem 0 0}
+.angka-proyek dt{font-size:.88rem;color:var(--tanah)}
+.angka-proyek dd{font:400 clamp(1.4rem,2.6vw,1.9rem)/1.2 var(--display);font-variant-numeric:tabular-nums;margin-top:.3rem}
+.angka-proyek dd.kosong{color:#A9B3A6}
+.logo-benih{width:120px;height:120px}
+@media (max-width:860px){.proyek-kepala{grid-template-columns:1fr}.tanaman,.angka-proyek{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -39,46 +45,34 @@
 <header>
   <div class="wrap nav">
     <a class="merek" href="/" aria-label="Daya Reforestasi Indonesia, ke Beranda">
-      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#13281F"/><path d="M5 23c4-7 8-10 11-10s7 3 11 10" fill="none" stroke="#E3A72F" stroke-width="2.4" stroke-linecap="round"/><path d="M9 26c3-4 5-6 7-6s4 2 7 6" fill="none" stroke="#EEF1EC" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#13281F"/><path d="M5 23c4-7 8-10 11-10s7 3 11 10" fill="none" stroke="#8CD94A" stroke-width="2.4" stroke-linecap="round"/><path d="M9 26c3-4 5-6 7-6s4 2 7 6" fill="none" stroke="#EEF1EC" stroke-width="2.4" stroke-linecap="round"/></svg>
       <div><b>Dareindo</b><span>Daya Reforestasi Indonesia</span></div>
     </a>
     <button class="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <ul class="menu" id="menu">
-      <li><a href="/proyek/" aria-current="page">Proyek</a></li>
+      <li><a href="/akar-bambu/" aria-current="page">Akar Bambu</a></li>
+      <li><a href="/benih/">Benih</a></li>
       <li><a href="/transparansi/">Transparansi</a></li>
-      <li><a href="/#kolaborasi">Kolaborasi</a></li>
       <li><a href="/kontak/">Kontak</a></li>
-      <li><a class="btn btn-utama" href="/lapor-lahan/">Laporkan Lahan</a></li>
+      <li><a class="btn btn-utama" href="/kontribusi/">Kontribusi</a></li>
+      <li class="bahasa" aria-label="Pilih bahasa"><a href="/akar-bambu/" hreflang="id" lang="id" aria-current="true" title="Bahasa Indonesia">ID</a><a href="/en/akar-bambu/" hreflang="en" lang="en" title="English">EN</a><a href="/de/akar-bambu/" hreflang="de" lang="de" title="Deutsch">DE</a></li>
     </ul>
   </div>
 </header>
 
 <main id="top">
 
-<section class="kepala">
-  <div class="wrap">
-    <p class="label">Proyek</p>
-    <h1>Dua proyek, satu tujuan.</h1>
-    <p class="lead">Akar Bambu memulihkan lahan kritis menjadi hutan yang memberi penghasilan bagi warga. Benih mempertemukan para penggiat lingkungan agar tidak lagi bergerak sendiri-sendiri.</p>
-    <ul class="lompat">
-      <li><a href="#akar-bambu">Akar Bambu</a></li>
-      <li><a href="#benih">Benih</a></li>
-    </ul>
-  </div>
-</section>
-
-<!-- Akar Bambu -->
 <section id="akar-bambu">
   <div class="wrap">
     <div class="proyek-kepala">
       <div>
         <span class="status">Mencari lokasi pertama</span>
-        <h2>Akar Bambu</h2>
+        <h1>Akar Bambu</h1>
         <p class="lead">Mengembalikan lahan gundul, terutama di perbukitan yang rawan longsor, menjadi hutan komoditas yang dirawat dan dipanen bersama warga.</p>
         <div class="aksi">
-          <a class="btn btn-utama" href="/lapor-lahan/">Laporkan lahan di dekat Anda</a>
+          <a class="btn btn-utama" href="/kontribusi/#lahan">Beritahu kami lahan di dekat Anda</a>
         </div>
       </div>
       <figure>
@@ -127,10 +121,10 @@
     </div>
 
     <div class="bagian">
-      <h2>Dari laporan sampai panen</h2>
+      <h2>Dari informasi warga sampai panen</h2>
       <div>
         <ol class="langkah">
-          <li><b>Laporan warga</b><span>Lahan kritis dilaporkan lewat situs ini.</span></li>
+          <li><b>Informasi warga</b><span>Warga memberi tahu kami lewat situs ini.</span></li>
           <li><b>Survei</b><span>Tim memeriksa lahan, tanah, dan kepemilikannya.</span></li>
           <li><b>Persiapan lahan</b><span>Bersama pemilik lahan dan warga sekitar.</span></li>
           <li><b>Tanam</b><span>Bibit penjaga tanah dan komoditas.</span></li>
@@ -143,8 +137,8 @@
     <div class="bagian">
       <h2>Lokasi</h2>
       <div>
-        <p class="kosong-info"><b>Belum ada lokasi.</b> Lokasi pertama Akar Bambu akan dipilih dari laporan warga. Peta lokasi akan tampil di sini setelah lokasi pertama ditetapkan.</p>
-        <p><a class="tautan" href="/lapor-lahan/">Tahu lahan rawan longsor? Beritahu kami</a></p>
+        <p class="kosong-info"><b>Belum ada lokasi.</b> Lokasi pertama Akar Bambu akan dipilih dari informasi warga. Peta lokasi akan tampil di sini setelah lokasi pertama ditetapkan.</p>
+        <p><a class="tautan" href="/kontribusi/#lahan">Tahu lahan rawan longsor? Beritahu kami</a></p>
       </div>
     </div>
 
@@ -164,74 +158,14 @@
       <h2>Ikut terlibat</h2>
       <div>
         <ul class="daftar">
-          <li><b>Warga</b><span>Laporkan lahan kritis di sekitar Anda, atau daftar sebagai pekerja saat proyek dimulai di daerah Anda.</span></li>
+          <li><b>Warga</b><span>Beri tahu kami lahan kritis di sekitar Anda, daftar sebagai kontributor, atau bekerja di proyek saat dimulai di daerah Anda.</span></li>
           <li><b>Badan usaha</b><span>Kemitraan penanaman dengan laporan dampak yang bisa diperiksa siapa saja.</span></li>
           <li><b>Pembeli hasil hutan</b><span>Bambu, katuk, vanili, dan hasil panen lain langsung dari lahan yang dipulihkan.</span></li>
         </ul>
         <div class="aksi">
-          <a class="btn btn-utama" href="/lapor-lahan/">Laporkan Lahan</a>
+          <a class="btn btn-utama" href="/kontribusi/">Kontribusi</a>
           <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Kemitraan%20Akar%20Bambu">Ajukan Kemitraan</a>
           <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Pembelian%20hasil%20panen%20Akar%20Bambu">Beli Hasil Panen</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Benih -->
-<section class="gelap on-dark" id="benih">
-  <div class="wrap">
-    <div class="proyek-kepala">
-      <div>
-        <span class="status">Aplikasi web, segera hadir</span>
-        <h2>Benih</h2>
-        <p class="lead">Ruang temu bagi para penggiat lingkungan. Dari hutan, laut, hingga keseimbangan ruang hidup urban.</p>
-      </div>
-      <svg class="logo-benih" viewBox="0 0 84 84" role="img" aria-label="Logo Benih: benih yang mulai tumbuh">
-        <ellipse cx="42" cy="62" rx="15" ry="11" fill="#B88A5A"/>
-        <path d="M33 60c5-3 13-3 18 0" stroke="#7A5C43" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M42 52V30" stroke="#E3A72F" stroke-width="3" stroke-linecap="round"/>
-        <path d="M42 36c-2-9-9-13-17-12 1 8 8 13 17 12z" fill="#A9CFA0"/>
-        <path d="M42 31c2-10 10-15 19-14-1 9-9 15-19 14z" fill="#E3A72F"/>
-      </svg>
-    </div>
-
-    <div class="bagian">
-      <h2>Masalahnya</h2>
-      <div>
-        <p class="lead">Banyak orang dan komunitas sudah bergerak untuk lingkungan. Sayangnya mereka masih sering bergerak sendiri-sendiri.</p>
-        <p>Kegiatan bersih pantai, penanaman, atau edukasi sering tidak terdengar oleh orang yang sebenarnya ingin ikut. Badan usaha yang ingin terlibat juga sulit menemukan komunitas yang tepat.</p>
-      </div>
-    </div>
-
-    <div class="bagian">
-      <h2>Yang akan ada di Benih</h2>
-      <div>
-        <ul class="daftar">
-          <li><b>Profil komunitas</b><span>Setiap komunitas dan penggiat punya halaman sendiri untuk memperkenalkan kegiatannya.</span></li>
-          <li><b>Membuat dan mengikuti kegiatan</b><span>Umumkan kegiatan Anda, atau temukan kegiatan yang bisa Anda ikuti.</span></li>
-          <li><b>Kategori</b><span>Hutan, laut, sampah, ruang hidup urban, dan lainnya, agar mudah menemukan yang sesuai minat.</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="bagian">
-      <h2>Cara kerjanya</h2>
-      <div>
-        <ol class="langkah">
-          <li><b>Daftar</b><span>Sebagai perorangan, komunitas, atau badan usaha.</span></li>
-          <li><b>Temukan atau buat kegiatan</b><span>Sesuai lokasi dan kategori.</span></li>
-          <li><b>Terhubung</b><span>Bergerak bersama penggiat lain.</span></li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="bagian">
-      <h2>Daftar tunggu</h2>
-      <div>
-        <p class="lead">Benih sedang dibangun. Tinggalkan email Anda dan kami kabari saat Benih siap dipakai.</p>
-        <div class="aksi">
-          <a class="btn btn-utama" href="mailto:halo@dareindo.com?subject=Daftar%20kabar%20peluncuran%20Benih">Daftar untuk kabar peluncuran</a>
         </div>
       </div>
     </div>
@@ -258,10 +192,10 @@
       <div>
         <h4>Jelajahi</h4>
         <ul>
-          <li><a href="/proyek/">Proyek</a></li>
+          <li><a href="/akar-bambu/">Akar Bambu</a></li>
+          <li><a href="/benih/">Benih</a></li>
           <li><a href="/transparansi/">Transparansi</a></li>
-          <li><a href="/lapor-lahan/">Laporkan Lahan</a></li>
-          <li><a href="/#kolaborasi">Kolaborasi</a></li>
+          <li><a href="/kontribusi/">Kontribusi</a></li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,9 @@
+.keperluan{display:grid;grid-template-columns:repeat(2,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan)}
+.keperluan li{padding:1.2rem 1.2rem 1.2rem 0;border-bottom:1px solid var(--garis);display:flex;flex-direction:column;gap:.4rem}
+.keperluan h3{font-size:1.25rem}
+.keperluan p{font-size:.95rem;color:#33463C;flex:1}
+.identitas{display:grid;grid-template-columns:auto 1fr;gap:0;border-top:2px solid var(--hutan)}
+.identitas dt,.identitas dd{padding:.9rem 0;border-bottom:1px solid var(--garis)}
+.identitas dt{font-weight:600;padding-right:1.6rem}
+.identitas dd.kosong{color:var(--tanah)}
+@media (max-width:640px){.keperluan{grid-template-columns:1fr}.identitas{grid-template-columns:1fr}.identitas dt{border-bottom:0;padding-bottom:0}}

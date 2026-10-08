@@ -1,0 +1,59 @@
+{
+  "id": {
+    "nama_bahasa": "Bahasa Indonesia",
+    "pilih_bahasa": "Pilih bahasa",
+    "menu": {"akar_bambu": "Akar Bambu", "benih": "Benih", "transparansi": "Transparansi", "kontak": "Kontak", "kontribusi": "Kontribusi"},
+    "tata_letak": {
+      "ke_beranda": "Daya Reforestasi Indonesia, ke Beranda",
+      "buka_menu": "Buka menu",
+      "slogan": "Tidak ada ekonomi tanpa ruang hidup yang lestari.",
+      "pembukuan_terbuka": "Seluruh pembukuan kami terbuka untuk publik.",
+      "periksa": "Periksa di sini",
+      "kontak": "Kontak",
+      "alamat": "Alamat terdaftar: segera diumumkan",
+      "kontak_perusahaan": "Kontak &amp; Perusahaan",
+      "jelajahi": "Jelajahi",
+      "transparansi": "Transparansi",
+      "kontribusi": "Kontribusi",
+      "foto": "Foto ilustrasi dari Unsplash, sampai foto lapangan kami tersedia."
+    }
+  },
+  "en": {
+    "nama_bahasa": "English",
+    "pilih_bahasa": "Choose language",
+    "menu": {"akar_bambu": "Akar Bambu", "benih": "Benih", "transparansi": "Transparency", "kontak": "Contact", "kontribusi": "Contribute"},
+    "tata_letak": {
+      "ke_beranda": "Daya Reforestasi Indonesia, go to home page",
+      "buka_menu": "Open menu",
+      "slogan": "There is no economy without a living space that endures.",
+      "pembukuan_terbuka": "All our books are open to the public.",
+      "periksa": "Check them here",
+      "kontak": "Contact",
+      "alamat": "Registered address: to be announced",
+      "kontak_perusahaan": "Contact &amp; Company",
+      "jelajahi": "Explore",
+      "transparansi": "Transparency",
+      "kontribusi": "Contribute",
+      "foto": "Illustrative photos from Unsplash until our own field photos are available."
+    }
+  },
+  "de": {
+    "nama_bahasa": "Deutsch",
+    "pilih_bahasa": "Sprache wählen",
+    "menu": {"akar_bambu": "Akar Bambu", "benih": "Benih", "transparansi": "Transparenz", "kontak": "Kontakt", "kontribusi": "Mitmachen"},
+    "tata_letak": {
+      "ke_beranda": "Daya Reforestasi Indonesia, zur Startseite",
+      "buka_menu": "Menü öffnen",
+      "slogan": "Keine Wirtschaft ohne einen Lebensraum, der Bestand hat.",
+      "pembukuan_terbuka": "Unsere gesamte Buchhaltung ist öffentlich einsehbar.",
+      "periksa": "Hier prüfen",
+      "kontak": "Kontakt",
+      "alamat": "Eingetragene Anschrift: wird bekanntgegeben",
+      "kontak_perusahaan": "Kontakt &amp; Unternehmen",
+      "jelajahi": "Entdecken",
+      "transparansi": "Transparenz",
+      "kontribusi": "Mitmachen",
+      "foto": "Illustrative Fotos von Unsplash, bis eigene Fotos aus dem Feld vorliegen."
+    }
+  }
+}
