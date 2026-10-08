@@ -11,6 +11,7 @@ Website resmi PT Daya Reforestasi Indonesia, perusahaan impact-driven di bidang 
 | `transparansi/` | Halaman Transparansi: ringkasan keuangan, arus dana per proyek, dampak, tabel transaksi |
 | `kontribusi/` | Beritahu kami lahan gundul atau rawan longsor, daftar sebagai kontributor, kemitraan (dikirim lewat email ke halo@dareindo.com) |
 | `kontak/` | Kontak & identitas perusahaan |
+| `privasi/`, `syarat/` | Kebijakan Privasi dan Syarat Penggunaan (draf: bagian kuning menunggu data PT dan tinjauan hukum; tersembunyi dari mesin pencari sampai final) |
 | `en/`, `de/` | Versi bahasa Inggris dan Jerman dari semua halaman |
 | `_src/` | Sumber semua halaman. Halaman HTML di atas dibuat dari sini |
 | `assets/situs.css`, `assets/situs.js` | Gaya, menu, dan pembaca Buku Kas Publik yang dipakai semua halaman |

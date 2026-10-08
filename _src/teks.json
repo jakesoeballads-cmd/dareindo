@@ -15,7 +15,9 @@
       "jelajahi": "Jelajahi",
       "transparansi": "Transparansi",
       "kontribusi": "Kontribusi",
-      "foto": "Foto ilustrasi dari Unsplash, sampai foto lapangan kami tersedia."
+      "foto": "Foto ilustrasi dari Unsplash, sampai foto lapangan kami tersedia.",
+      "privasi": "Kebijakan Privasi",
+      "syarat": "Syarat Penggunaan"
     }
   },
   "en": {
@@ -34,7 +36,9 @@
       "jelajahi": "Explore",
       "transparansi": "Transparency",
       "kontribusi": "Contribute",
-      "foto": "Illustrative photos from Unsplash until our own field photos are available."
+      "foto": "Illustrative photos from Unsplash until our own field photos are available.",
+      "privasi": "Privacy Policy",
+      "syarat": "Terms of Use"
     }
   },
   "de": {
@@ -53,7 +57,9 @@
       "jelajahi": "Entdecken",
       "transparansi": "Transparenz",
       "kontribusi": "Mitmachen",
-      "foto": "Illustrative Fotos von Unsplash, bis eigene Fotos aus dem Feld vorliegen."
+      "foto": "Illustrative Fotos von Unsplash, bis eigene Fotos aus dem Feld vorliegen.",
+      "privasi": "Datenschutzerklärung",
+      "syarat": "Nutzungsbedingungen"
     }
   }
 }

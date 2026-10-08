@@ -92,6 +92,8 @@ footer{background:var(--hutan);color:#C9D4CA;padding-block:56px 32px;font-size:.
 .kaki a{text-decoration:none}
 .kaki a:hover{color:var(--kunyit)}
 .legal{padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.82rem;color:#93A597}
+.legal a{text-decoration:none}
+.legal a:hover{color:var(--kunyit)}
 @media (max-width:760px){.kaki{grid-template-columns:1fr}}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
