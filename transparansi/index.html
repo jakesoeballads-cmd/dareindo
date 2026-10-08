@@ -1,0 +1,353 @@
+<!doctype html>
+<!-- Dibuat otomatis oleh _src/build.py. Jangan edit file ini langsung: ubah _src/, lalu jalankan python3 _src/build.py -->
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transparansi · Daya Reforestasi Indonesia</title>
+<meta name="description" content="Buku Kas Publik PT Daya Reforestasi Indonesia: ringkasan keuangan, arus dana per proyek, laporan dampak, dan setiap transaksi yang sudah diverifikasi.">
+<meta property="og:title" content="Transparansi · Daya Reforestasi Indonesia">
+<meta property="og:description" content="Buku Kas Publik PT Daya Reforestasi Indonesia: ringkasan keuangan, arus dana per proyek, laporan dampak, dan setiap transaksi yang sudah diverifikasi.">
+<meta property="og:url" content="https://dareindo.com/transparansi/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://dareindo.com/transparansi/">
+<link rel="alternate" hreflang="id" href="https://dareindo.com/transparansi/">
+<link rel="alternate" hreflang="en" href="https://dareindo.com/en/transparansi/">
+<link rel="alternate" hreflang="de" href="https://dareindo.com/de/transparansi/">
+<link rel="alternate" hreflang="x-default" href="https://dareindo.com/transparansi/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313281F'/%3E%3Cpath d='M5 23c4-7 8-10 11-10s7 3 11 10' fill='none' stroke='%238CD94A' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M9 26c3-4 5-6 7-6s4 2 7 6' fill='none' stroke='%23EEF1EC' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/situs.css">
+<style>
+.sikap{columns:2 30ch;column-gap:clamp(32px,5vw,64px);margin-top:2rem}
+.sikap p{margin-bottom:1rem;break-inside:avoid}
+.buku{margin-top:0}
+.baris.total dt{font-weight:700}
+@media (min-width:1000px){
+  .buku dl{display:grid;grid-template-columns:1fr 1fr}
+  .buku .baris{border-right:1px solid #DCE2D8}
+  .buku .baris:nth-child(2n){border-right:0}
+}
+.saring{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-bottom:1rem}
+.saring label{font-size:.85rem;font-weight:600;display:grid;gap:.3rem}
+@media (max-width:760px){.saring{grid-template-columns:1fr}}
+.jenis-masuk{color:var(--lumut);font-weight:600}
+.jenis-keluar{color:#9A4B22;font-weight:600}
+.dampak{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;border-top:2px solid var(--hutan)}
+.dampak div{padding:1rem 1rem 1rem 0;border-bottom:1px solid var(--garis)}
+.dampak dt{font-size:.9rem;color:var(--tanah)}
+.dampak dd{font:400 1.9rem/1.2 var(--display);font-variant-numeric:tabular-nums;margin-top:.2rem}
+.dampak dd small{font:400 .9rem var(--body);color:var(--tanah);margin-left:.3rem}
+.dampak dd.kosong{color:#A9B3A6}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="merek" href="/" aria-label="Daya Reforestasi Indonesia, ke Beranda">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#13281F"/><path d="M5 23c4-7 8-10 11-10s7 3 11 10" fill="none" stroke="#8CD94A" stroke-width="2.4" stroke-linecap="round"/><path d="M9 26c3-4 5-6 7-6s4 2 7 6" fill="none" stroke="#EEF1EC" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <div><b>Dareindo</b><span>Daya Reforestasi Indonesia</span></div>
+    </a>
+    <button class="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="/akar-bambu/">Akar Bambu</a></li>
+      <li><a href="/benih/">Benih</a></li>
+      <li><a href="/transparansi/" aria-current="page">Transparansi</a></li>
+      <li><a href="/kontak/">Kontak</a></li>
+      <li><a class="btn btn-utama" href="/kontribusi/">Kontribusi</a></li>
+      <li class="bahasa" aria-label="Pilih bahasa"><a href="/transparansi/" hreflang="id" lang="id" aria-current="true" title="Bahasa Indonesia">ID</a><a href="/en/transparansi/" hreflang="en" lang="en" title="English">EN</a><a href="/de/transparansi/" hreflang="de" lang="de" title="Deutsch">DE</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="kepala">
+  <div class="wrap">
+    <p class="label">Transparansi</p>
+    <h1>Seluruh pembukuan kami terbuka untuk Anda.</h1>
+    <p class="lead">Setiap rupiah yang masuk dan keluar dicatat di Buku Kas Publik, lengkap dengan bukti, dan tampil di halaman ini setelah diperiksa orang kedua.</p>
+    <ul class="lompat">
+      <li><a href="#ringkasan">Ringkasan keuangan</a></li>
+      <li><a href="#per-proyek">Arus dana per proyek</a></li>
+      <li><a href="#dampak">Laporan dampak</a></li>
+      <li><a href="#transaksi">Tabel transaksi</a></li>
+      <li><a href="#arsip">Arsip dokumen</a></li>
+      <li><a href="#metodologi">Metodologi</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" style="padding-bottom:0">
+  <div class="wrap">
+    <h2 style="max-width:22ch">Mengapa perusahaan membuka pembukuannya?</h2>
+    <div class="sikap">
+      <p class="lead">Kami perseroan terbatas, bukan yayasan. Kami mencari laba, dan kami ingin Anda bisa melihat dari mana laba itu datang dan ke mana ia mengalir.</p>
+      <p>Pemulihan lingkungan sering diminta untuk dipercaya begitu saja. Kami memilih jalan sebaliknya: seluruh anggaran, biaya operasional, dan pendapatan manajemen bisa diperiksa oleh investor, mitra, warga, dan siapa pun yang ingin tahu.</p>
+      <p>Angka di halaman ini diambil langsung dari Buku Kas Publik yang diisi tim kami. Jika ada yang janggal, tanyakan. Kami akan menjawab dengan bukti.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="bagian" id="ringkasan" style="grid-template-columns:minmax(0,1fr)">
+    <div>
+      <h2>Ringkasan keuangan</h2>
+      <p class="muted">Sejak awal pencatatan publik. Berbasis kas: dicatat saat uang benar-benar masuk atau keluar.</p>
+    </div>
+    <div class="buku" aria-labelledby="buku-judul">
+      <div class="buku-kepala">
+        <b id="buku-judul">Buku Kas Publik</b>
+        <span>Pencatatan publik dimulai Oktober 2026</span>
+      </div>
+      <dl>
+        <div class="baris"><dt>Pendapatan usaha</dt><dd class="kosong" data-kunci="pendapatan">Menunggu</dd></div>
+        <div class="baris"><dt>Pendanaan &amp; modal</dt><dd class="kosong" data-kunci="modal">Menunggu</dd></div>
+        <div class="baris"><dt>Biaya proyek<small>Langsung ke lapangan</small></dt><dd class="kosong" data-kunci="proyek">Menunggu</dd></div>
+        <div class="baris"><dt>Biaya operasional</dt><dd class="kosong" data-kunci="operasional">Menunggu</dd></div>
+        <div class="baris"><dt>Pajak</dt><dd class="kosong" data-kunci="pajak">Menunggu</dd></div>
+        <div class="baris"><dt>Porsi pengeluaran untuk proyek<small>Dari seluruh uang keluar</small></dt><dd class="kosong" data-kunci="porsi">Menunggu</dd></div>
+        <div class="baris total"><dt>Total uang masuk</dt><dd class="kosong" data-kunci="masuk">Menunggu</dd></div>
+        <div class="baris total"><dt>Total uang keluar</dt><dd class="kosong" data-kunci="keluar">Menunggu</dd></div>
+        <div class="baris total"><dt>Laba / (rugi) usaha<small>Pendapatan usaha dikurangi uang keluar</small></dt><dd class="kosong" data-kunci="laba">Menunggu</dd></div>
+        <div class="baris total"><dt>Saldo kas</dt><dd class="kosong" data-kunci="saldo">Menunggu</dd></div>
+      </dl>
+      <div class="buku-kaki">
+        <span class="stempel" aria-hidden="true">Hanya data terverifikasi</span>
+        <span id="buku-catatan" style="flex:1;min-width:200px">Angka akan tampil di sini setelah entri pertama diverifikasi.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bagian">
+    <div>
+      <h2>Ke mana laba kami mengalir</h2>
+    </div>
+    <div>
+      <p class="lead">Kebijakan alokasi laba sedang kami susun. Begitu disepakati, rinciannya akan kami umumkan di sini, termasuk porsi yang kembali ke proyek dan ke warga.</p>
+    </div>
+  </div>
+
+  <div class="bagian" id="per-proyek">
+    <div>
+      <h2>Arus dana per proyek</h2>
+      <p class="muted">Uang masuk dan keluar untuk setiap proyek, serta porsinya dari seluruh pengeluaran.</p>
+    </div>
+    <div>
+      <div class="tabel-wadah">
+        <table>
+          <thead><tr><th>Proyek</th><th class="angka-sel">Uang masuk</th><th class="angka-sel">Uang keluar</th><th>Porsi dari total keluar</th></tr></thead>
+          <tbody id="tabel-proyek">
+            <tr><td>Akar Bambu</td><td class="angka-sel muted">Menunggu</td><td class="angka-sel muted">Menunggu</td><td class="muted">Menunggu</td></tr>
+            <tr><td>Benih</td><td class="angka-sel muted">Menunggu</td><td class="angka-sel muted">Menunggu</td><td class="muted">Menunggu</td></tr>
+            <tr><td>Lapor Lahan &amp; Riset</td><td class="angka-sel muted">Menunggu</td><td class="angka-sel muted">Menunggu</td><td class="muted">Menunggu</td></tr>
+            <tr><td>Umum Perusahaan</td><td class="angka-sel muted">Menunggu</td><td class="angka-sel muted">Menunggu</td><td class="muted">Menunggu</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="bagian" id="dampak">
+    <div>
+      <h2>Laporan dampak</h2>
+      <p class="muted">Capaian di lapangan yang sudah diverifikasi, dihitung sejak awal pencatatan.</p>
+    </div>
+    <div>
+      <dl class="dampak" id="daftar-dampak">
+        <div><dt>Pohon ditanam</dt><dd class="kosong">Menunggu</dd></div>
+        <div><dt>Luas lahan dipulihkan</dt><dd class="kosong">Menunggu</dd></div>
+        <div><dt>Pekerja lokal terlibat</dt><dd class="kosong">Menunggu</dd></div>
+        <div><dt>Hari kerja warga</dt><dd class="kosong">Menunggu</dd></div>
+        <div><dt>Laporan lahan diterima</dt><dd class="kosong">Menunggu</dd></div>
+        <div><dt>Lahan disurvei</dt><dd class="kosong">Menunggu</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="bagian" id="transaksi" style="grid-template-columns:minmax(0,1fr)">
+    <div>
+      <h2>Tabel transaksi</h2>
+      <p class="muted">Setiap uang masuk dan keluar yang sudah diverifikasi, beserta tautan buktinya. Upah dicatat per peran, bukan per nama.</p>
+    </div>
+    <div>
+      <div class="saring">
+        <label>Cari<input type="search" id="cari" placeholder="Keterangan, kategori, atau no. bukti"></label>
+        <label>Bulan<select id="saring-bulan"><option value="">Semua bulan</option></select></label>
+        <label>Proyek<select id="saring-proyek"><option value="">Semua proyek</option></select></label>
+      </div>
+      <div class="tabel-wadah">
+        <table>
+          <thead><tr><th>Tanggal</th><th>No. bukti</th><th>Jenis</th><th>Kategori</th><th>Proyek</th><th>Keterangan</th><th class="angka-sel">Jumlah (Rp)</th><th>Bukti</th></tr></thead>
+          <tbody id="tabel-transaksi">
+            <tr><td colspan="8" class="muted">Transaksi akan tampil di sini setelah entri pertama diverifikasi.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="catatan" id="jumlah-transaksi" style="margin-top:.8rem"></p>
+    </div>
+  </div>
+
+  <div class="bagian" id="arsip">
+    <div>
+      <h2>Arsip dokumen</h2>
+      <p class="muted">Laporan bulanan, laporan tahunan, dan hasil audit dalam format PDF.</p>
+    </div>
+    <div>
+      <p class="kosong-info"><b>Belum ada dokumen.</b> Laporan bulanan pertama akan terbit setelah bulan pencatatan pertama ditutup.</p>
+      <p><a class="tautan" href="mailto:halo@dareindo.com?subject=Permintaan%20Buku%20Kas%20Publik">Minta salinan pembukuan</a></p>
+    </div>
+  </div>
+
+  <div class="bagian" id="metodologi">
+    <div>
+      <h2>Metodologi</h2>
+      <p class="muted">Cara data dikumpulkan, siapa yang memeriksa, dan seberapa sering diperbarui.</p>
+    </div>
+    <div>
+      <ul class="daftar">
+        <li><b>Satu baris untuk setiap transaksi</b><span>Setiap uang masuk atau keluar dicatat di Buku Kas Publik (Google Sheets) dengan tanggal, nomor bukti, kategori, proyek, dan jumlahnya.</span></li>
+        <li><b>Ada bukti untuk setiap angka</b><span>Foto nota atau kuitansi disimpan di folder bersama dan ditautkan ke barisnya.</span></li>
+        <li><b>Diperiksa orang kedua</b><span>Transaksi berstatus "Menunggu Verifikasi" sampai orang selain pencatat mencocokkan bukti dan jumlahnya. Hanya data berstatus Terverifikasi yang tampil di sini.</span></li>
+        <li><b>Data pribadi tidak ditampilkan</b><span>Upah dicatat per peran atau kelompok, bukan per nama orang.</span></li>
+        <li><b>Diperbarui langsung</b><span>Halaman ini membaca Buku Kas Publik setiap kali dibuka, jadi angka yang Anda lihat adalah angka terbaru.</span></li>
+        <li><b>Dua lapis pembukuan</b><span>Buku Kas Publik berjalan berdampingan dengan pembukuan resmi perusahaan untuk keperluan pajak.</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="kaki">
+      <div>
+        <p class="slogan">Tidak ada ekonomi tanpa ruang hidup yang lestari.</p>
+        <p style="margin-top:1rem">Seluruh pembukuan kami terbuka untuk publik. <a class="tautan" href="/transparansi/">Periksa di sini</a></p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li>Alamat terdaftar: segera diumumkan</li>
+          <li><a href="/kontak/">Kontak &amp; Perusahaan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <ul>
+          <li><a href="/akar-bambu/">Akar Bambu</a></li>
+          <li><a href="/benih/">Benih</a></li>
+          <li><a href="/transparansi/">Transparansi</a></li>
+          <li><a href="/kontribusi/">Kontribusi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="tahun">2026</span> PT Daya Reforestasi Indonesia</span>
+      <span>Foto ilustrasi dari Unsplash, sampai foto lapangan kami tersedia.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/situs.js"></script>
+<script>
+const rp = n => new Intl.NumberFormat(LOKAL).format(n);
+/* Rupiah selalu bulat, jadi cukup ambil digitnya ("Rp 1.250.000" → 1250000). */
+const rupiah = s => Number(String(s).replace(/[^\d]/g, '')) || 0;
+/* Porsi bisa "12,5%" atau "0.125", tergantung format sel. */
+const persen = s => {
+  const t = String(s).trim(), n = parseFloat(t.replace(',', '.').replace(/[^\d.-]/g, ''));
+  return isFinite(n) ? (t.includes('%') ? n : n * 100) : 0;
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+
+/* Arus dana per proyek & dampak: dari tab Ringkasan */
+ringkasanSiap.then(rows => {
+  if (!rows) return;
+  const i = rows.findIndex(r => (r[0] || '').trim() === 'Proyek' && (r[1] || '').trim() === 'Uang Masuk');
+  if (i >= 0) {
+    const proyek = [];
+    for (const r of rows.slice(i + 1)) { if (!(r[0] || '').trim()) break; proyek.push(r); }
+    if (proyek.length) document.getElementById('tabel-proyek').innerHTML = proyek.map(r => {
+      const porsi = (r[4] || '').trim(), p = Math.min(100, Math.max(0, persen(porsi)));
+      return `<tr><td>${esc(r[0])}</td><td class="angka-sel">${esc(r[1] || '')}</td><td class="angka-sel">${esc(r[2] || '')}</td>` +
+        `<td><div style="display:flex;gap:10px;align-items:center"><div class="batang" style="flex:1"><i style="width:${p}%"></i></div><span>${esc(porsi)}</span></div></td></tr>`;
+    }).join('');
+  }
+  const j = rows.findIndex(r => (r[3] || '').trim() === 'Indikator' && (r[6] || '').trim() === 'Terverifikasi');
+  if (j >= 0) {
+    const dampak = [];
+    for (const r of rows.slice(j + 1)) { if (!(r[3] || '').trim()) break; dampak.push(r); }
+    if (dampak.length) document.getElementById('daftar-dampak').innerHTML = dampak.map(r =>
+      `<div><dt>${esc(r[3])}</dt><dd>${esc(r[6] || '0')}<small>${esc(r[4] || '')}</small></dd></div>`).join('');
+  }
+});
+
+/* Tabel transaksi: dari tab Transaksi, hanya baris Terverifikasi */
+(async function transaksi(){
+  if (!BUKU_KAS.transaksi) return;
+  const tbody = document.getElementById('tabel-transaksi');
+  const info = document.getElementById('jumlah-transaksi');
+  let data;
+  try {
+    const rows = await ambilCSV(BUKU_KAS.transaksi);
+    const h = rows.findIndex(r => r.includes('Tanggal') && r.includes('Status'));
+    if (h < 0) throw new Error('kepala tabel tidak ditemukan');
+    const kol = nama => rows[h].findIndex(c => c.trim().startsWith(nama));
+    const K = { tgl: kol('Tanggal'), bukti: kol('No. Bukti'), jenis: kol('Jenis'), kat: kol('Kategori'), proyek: kol('Proyek'),
+                ket: kol('Keterangan'), jml: kol('Jumlah'), tautan: kol('Tautan Bukti'), status: kol('Status') };
+    data = rows.slice(h + 1)
+      .filter(r => (r[K.status] || '').trim() === 'Terverifikasi' && (r[K.tgl] || '').trim() && !(r[K.ket] || '').includes('[CONTOH]'))
+      .map(r => ({ tgl: r[K.tgl].trim(), bukti: r[K.bukti] || '', jenis: (r[K.jenis] || '').trim(), kat: r[K.kat] || '',
+                   proyek: (r[K.proyek] || '').trim(), ket: r[K.ket] || '', jml: rupiah(r[K.jml]), tautan: (r[K.tautan] || '').trim() }));
+  } catch (e) {
+    tbody.innerHTML = `<tr><td colspan="8" class="muted">${esc(t('gagal_muat'))}</td></tr>`;
+    return;
+  }
+  /* Tanggal dari Google Sheets bisa "1/10/2026" atau "2026-10-01"; kunci bulan = "2026-10". */
+  const kunciBulan = t => {
+    let m = t.match(/^(\d{4})-(\d{1,2})/); if (m) return `${m[1]}-${m[2].padStart(2, '0')}`;
+    m = t.match(/^\d{1,2}[\/.-](\d{1,2})[\/.-](\d{4})/); if (m) return `${m[2]}-${m[1].padStart(2, '0')}`;
+    return '';
+  };
+  const namaBulan = k => new Date(k + '-01T00:00:00').toLocaleDateString(LOKAL, { month: 'long', year: 'numeric' });
+  const isiPilihan = (id, nilai, label) => {
+    const sel = document.getElementById(id);
+    [...new Set(nilai.filter(Boolean))].sort().forEach(v => sel.add(new Option(label(v), v)));
+  };
+  isiPilihan('saring-bulan', data.map(d => kunciBulan(d.tgl)), namaBulan);
+  isiPilihan('saring-proyek', data.map(d => d.proyek), v => v);
+
+  const amanUrl = u => /^https:\/\//.test(u) ? u : '';
+  function gambar(){
+    const q = document.getElementById('cari').value.trim().toLowerCase();
+    const b = document.getElementById('saring-bulan').value;
+    const p = document.getElementById('saring-proyek').value;
+    const hasil = data.filter(d => (!b || kunciBulan(d.tgl) === b) && (!p || d.proyek === p) &&
+      (!q || [d.bukti, d.kat, d.ket, d.proyek].join(' ').toLowerCase().includes(q)));
+    tbody.innerHTML = hasil.length ? hasil.map(d => {
+      const u = amanUrl(d.tautan);
+      return `<tr><td style="white-space:nowrap">${esc(d.tgl)}</td><td>${esc(d.bukti)}</td>` +
+        `<td class="${d.jenis === 'Masuk' ? 'jenis-masuk' : 'jenis-keluar'}">${esc(d.jenis)}</td><td>${esc(d.kat)}</td><td>${esc(d.proyek)}</td>` +
+        `<td>${esc(d.ket)}</td><td class="angka-sel">${d.jenis === 'Keluar' ? '−' : ''}${rp(d.jml)}</td>` +
+        `<td>${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t('lihat'))}</a>` : '<span class="muted">-</span>'}</td></tr>`;
+    }).join('') : `<tr><td colspan="8" class="muted">${esc(t('tidak_cocok'))}</td></tr>`;
+    const masuk = hasil.filter(d => d.jenis === 'Masuk').reduce((a, d) => a + d.jml, 0);
+    const keluar = hasil.filter(d => d.jenis === 'Keluar').reduce((a, d) => a + d.jml, 0);
+    info.textContent = t('ringkas_transaksi', { n: hasil.length, masuk: rp(masuk), keluar: rp(keluar) });
+  }
+  ['cari', 'saring-bulan', 'saring-proyek'].forEach(id => document.getElementById(id).addEventListener('input', gambar));
+  gambar();
+})();
+</script>
+</body>
+</html>

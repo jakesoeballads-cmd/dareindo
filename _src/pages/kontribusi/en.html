@@ -1,0 +1,182 @@
+title: Contribute
+description: Help restore land with Dareindo: tell us about bare or landslide-prone land near you, or sign up as a contributor.
+---
+<section class="kepala">
+  <div class="wrap">
+    <p class="label">Contribute</p>
+    <h1>Every contribution makes a real difference.</h1>
+    <p class="lead">You do not need to be an expert to help restore land. Just tell us about land that needs it, or join us as a contributor with whatever time and skills you have.</p>
+    <ul class="lompat">
+      <li><a href="#lahan">Tell us about bare or landslide-prone land</a></li>
+      <li><a href="#kontributor">Sign up as a contributor</a></li>
+      <li><a href="#kemitraan">Partnerships</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap bab" id="lahan">
+  <h2>Tell us where there is bare or landslide-prone land.</h2>
+  <p class="lead">Land near you could become the next Akar Bambu site. Our team will look into what you send and work out the best way to restore it together with local people.</p>
+
+  <div class="lapor-grid">
+    <form class="formulir" id="form-lahan" novalidate
+          data-judul="Land tip-off" data-pelapor="Sent by" data-anonim="Anonymous" data-foto="(Photos of the land are attached to this email)">
+      <fieldset>
+        <legend>Where is the land?</legend>
+        <div class="kolom">
+          <label for="lokasi">Location</label>
+          <input type="text" id="lokasi" required placeholder="Village, district, regency/city, province">
+          <small>Required.</small>
+        </div>
+        <div class="kolom">
+          <label for="koordinat">Coordinates</label>
+          <div class="gps">
+            <button type="button" class="btn btn-garis" id="tombol-gps">Use my current location</button>
+            <small id="status-gps" aria-live="polite">Use this if you are standing on the land right now.</small>
+          </div>
+          <input type="text" id="koordinat" placeholder="Example: -6.9175, 107.6191">
+        </div>
+        <div class="kolom">
+          <label for="peta">Google Maps link (optional)</label>
+          <input type="url" id="peta" placeholder="https://maps.app.goo.gl/...">
+          <small>In Google Maps, press and hold on the spot, then choose Share.</small>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What is it like?</legend>
+        <div class="kolom">
+          <span class="judul-kolom" id="judul-kondisi">Condition</span>
+          <div class="pilihan" role="group" aria-labelledby="judul-kondisi">
+            <label><input type="checkbox" name="kondisi" value="Bare / no trees"> Bare / no trees</label>
+            <label><input type="checkbox" name="kondisi" value="Landslide-prone slope"> Landslide-prone slope</label>
+            <label><input type="checkbox" name="kondisi" value="Has had a landslide"> Has had a landslide</label>
+            <label><input type="checkbox" name="kondisi" value="Abandoned / not farmed"> Abandoned / not farmed</label>
+            <label><input type="checkbox" name="kondisi" value="Planted with seasonal crops"> Planted with seasonal crops</label>
+            <label><input type="checkbox" name="kondisi" value="Former mine or quarry"> Former mine or quarry</label>
+          </div>
+        </div>
+        <div class="kolom-dua">
+          <div class="kolom">
+            <label for="luas">Rough size</label>
+            <input type="text" id="luas" placeholder="Example: 2 hectares, or one football pitch">
+          </div>
+          <div class="kolom">
+            <label for="kepemilikan">Ownership</label>
+            <select id="kepemilikan">
+              <option value="">Choose if you know</option>
+              <option>Mine / my family’s</option>
+              <option>Another resident’s</option>
+              <option>Village land</option>
+              <option>Customary (adat) land</option>
+              <option>State forest area</option>
+              <option>Company-owned</option>
+              <option>Don’t know</option>
+            </select>
+          </div>
+        </div>
+        <div class="kolom">
+          <label for="cerita">Tell us about it</label>
+          <textarea id="cerita" placeholder="How long has it been like this? What happens in heavy rain? Do people nearby farm it?"></textarea>
+        </div>
+        <p class="kosong-info" style="margin:0"><b>Photos help a lot.</b> Attach them to the email that opens when you press send.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your contact details (optional)</legend>
+        <label class="cek"><input type="checkbox" id="anonim"> <span>I would like to stay anonymous. We will not be able to contact you for a follow-up survey.</span></label>
+        <div class="kolom-dua" id="kolom-kontak">
+          <div class="kolom">
+            <label for="nama">Name</label>
+            <input type="text" id="nama" autocomplete="name">
+          </div>
+          <div class="kolom">
+            <label for="telepon">Phone / WhatsApp</label>
+            <input type="tel" id="telepon" autocomplete="tel">
+          </div>
+        </div>
+        <p class="catatan">Your name and contact details are never made public. We only use them to follow up on this tip-off.</p>
+      </fieldset>
+
+      <div class="pesan-form" id="galat" role="alert" hidden></div>
+      <div class="aksi" style="margin-top:0">
+        <button type="submit" class="btn btn-utama">Send by email</button>
+      </div>
+      <p class="catatan">This button opens your email app with everything filled in, addressed to halo@dareindo.com.</p>
+      <p class="darurat-kecil"><b>Seeing signs of a landslide right now?</b> Contact your local disaster agency (BPBD) or call 112 straight away. This form is not an emergency service.</p>
+
+      <div id="cadangan" hidden>
+        <div class="pesan-form">Email didn’t open? Copy the text below and send it to <a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a>.</div>
+        <textarea id="teks-laporan" readonly aria-label="Text to send" style="margin-top:1rem"></textarea>
+        <div class="aksi" style="margin-top:1rem"><button type="button" class="btn btn-garis" id="tombol-salin">Copy text</button></div>
+      </div>
+    </form>
+
+    <aside class="lapor-samping">
+      <div>
+        <h2>After you tell us</h2>
+        <ol class="langkah" style="margin-top:1rem">
+          <li><b>Received</b><span>Your tip-off arrives and is logged.</span></li>
+          <li><b>Checked</b><span>We match the location and photos.</span></li>
+          <li><b>Surveyed</b><span>Our team visits the land with local people.</span></li>
+          <li><b>Planned together</b><span>With the landowner and the people nearby.</span></li>
+          <li><b>Planted</b><span>Restoration begins.</span></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap bab" id="kontributor">
+  <h2>Sign up as a contributor.</h2>
+  <p class="lead">Contributors are people who help drive land restoration with the time and skills they have. Fill in this short form and send it by email. We will get in touch when there is an activity that suits you.</p>
+  <ul class="peran">
+    <li><b>In the field</b><span>Planting, tending land and helping with surveys in your area.</span></li>
+    <li><b>Sharing expertise</b><span>Agroforestry, farming, mapping, land law or other skills.</span></li>
+    <li><b>Spreading the word</b><span>Photos, video, writing, and bringing people around you on board.</span></li>
+  </ul>
+
+  <form class="formulir" id="form-kontributor" novalidate style="margin-top:2.4rem" data-judul="Contributor sign-up">
+    <div class="kolom-dua">
+      <div class="kolom"><label for="k-nama">Name</label><input type="text" id="k-nama" autocomplete="name" required></div>
+      <div class="kolom"><label for="k-email">Email</label><input type="email" id="k-email" autocomplete="email" required></div>
+    </div>
+    <div class="kolom-dua">
+      <div class="kolom"><label for="k-telepon">Phone / WhatsApp (optional)</label><input type="tel" id="k-telepon" autocomplete="tel"></div>
+      <div class="kolom"><label for="k-domisili">Where you live</label><input type="text" id="k-domisili" placeholder="City or regency, province / country"></div>
+    </div>
+    <div class="kolom">
+      <span class="judul-kolom" id="judul-bidang">I would like to help with</span>
+      <div class="pilihan" role="group" aria-labelledby="judul-bidang">
+        <label><input type="checkbox" name="bidang" value="Planting and tending land"> Planting and tending land</label>
+        <label><input type="checkbox" name="bidang" value="Surveys and mapping"> Surveys and mapping</label>
+        <label><input type="checkbox" name="bidang" value="Sharing expertise"> Sharing expertise</label>
+        <label><input type="checkbox" name="bidang" value="Photos, video and writing"> Photos, video and writing</label>
+        <label><input type="checkbox" name="bidang" value="Connecting with local people or communities"> Connecting with local people or communities</label>
+      </div>
+    </div>
+    <div class="kolom"><label for="k-pesan">A little about you (optional)</label><textarea id="k-pesan"></textarea></div>
+    <div class="pesan-form" id="k-galat" role="alert" hidden></div>
+    <div class="aksi" style="margin-top:0">
+      <button type="submit" class="btn btn-utama">Sign up by email</button>
+      <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Contributor%20sign-up">Write your own email</a>
+    </div>
+  </form>
+</section>
+
+<section class="wrap bab" id="kemitraan" style="border-bottom:0">
+  <h2>Partnerships for businesses and organisations.</h2>
+  <p class="lead">Planting partnerships, impact investment, buying forest products, or sharing data and expertise, with impact reports that anyone can check.</p>
+  <div class="aksi">
+    <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Partnership%20enquiry">Propose a Partnership</a>
+    <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Organisation%20collaboration">Collaborate as an Organisation</a>
+  </div>
+</section>
+
+<section class="band gelap on-dark" id="peta">
+  <div class="wrap">
+    <h2>Map of the land we are following up</h2>
+    <p class="lead" style="margin-top:1.2rem">Land we have checked will appear on this map with its status, without any personal data about who sent it.</p>
+    <p class="kosong-info" style="margin-top:2rem;background:transparent;color:#C9D4CA;border-color:#4A6455"><b style="color:var(--kabut)">No land checked yet.</b> The number of tip-offs received and sites surveyed is also recorded on the <a class="tautan" href="{{base}}/transparansi/#dampak">Transparency</a> page.</p>
+  </div>
+</section>

@@ -1,0 +1,182 @@
+title: Kontribusi
+description: Ikut memulihkan lahan bersama Dareindo: beri tahu kami lahan gundul atau rawan longsor di sekitar Anda, atau daftar sebagai kontributor.
+---
+<section class="kepala">
+  <div class="wrap">
+    <p class="label">Kontribusi</p>
+    <h1>Setiap kontribusi akan sangat berarti.</h1>
+    <p class="lead">Anda tidak perlu menjadi ahli untuk ikut memulihkan lahan. Cukup beri tahu kami lahan yang perlu dipulihkan, atau bergabung sebagai kontributor sesuai waktu dan keahlian Anda.</p>
+    <ul class="lompat">
+      <li><a href="#lahan">Beritahu kami lahan gundul atau rawan longsor</a></li>
+      <li><a href="#kontributor">Daftar sebagai kontributor</a></li>
+      <li><a href="#kemitraan">Kemitraan</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap bab" id="lahan">
+  <h2>Beritahu kami keberadaan lahan gundul atau rawan longsor.</h2>
+  <p class="lead">Lahan di sekitar Anda bisa menjadi lokasi Akar Bambu berikutnya. Tim kami akan memeriksa informasi Anda dan meneliti cara terbaik untuk memulihkannya bersama warga.</p>
+
+  <div class="lapor-grid">
+    <form class="formulir" id="form-lahan" novalidate
+          data-judul="Informasi lahan" data-pelapor="Pengirim" data-anonim="Tanpa nama" data-foto="(Foto lahan dilampirkan di email ini)">
+      <fieldset>
+        <legend>Di mana lahannya?</legend>
+        <div class="kolom">
+          <label for="lokasi">Lokasi lahan</label>
+          <input type="text" id="lokasi" required placeholder="Desa, kecamatan, kabupaten/kota, provinsi">
+          <small>Wajib diisi.</small>
+        </div>
+        <div class="kolom">
+          <label for="koordinat">Titik koordinat</label>
+          <div class="gps">
+            <button type="button" class="btn btn-garis" id="tombol-gps">Pakai lokasi saya sekarang</button>
+            <small id="status-gps" aria-live="polite">Pakai ini jika Anda sedang berada di lahan tersebut.</small>
+          </div>
+          <input type="text" id="koordinat" placeholder="Contoh: -6.9175, 107.6191">
+        </div>
+        <div class="kolom">
+          <label for="peta">Tautan Google Maps (opsional)</label>
+          <input type="url" id="peta" placeholder="https://maps.app.goo.gl/...">
+          <small>Di Google Maps, tekan lama titik lahannya, lalu pilih Bagikan.</small>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Seperti apa kondisinya?</legend>
+        <div class="kolom">
+          <span class="judul-kolom" id="judul-kondisi">Kondisi lahan</span>
+          <div class="pilihan" role="group" aria-labelledby="judul-kondisi">
+            <label><input type="checkbox" name="kondisi" value="Gundul / tanpa pohon"> Gundul / tanpa pohon</label>
+            <label><input type="checkbox" name="kondisi" value="Lereng rawan longsor"> Lereng rawan longsor</label>
+            <label><input type="checkbox" name="kondisi" value="Pernah longsor"> Pernah longsor</label>
+            <label><input type="checkbox" name="kondisi" value="Terlantar / tidak digarap"> Terlantar / tidak digarap</label>
+            <label><input type="checkbox" name="kondisi" value="Ditanami tanaman semusim"> Ditanami tanaman semusim</label>
+            <label><input type="checkbox" name="kondisi" value="Bekas tambang / galian"> Bekas tambang / galian</label>
+          </div>
+        </div>
+        <div class="kolom-dua">
+          <div class="kolom">
+            <label for="luas">Perkiraan luas</label>
+            <input type="text" id="luas" placeholder="Contoh: 2 hektare, atau 1 lapangan bola">
+          </div>
+          <div class="kolom">
+            <label for="kepemilikan">Status kepemilikan</label>
+            <select id="kepemilikan">
+              <option value="">Pilih jika tahu</option>
+              <option>Milik saya / keluarga saya</option>
+              <option>Milik warga lain</option>
+              <option>Tanah desa / kas desa</option>
+              <option>Tanah adat / ulayat</option>
+              <option>Kawasan hutan negara</option>
+              <option>Milik perusahaan</option>
+              <option>Tidak tahu</option>
+            </select>
+          </div>
+        </div>
+        <div class="kolom">
+          <label for="cerita">Ceritakan kondisinya</label>
+          <textarea id="cerita" placeholder="Sejak kapan lahannya seperti ini? Apa yang terjadi saat hujan deras? Apakah warga sekitar menggarapnya?"></textarea>
+        </div>
+        <p class="kosong-info" style="margin:0"><b>Foto lahan sangat membantu.</b> Lampirkan foto di email yang akan terbuka setelah Anda menekan tombol kirim.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Kontak Anda (opsional)</legend>
+        <label class="cek"><input type="checkbox" id="anonim"> <span>Saya ingin mengirim tanpa nama. Kami tidak bisa menghubungi Anda untuk survei lanjutan.</span></label>
+        <div class="kolom-dua" id="kolom-kontak">
+          <div class="kolom">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" autocomplete="name">
+          </div>
+          <div class="kolom">
+            <label for="telepon">Nomor HP / WhatsApp</label>
+            <input type="tel" id="telepon" autocomplete="tel">
+          </div>
+        </div>
+        <p class="catatan">Nama dan kontak Anda tidak pernah ditampilkan ke publik. Kami hanya memakainya untuk menindaklanjuti informasi ini.</p>
+      </fieldset>
+
+      <div class="pesan-form" id="galat" role="alert" hidden></div>
+      <div class="aksi" style="margin-top:0">
+        <button type="submit" class="btn btn-utama">Kirim lewat email</button>
+      </div>
+      <p class="catatan">Tombol ini membuka aplikasi email Anda dengan isian yang sudah tersusun, dikirim ke halo@dareindo.com.</p>
+      <p class="darurat-kecil"><b>Melihat tanda longsor yang mengancam saat ini?</b> Segera hubungi BPBD setempat atau 112. Formulir ini bukan layanan darurat.</p>
+
+      <div id="cadangan" hidden>
+        <div class="pesan-form">Email tidak terbuka? Salin teks di bawah ini dan kirim ke <a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a>.</div>
+        <textarea id="teks-laporan" readonly aria-label="Teks yang akan dikirim" style="margin-top:1rem"></textarea>
+        <div class="aksi" style="margin-top:1rem"><button type="button" class="btn btn-garis" id="tombol-salin">Salin teks</button></div>
+      </div>
+    </form>
+
+    <aside class="lapor-samping">
+      <div>
+        <h2>Setelah Anda memberi tahu kami</h2>
+        <ol class="langkah" style="margin-top:1rem">
+          <li><b>Diterima</b><span>Informasi Anda masuk dan dicatat.</span></li>
+          <li><b>Diperiksa</b><span>Kami mencocokkan lokasi dan foto.</span></li>
+          <li><b>Disurvei</b><span>Tim datang ke lahan bersama warga.</span></li>
+          <li><b>Dirumuskan bersama</b><span>Bersama pemilik lahan dan warga sekitar.</span></li>
+          <li><b>Ditanam</b><span>Lahan mulai dipulihkan.</span></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap bab" id="kontributor">
+  <h2>Daftar sebagai kontributor.</h2>
+  <p class="lead">Kontributor adalah orang-orang yang ikut menggerakkan pemulihan lahan sesuai waktu dan keahliannya. Isi formulir singkat ini, lalu kirim lewat email. Kami akan menghubungi Anda saat ada kegiatan yang cocok.</p>
+  <ul class="peran">
+    <li><b>Di lapangan</b><span>Menanam, merawat lahan, dan membantu survei di daerah Anda.</span></li>
+    <li><b>Berbagi keahlian</b><span>Agroforestri, pertanian, pemetaan, hukum pertanahan, atau keahlian lain.</span></li>
+    <li><b>Menyebarkan cerita</b><span>Foto, video, tulisan, dan mengajak orang di sekitar Anda.</span></li>
+  </ul>
+
+  <form class="formulir" id="form-kontributor" novalidate style="margin-top:2.4rem" data-judul="Pendaftaran kontributor">
+    <div class="kolom-dua">
+      <div class="kolom"><label for="k-nama">Nama</label><input type="text" id="k-nama" autocomplete="name" required></div>
+      <div class="kolom"><label for="k-email">Email</label><input type="email" id="k-email" autocomplete="email" required></div>
+    </div>
+    <div class="kolom-dua">
+      <div class="kolom"><label for="k-telepon">Nomor HP / WhatsApp (opsional)</label><input type="tel" id="k-telepon" autocomplete="tel"></div>
+      <div class="kolom"><label for="k-domisili">Domisili</label><input type="text" id="k-domisili" placeholder="Kabupaten/kota, provinsi"></div>
+    </div>
+    <div class="kolom">
+      <span class="judul-kolom" id="judul-bidang">Ingin berkontribusi di bidang</span>
+      <div class="pilihan" role="group" aria-labelledby="judul-bidang">
+        <label><input type="checkbox" name="bidang" value="Menanam dan merawat lahan"> Menanam dan merawat lahan</label>
+        <label><input type="checkbox" name="bidang" value="Survei dan pemetaan"> Survei dan pemetaan</label>
+        <label><input type="checkbox" name="bidang" value="Berbagi keahlian"> Berbagi keahlian</label>
+        <label><input type="checkbox" name="bidang" value="Foto, video, dan tulisan"> Foto, video, dan tulisan</label>
+        <label><input type="checkbox" name="bidang" value="Menghubungkan dengan warga atau komunitas"> Menghubungkan dengan warga atau komunitas</label>
+      </div>
+    </div>
+    <div class="kolom"><label for="k-pesan">Ceritakan sedikit tentang Anda (opsional)</label><textarea id="k-pesan"></textarea></div>
+    <div class="pesan-form" id="k-galat" role="alert" hidden></div>
+    <div class="aksi" style="margin-top:0">
+      <button type="submit" class="btn btn-utama">Daftar lewat email</button>
+      <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Pendaftaran%20kontributor">Tulis email sendiri</a>
+    </div>
+  </form>
+</section>
+
+<section class="wrap bab" id="kemitraan" style="border-bottom:0">
+  <h2>Kemitraan untuk badan usaha dan organisasi.</h2>
+  <p class="lead">Kemitraan penanaman, investasi dampak, pembelian hasil hutan, atau berbagi data dan keahlian, dengan laporan dampak yang bisa diperiksa siapa saja.</p>
+  <div class="aksi">
+    <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Pengajuan%20kemitraan">Ajukan Kemitraan</a>
+    <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Kolaborasi%20organisasi">Kolaborasi Organisasi</a>
+  </div>
+</section>
+
+<section class="band gelap on-dark" id="peta">
+  <div class="wrap">
+    <h2>Peta lahan yang sedang kami tindak lanjuti</h2>
+    <p class="lead" style="margin-top:1.2rem">Lahan yang sudah kami periksa akan tampil di peta ini beserta statusnya, tanpa data pribadi pengirim.</p>
+    <p class="kosong-info" style="margin-top:2rem;background:transparent;color:#C9D4CA;border-color:#4A6455"><b style="color:var(--kabut)">Belum ada lahan yang diperiksa.</b> Jumlah informasi lahan yang diterima dan disurvei juga tercatat di halaman <a class="tautan" href="{{base}}/transparansi/#dampak">Transparansi</a>.</p>
+  </div>
+</section>

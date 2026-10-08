@@ -1,0 +1,22 @@
+.lapor-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,80px);align-items:start;padding-block:clamp(48px,7vw,88px)}
+.lapor-samping{position:sticky;top:100px;display:grid;gap:1.6rem}
+.lapor-samping h2{font-size:1.5rem}
+.lapor-samping .langkah{grid-template-columns:1fr}
+.lapor-samping .langkah li{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;padding-right:0}
+.lapor-samping .langkah li::before{grid-row:span 2;margin:0}
+.lapor-samping .langkah span{margin:0}
+.gps{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.gps .btn{padding:.7rem 1rem;font-size:.92rem}
+#teks-laporan{font:.9rem/1.5 ui-monospace,Menlo,Consolas,monospace;min-height:220px;background:#FBFAF5}
+@media (max-width:860px){.lapor-grid{grid-template-columns:1fr}.lapor-samping{position:static;order:-1}}
+.bab{padding-block:clamp(48px,7vw,88px);border-bottom:1px solid var(--garis)}
+.bab > h2{max-width:24ch}
+.bab > .lead{margin-top:1rem}
+.bab .lapor-grid{padding-block:2rem 0}
+.darurat-kecil{font-size:.88rem;color:var(--tanah);border-left:3px solid var(--garis);padding-left:.9rem}
+.darurat-kecil b{color:var(--hutan)}
+.peran{display:grid;grid-template-columns:repeat(3,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan);margin-top:2rem}
+.peran li{padding:1rem 1rem 1rem 0;border-bottom:1px solid var(--garis)}
+.peran b{display:block;font:400 1.2rem var(--display)}
+.peran span{font-size:.93rem;color:#33463C}
+@media (max-width:860px){.peran{grid-template-columns:1fr}}

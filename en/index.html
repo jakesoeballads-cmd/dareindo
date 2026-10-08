@@ -1,0 +1,396 @@
+<!doctype html>
+<!-- Dibuat otomatis oleh _src/build.py. Jangan edit file ini langsung: ubah _src/, lalu jalankan python3 _src/build.py -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daya Reforestasi Indonesia</title>
+<meta name="description" content="PT Daya Reforestasi Indonesia restores degraded land into forests that support the people living around them, and opens all of its books to the public.">
+<meta property="og:title" content="Daya Reforestasi Indonesia">
+<meta property="og:description" content="PT Daya Reforestasi Indonesia restores degraded land into forests that support the people living around them, and opens all of its books to the public.">
+<meta property="og:url" content="https://dareindo.com/en/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://dareindo.com/en/">
+<link rel="alternate" hreflang="id" href="https://dareindo.com/">
+<link rel="alternate" hreflang="en" href="https://dareindo.com/en/">
+<link rel="alternate" hreflang="de" href="https://dareindo.com/de/">
+<link rel="alternate" hreflang="x-default" href="https://dareindo.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313281F'/%3E%3Cpath d='M5 23c4-7 8-10 11-10s7 3 11 10' fill='none' stroke='%238CD94A' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M9 26c3-4 5-6 7-6s4 2 7 6' fill='none' stroke='%23EEF1EC' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/situs.css">
+<style>
+/* 1 Hero */
+.hero{padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,112px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:end}
+.hero .label{font-size:.9rem;font-weight:600;color:var(--lumut);margin-bottom:1.4rem}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.1rem);max-width:13ch}
+.hero .lead{margin-top:1.6rem;max-width:46ch}
+.hero .foto{aspect-ratio:4/5}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero .foto{aspect-ratio:4/3}}
+
+/* 2 Pergeseran */
+.geser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.geser p+p{margin-top:1.1rem}
+.kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end;align-self:start;position:sticky;top:120px}
+.kontur path{fill:none;stroke:var(--kunyit);stroke-width:1.4;opacity:.9}
+.kontur path:nth-child(even){stroke:#7FA07F}
+.kontur text{font:500 11px var(--body);fill:#9FB3A2;font-variant-numeric:tabular-nums}
+@media (max-width:860px){.geser{grid-template-columns:1fr}.kontur{justify-self:start;max-width:380px;position:static}}
+
+/* 3 Krisis */
+.angka{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:2px solid var(--hutan)}
+.angka > div{padding:1.6rem 1.6rem 0 0}
+.angka > div + div{padding-left:1.6rem;border-left:1px solid var(--garis)}
+.angka b{display:block;font:400 clamp(2.4rem,4.6vw,3.6rem)/1 var(--display);font-variant-numeric:tabular-nums}
+.angka .ket{margin-top:.7rem;font-weight:500}
+.angka .sumber{margin-top:.5rem;font-size:.8rem;color:var(--tanah)}
+.angka .sumber a{text-decoration:none;border-bottom:1px solid currentColor}
+.pernyataan{margin-top:1.6rem;font:400 clamp(1.5rem,3vw,2.2rem)/1.25 var(--display);max-width:26ch;color:var(--lumut)}
+.filosofi{margin-top:2rem;columns:2 30ch;column-gap:clamp(32px,5vw,64px)}
+.filosofi p{margin-bottom:1rem;break-inside:avoid}
+.akar .isi p a{color:var(--tanah);text-decoration:none}
+.penutup{margin-top:2.6rem;font:400 1.35rem/1.4 var(--display);max-width:34ch}
+@media (max-width:760px){.angka{grid-template-columns:1fr}.angka > div,.angka > div + div{padding:1.4rem 0;border-left:0;border-bottom:1px solid var(--garis)}}
+
+/* 4 Ironi */
+.ironi{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,80px);align-items:start}
+.ironi .foto{aspect-ratio:3/4}
+.ironi p{margin-top:1.1rem}
+blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--kunyit);font:400 clamp(1.6rem,3vw,2.2rem)/1.25 var(--display);max-width:22ch}
+@media (max-width:860px){.ironi{grid-template-columns:1fr}.ironi .foto{aspect-ratio:4/3;order:2}}
+
+/* 5 Jawaban */
+.jawaban{background:var(--putih)}
+.jawaban p+p{margin-top:1rem}
+.prinsip{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);margin-top:3.2rem;list-style:none}
+.prinsip li{border-top:2px solid var(--lumut);padding-top:1.2rem}
+.prinsip h3{margin-bottom:.5rem}
+.prinsip p{font-size:1rem;color:#33463C}
+@media (max-width:860px){.prinsip{grid-template-columns:1fr}}
+
+/* 6 Proyek */
+.proyek-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;margin-top:3rem}
+.proyek{border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.akar{background:var(--putih)}
+.akar .foto{aspect-ratio:16/9;border-radius:0}
+.benih{background:var(--lumut);color:var(--kabut)}
+.proyek .isi{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:.9rem;flex:1}
+.akar .status{color:var(--tanah)}
+.proyek h3{font-size:2rem}
+.proyek .aksi{margin-top:auto;padding-top:.6rem;align-items:center;gap:20px}
+.benih .logo-benih{width:84px;height:84px}
+.benih .tautan{border-color:var(--kunyit)}
+@media (max-width:860px){.proyek-grid{grid-template-columns:1fr}}
+
+
+/* 8 Kolaborasi */
+.mitra{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);margin-top:3rem;list-style:none}
+.mitra li{display:flex;flex-direction:column;gap:.7rem;padding-top:1.2rem;border-top:1px solid var(--hutan)}
+.mitra p{flex:1;color:#33463C}
+@media (max-width:860px){.mitra{grid-template-columns:1fr}}
+
+/* 9 CTA */
+.ajak{background:var(--lumut);color:var(--kabut)}
+.ajak h2{max-width:20ch}
+.ajak .lead{color:#DCE6DA}
+.darurat{margin-top:1.6rem;font-size:.9rem;color:#DCE6DA;max-width:60ch}
+.darurat b{color:var(--putih)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="merek" href="/en/" aria-label="Daya Reforestasi Indonesia, go to home page">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#13281F"/><path d="M5 23c4-7 8-10 11-10s7 3 11 10" fill="none" stroke="#8CD94A" stroke-width="2.4" stroke-linecap="round"/><path d="M9 26c3-4 5-6 7-6s4 2 7 6" fill="none" stroke="#EEF1EC" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <div><b>Dareindo</b><span>Daya Reforestasi Indonesia</span></div>
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="/en/akar-bambu/">Akar Bambu</a></li>
+      <li><a href="/en/benih/">Benih</a></li>
+      <li><a href="/en/transparansi/">Transparency</a></li>
+      <li><a href="/en/kontak/">Contact</a></li>
+      <li><a class="btn btn-utama" href="/en/kontribusi/">Contribute</a></li>
+      <li class="bahasa" aria-label="Choose language"><a href="/" hreflang="id" lang="id" title="Bahasa Indonesia">ID</a><a href="/en/" hreflang="en" lang="en" aria-current="true" title="English">EN</a><a href="/de/" hreflang="de" lang="de" title="Deutsch">DE</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. Hero -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>There is no economy without a living space that endures.</h1>
+      <p class="lead">Building a harmonious relationship between people and nature, and all who live in it.</p>
+      <div class="aksi">
+        <a class="btn btn-utama" href="#proyek">See Our Projects</a>
+        <a class="btn btn-garis" href="#transparansi">Open Our Books</a>
+      </div>
+    </div>
+    <figure>
+      <div class="foto">
+        <img src="https://images.unsplash.com/photo-1510611280575-f007416f59f2?w=1200&q=70&fm=jpg&fit=crop" alt="Misty green hills with forest and village houses on the slopes" width="1200" height="1500" fetchpriority="high">
+      </div>
+      <figcaption class="credit">Illustrative photo: Bandung, West Java. Rifqi Ali Ridho / <a href="https://unsplash.com/photos/1ftrPzqRMTo">Unsplash</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2. Pergeseran makna ekonomi -->
+<section class="band gelap on-dark">
+  <div class="wrap geser">
+    <div>
+      <h2>The economy is no longer just numbers.</h2>
+      <p class="lead" style="margin-top:1.6rem"><strong>PT Daya Reforestasi Indonesia</strong> is a company that builds ecology-based businesses. Its main concerns are restoring ecosystems, raising public awareness, and creating economic opportunities that keep the long-term wellbeing of the environment and of communities in view.</p>
+      <p class="lead">Daya does not see environmental problems in isolation. Environmental damage is tied to how people use natural resources, how development is carried out, how communities meet their economic needs, and how awareness of and access to environmental knowledge are built.</p>
+      <p class="lead">That is why Daya is not here only to plant trees or bring back green cover. That work is part of a bigger idea: <strong>rebuilding a healthier, more harmonious relationship between people and the nature around them.</strong></p>
+      <p class="lead">Daya sees itself as one of many ecology-based businesses. We do not claim to be the only ones with answers. We act as a <strong>driver, facilitator and space for collaboration</strong> where the public, communities, experts, enthusiasts, institutions and many others can contribute to the environment.</p>
+    </div>
+    <svg class="kontur" id="kontur" viewBox="0 0 500 500" role="img" aria-label="Contour lines of a hill"></svg>
+  </div>
+</section>
+
+<!-- 3. Krisis -->
+<section class="band">
+  <div class="wrap">
+    <h2>People and Nature</h2>
+    <p class="pernyataan">Nature is not just a resource. Nature is what makes life possible.</p>
+    <div class="filosofi">
+      <p class="lead">The philosophy of PT Daya Reforestasi Indonesia starts from a simple realisation: <strong>everything people need comes from nature.</strong></p>
+      <p>Food, water, air, energy, building materials and so much else come from natural systems. Yet in the course of development, people often act as if they stood outside nature and had the right to rule over it.</p>
+      <p>Daya sees people as fundamentally <strong>part of nature</strong>. Our ability to build, develop technology and change our surroundings is a great power (in Indonesian, <em>daya</em>). But that power can also become a source of destruction when it is used without limits and without regard for the other inhabitants of nature.</p>
+      <p>So caring for the environment is not a “favour” people do for nature. It is part of our responsibility as one of nature’s inhabitants.</p>
+      <p>For Daya, sustainability does not mean that people stop using nature. People will always need nature. What has to change is <strong>how we take, process and use its resources, responsibly enough that its ecological functions can carry on.</strong></p>
+    </div>
+    <div class="angka">
+      <div>
+        <b>175,400 ha</b>
+        <p class="ket">Net forest loss in Indonesia during 2024</p>
+        <p class="sumber">Ministry of Forestry, via <a href="https://www.thejakartapost.com/indonesia/2025/03/25/deforestation-climbed-to-175000-ha-in-2024-ministry-admits">The Jakarta Post</a></p>
+      </div>
+      <div>
+        <b>933</b>
+        <p class="ket">Landslides recorded in Indonesia during 2024</p>
+        <p class="sumber">BNPB, via <a href="https://www.antaranews.com/berita/4569674/banjir-dan-longsor-dominasi-5593-kejadian-bencana-sepanjang-2024">Antara</a></p>
+      </div>
+      <div>
+        <b>14.3 million ha</b>
+        <p class="ket">Of degraded land in need of replanting</p>
+        <p class="sumber">Minister of Environment and Forestry (2020), via <a href="https://www.suarasurabaya.net/?p=478695">Suara Surabaya</a></p>
+      </div>
+    </div>
+    <p class="penutup">Behind every number are people whose lives depend on that same land.</p>
+  </div>
+</section>
+
+<!-- 4. Ironi di lapangan -->
+<section class="band" style="padding-top:0">
+  <div class="wrap ironi">
+    <figure>
+      <div class="foto">
+        <img src="https://images.unsplash.com/photo-1597868165956-03a6827955b1?w=900&q=70&fm=jpg&fit=crop" alt="Hands planting a seedling in the soil" width="900" height="1200" loading="lazy">
+      </div>
+      <figcaption class="credit">Illustrative photo: Jonathan Kemper / <a href="https://unsplash.com/photos/hands-planting-seedling-in-garden-4z3lnwEvZQw">Unsplash</a></figcaption>
+    </figure>
+    <div>
+      <h2>Planting trees turns out not to be the hardest part.</h2>
+      <p class="lead">Restoring degraded land involves many parties and many obstacles. Ironically, the obstacle we meet most often is the closest one: the people whose livelihoods already depend on that land.</p>
+      <p>Slopes that should be protected are planted with seasonal crops. Native plants that hold the soil together are replaced with shallow-rooted ones. This is not because people do not care. Families need to eat today, while the benefits of a forest take years to arrive.</p>
+      <blockquote>Banning without offering alternatives only moves the problem elsewhere.</blockquote>
+      <p style="margin-top:2rem">As long as protecting forests is seen as the opposite of earning a living, degraded land will keep growing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Jawaban kami -->
+<section class="band jawaban">
+  <div class="wrap">
+    <h2 style="max-width:22ch">We exist so that protecting forests and earning a living can go hand in hand.</h2>
+    <div style="margin-top:1.6rem">
+      <p class="lead">Daya Reforestasi Indonesia is a limited company working in the socio-ecological field. We are not a foundation and not an NGO. We chose the business route because restoration that can sustain itself lasts longer than a programme waiting for its next round of aid.</p>
+      <p class="lead">We call it an ecology-based economy: a restored forest that also becomes a fair source of income for the people around it.</p>
+    </div>
+    <ul class="prinsip">
+      <li><h3>Plants that provide a living</h3><p>Native plants that protect the soil grow alongside cash crops in an agroforestry system.</p></li>
+      <li><h3>Local people at the centre</h3><p>Local residents work on the project, guided by experts, and share in what the forest produces.</p></li>
+      <li><h3>Growing as the land recovers</h3><p>Our business grows as the land recovers. You can check where our profit goes in our books.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. Proyek -->
+<section class="band" id="proyek">
+  <div class="wrap">
+    <h2>Two projects, one goal.</h2>
+    <div class="proyek-grid">
+      <article class="proyek akar">
+        <figure class="foto">
+          <img src="https://images.unsplash.com/photo-1685604957746-fcce91338d81?w=1200&q=70&fm=jpg&fit=crop" alt="A dirt road between tall clumps of bamboo" width="1200" height="675" loading="lazy">
+        </figure>
+        <div class="isi">
+          <span class="status">Agroforestry and silviculture</span>
+          <h3>Akar Bambu</h3>
+          <p>Turning bare land, especially on landslide-prone hillsides, back into a productive forest. Bamboo absorbs and holds water and helps bind the soil on slopes. Katuk and vanilla<a href="#catatan-komoditas" aria-label="see note">*</a> provide income, and local native plants restore the ecosystem.</p>
+          <p class="catatan" id="catatan-komoditas">*Cash crops (other than bamboo) are chosen to suit the natural conditions of each site and the needs of the people nearby.</p>
+          <div class="aksi">
+            <a class="btn btn-garis" href="/en/kontribusi/#lahan">Know of landslide-prone land? Tell us</a>
+            <a class="tautan" href="/en/akar-bambu/">More about Akar Bambu</a>
+          </div>
+          <p class="catatan">Every contribution makes a real difference.</p>
+          <p class="credit">Illustrative photo: Surodadu Forest, Mojokerto, East Java. Muhammad Faris Afif Putra / <a href="https://unsplash.com/photos/a-dirt-road-surrounded-by-tall-bamboo-trees-zAPdgbiVTz0">Unsplash</a></p>
+        </div>
+      </article>
+      <article class="proyek benih on-dark">
+        <div class="isi">
+          <svg class="logo-benih" viewBox="0 0 84 84" role="img" aria-label="Benih logo: a seed starting to sprout">
+            <ellipse cx="42" cy="62" rx="15" ry="11" fill="#B88A5A"/>
+            <path d="M33 60c5-3 13-3 18 0" stroke="#7A5C43" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M42 52V30" stroke="#E3A72F" stroke-width="3" stroke-linecap="round"/>
+            <path d="M42 36c-2-9-9-13-17-12 1 8 8 13 17 12z" fill="#A9CFA0"/>
+            <path d="M42 31c2-10 10-15 19-14-1 9-9 15-19 14z" fill="#E3A72F"/>
+          </svg>
+          <span class="status">Web app, coming soon</span>
+          <h3>Benih</h3>
+          <p>A meeting place for people who work for the environment, from forests and oceans to balanced urban living. <em>Benih</em> (“seed”) aims to become a platform where individuals, communities and businesses find each other and organise activities together.</p>
+          <div class="aksi">
+            <a class="btn btn-utama" href="mailto:halo@dareindo.com?subject=Benih%20launch%20updates">Get launch updates</a>
+            <a class="tautan" href="/en/benih/">More about Benih</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Transparansi radikal -->
+<section class="band gelap on-dark" id="transparansi">
+  <div class="wrap">
+    <h2 style="max-width:24ch">Radical transparency is the signature of Daya Reforestasi Indonesia</h2>
+    <p class="lead" style="margin-top:1.4rem">Structurally, Daya Reforestasi Indonesia combines its own ecosystem monitoring with radical financial transparency. This makes sure every investment is used efficiently and effectively, with a direct effect on environmental targets and a sustainable return.</p>
+    <p class="lead" style="margin-top:1rem">We apply the same principle to every project we run: all budgets, operating costs and management income are open to investors and the public, backed by regular ecosystem monitoring.</p>
+
+    <div class="buku" aria-labelledby="buku-judul">
+      <div class="buku-kepala">
+        <b id="buku-judul">Public Cash Book</b>
+        <span id="buku-status">Public record-keeping started October 2026</span>
+      </div>
+      <dl>
+        <div class="baris"><dt>Total money in<small>Business income, capital and investment</small></dt><dd class="kosong" data-kunci="masuk">Pending</dd></div>
+        <div class="baris"><dt>Share of spending on projects<small>Of all money out</small></dt><dd class="kosong" data-kunci="porsi">Pending</dd></div>
+        <div class="baris"><dt>Trees planted<small>Verified</small></dt><dd class="kosong" data-kunci="pohon">Pending</dd></div>
+        <div class="baris"><dt>Local workers involved<small>People, verified</small></dt><dd class="kosong" data-kunci="pekerja">Pending</dd></div>
+      </dl>
+      <div class="buku-kaki">
+        <span class="stempel" aria-hidden="true">Verified data only</span>
+        <span id="buku-catatan" style="flex:1;min-width:200px">Figures will appear here once the first entry has been verified.</span>
+        <a class="tautan" href="/en/transparansi/">Open the full books</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Kolaborasi -->
+<section class="band" id="kolaborasi">
+  <div class="wrap">
+    <h2 style="max-width:20ch">We are not starting from scratch, and we are not working alone.</h2>
+    <p class="lead" style="margin-top:1.4rem">Local people, businesses and non-profit organisations were caring for Indonesia’s nature long before us. We are here to work alongside everyone who shares that concern.</p>
+    <ul class="mitra">
+      <li><h3>Individuals</h3><p>Tell us about degraded land, work on our projects, and share knowledge and information.</p><a class="tautan" href="/en/kontribusi/#kontributor">Sign up as a contributor</a></li>
+      <li><h3>Businesses</h3><p>Planting partnerships and purchases of forest products, with impact reports that anyone can check.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Partnership%20enquiry">Propose a Partnership</a></li>
+      <li><h3>Non-profit organisations</h3><p>Share data, sites and expertise. Connect with other practitioners through Benih.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Organisation%20collaboration">Let’s Collaborate</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9. Ajakan penutup -->
+<section class="band ajak on-dark" id="ajak">
+  <div class="wrap">
+    <h2>Degraded land near you could become the next forest.</h2>
+    <p class="lead" style="margin-top:1.4rem">Let us know about bare or landslide-prone land. Our team will look into what you send and work out the best way to restore it together with local people.</p>
+    <p class="lead" style="margin-top:1rem">Include the location (or a Google Maps pin), photos of the land and a rough size.</p>
+    <div class="aksi">
+      <a class="btn btn-utama" href="/en/kontribusi/#lahan">Tell Us</a>
+      <a class="btn btn-garis" href="/en/kontribusi/#kontributor">Become a Contributor</a>
+    </div>
+    <p class="darurat"><b>Seeing signs of a landslide right now?</b> Contact your local disaster agency (BPBD) or call 112 straight away. This form is not an emergency service.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="kaki">
+      <div>
+        <p class="slogan">There is no economy without a living space that endures.</p>
+        <p style="margin-top:1rem">All our books are open to the public. <a class="tautan" href="/en/transparansi/">Check them here</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li>Registered address: to be announced</li>
+          <li><a href="/en/kontak/">Contact &amp; Company</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/en/akar-bambu/">Akar Bambu</a></li>
+          <li><a href="/en/benih/">Benih</a></li>
+          <li><a href="/en/transparansi/">Transparency</a></li>
+          <li><a href="/en/kontribusi/">Contribute</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="tahun">2026</span> PT Daya Reforestasi Indonesia</span>
+      <span>Illustrative photos from Unsplash until our own field photos are available.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/situs.js"></script>
+<script>
+/* Garis kontur bukit (bagian 2): digambar sekali saat terlihat */
+(function kontur(){
+  const svg = document.getElementById('kontur');
+  const NS = 'http://www.w3.org/2000/svg';
+  const cx = 250, cy = 265, rings = 9;
+  const paths = [];
+  for (let i = 0; i < rings; i++) {
+    const r = 34 + i * 25, pts = [];
+    for (let a = 0; a <= 64; a++) {
+      const t = a / 64 * Math.PI * 2;
+      const wob = 1 + 0.10 * Math.sin(3 * t + i * .5) + 0.06 * Math.cos(5 * t - i * .3) + 0.04 * Math.sin(7 * t + i);
+      pts.push([cx + Math.cos(t) * r * wob * 1.08, cy + Math.sin(t) * r * wob * .86 - i * 2]);
+    }
+    let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+    for (let k = 1; k < pts.length; k++) d += `L${pts[k][0].toFixed(1)},${pts[k][1].toFixed(1)}`;
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', d + 'Z');
+    svg.appendChild(p); paths.push(p);
+  }
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  paths.forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; });
+  const io = new IntersectionObserver(es => {
+    if (!es[0].isIntersecting) return;
+    paths.forEach((p, i) => {
+      p.style.transition = `stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) ${i * 0.12}s`;
+      p.style.strokeDashoffset = 0;
+    });
+    io.disconnect();
+  }, { threshold: .35 });
+  io.observe(svg);
+})();
+</script>
+</body>
+</html>
