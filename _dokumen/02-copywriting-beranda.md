@@ -1,6 +1,6 @@
 # Copywriting Beranda — Daya Reforestasi Indonesia
 
-Draf 1 · 7 Oktober 2026
+Draf 2 · 8 Oktober 2026 (revisi dari tim)
 
 > Salinan dari dokumen copywriting. Versi yang sedang diedit bersama ada di dokumen Claude; file ini diperbarui setiap kali draf dikunci.
 
@@ -19,11 +19,9 @@ Beranda bercerita dalam lima langkah: **krisis → ironi di lapangan → jawaban
 
 ## 1. Hero
 
-**Label kecil:** PT Daya Reforestasi Indonesia
-
 **Judul:** Tidak ada ekonomi tanpa ruang hidup yang lestari.
 
-**Subjudul:** Kami memulihkan lahan kritis menjadi hutan yang menghidupi warga di sekitarnya. Setiap rupiah dan setiap pohon kami buka untuk diperiksa publik.
+**Subjudul:** Membangun hubungan harmonis antara manusia dan alam beserta seluruh penghuninya.
 
 **Tombol utama:** Lihat Proyek Kami
 
@@ -42,21 +40,33 @@ Beranda bercerita dalam lima langkah: **krisis → ironi di lapangan → jawaban
 
 **Teks:**
 
-Selama puluhan tahun, kemajuan diukur dari seberapa banyak yang bisa kita ambil dari alam. Hutan dihitung dalam meter kubik kayu. Lahan dihitung dalam ton panen per musim.
+**PT Daya Reforestasi Indonesia** merupakan perusahaan yang berfokus pada pengembangan usaha berbasis ekologi dengan perhatian utama terhadap pemulihan ekosistem, peningkatan kesadaran masyarakat, serta penciptaan ruang ekonomi yang tetap mempertimbangkan keberlangsungan lingkungan dan masyarakat.
 
-Hari ini ukurannya berubah. Ekonomi adalah nilai keseimbangan dan ukuran kelestarian: berapa lama tanah tetap subur, air tetap mengalir, dan sebuah desa tetap aman untuk ditinggali.
+Daya tidak memandang persoalan lingkungan sebagai persoalan yang berdiri sendiri. Kerusakan lingkungan berkaitan dengan cara manusia menggunakan sumber daya alam, bagaimana pembangunan dilakukan, bagaimana masyarakat memenuhi kebutuhan ekonominya, serta bagaimana kesadaran dan akses terhadap pengetahuan lingkungan dibangun.
+
+Karena itu, Daya tidak hadir semata-mata untuk menanam pohon atau mengembalikan tutupan hijau. Fokus tersebut merupakan bagian dari gagasan yang lebih besar: **membangun kembali hubungan yang lebih sehat dan harmonis antara manusia dengan alam di sekitarnya.**
+
+Dalam menjalankan perannya, Daya menempatkan dirinya sebagai salah satu dari banyak pelaku usaha berbasis ekologis. Perusahaan tidak memosisikan diri sebagai satu-satunya pihak yang memiliki solusi, melainkan sebagai **penggerak, fasilitator, dan ruang kolaborasi** yang memungkinkan masyarakat umum, komunitas, ahli, enthusiast, institusi, dan berbagai pihak lainnya untuk ikut berkontribusi terhadap lingkungan.
 
 **Catatan desain:** satu momen animasi saat di-scroll. Deretan angka di kiri perlahan berubah menjadi garis kontur bukit dan daun di kanan. Hanya di bagian ini, agar terasa istimewa.
 
-## 3. Krisis
+## 3. Ekonomi Lestari
 
-**Judul:** Ruang hidup kita menyusut setiap tahun.
+**Judul:** Manusia dan Alam
 
 **Teks:**
 
-Hutan terus dibuka untuk berbagai kebutuhan. Lahan hijau beralih fungsi. Setiap hektare yang hilang membawa pergi keanekaragaman hayati, sumber air, dan akar-akar yang selama ini menahan tanah di lereng.
+**Alam bukan sekadar sumber daya. Alam adalah syarat kehidupan.**
 
-Akibatnya tidak berhenti di hutan. Ketika tanah kehilangan penahannya, hujan berubah menjadi longsor dan banjir yang menimpa rumah, sawah, dan jalan desa.
+Filosofi PT Daya Reforestasi Indonesia berangkat dari sebuah kesadaran sederhana: **seluruh kebutuhan manusia berasal dari alam.**
+
+Manusia memperoleh pangan, air, udara, energi, bahan bangunan, dan berbagai kebutuhan kehidupannya dari sistem alam. Namun dalam proses pembangunan, manusia sering menempatkan dirinya seolah-olah berada di luar alam dan memiliki hak untuk menguasainya.
+
+Daya memandang bahwa manusia pada dasarnya adalah **bagian dari alam**. Kemampuan manusia untuk membangun, mengembangkan teknologi, dan mengubah lingkungan merupakan bentuk daya yang besar. Namun daya tersebut juga dapat berubah menjadi sumber kerusakan ketika digunakan tanpa batas dan tanpa mempertimbangkan keberadaan penghuni alam lainnya.
+
+Karena itu, menjaga lingkungan bukan dipahami sebagai bentuk “kebaikan” manusia kepada alam. Menjaga lingkungan merupakan bagian dari tanggung jawab manusia sebagai salah satu penghuni alam.
+
+Bagi Daya, keberlanjutan bukan berarti manusia berhenti menggunakan alam. Manusia akan selalu membutuhkan alam. Yang perlu diubah adalah **cara manusia mengambil, mengolah, dan memanfaatkan sumber daya tersebut secara bertanggung jawab sehingga fungsi ekologisnya tetap dapat berlangsung.**
 
 **Tiga angka (ditampilkan besar, masing-masing dengan sumber di bawahnya):**
 
@@ -66,7 +76,7 @@ Akibatnya tidak berhenti di hutan. Ketika tanah kehilangan penahannya, hujan ber
 | 933 kejadian | Tanah longsor di Indonesia sepanjang 2024 | BNPB, via [Antara](https://www.antaranews.com/berita/4569674/banjir-dan-longsor-dominasi-5593-kejadian-bencana-sepanjang-2024) |
 | 14,3 juta ha | Lahan kritis yang perlu ditanami kembali | Menteri LHK (2020), via [Suara Surabaya](https://www.suarasurabaya.net/?p=478695) |
 
-**Kalimat penutup bagian:** Di balik setiap angka ada desa yang hidupnya bergantung pada tanah yang sama.
+**Kalimat penutup bagian:** Di balik setiap angka terdapat masyarakat yang hidupnya bergantung pada tanah yang sama.
 
 **Catatan desain:** angka muncul satu per satu. Sumber ditulis kecil tapi selalu terlihat, bukan disembunyikan di tooltip.
 
@@ -100,8 +110,8 @@ Kami menyebutnya ekonomi berbasis ekologi: hutan yang dipulihkan juga menjadi su
 
 | Prinsip | Teks |
 | --- | --- |
-| Tanam yang menghidupi | Tanaman asli penjaga tanah ditanam berdampingan dengan komoditas bernilai ekonomi lewat pola agroforestri. |
-| Warga sebagai mitra | Warga setempat bekerja di proyek, dibimbing ahli, dan ikut menerima manfaat dari hasil hutan. |
+| Tanaman yang menghidupi | Tanaman asli penjaga tanah ditanam berdampingan dengan komoditas bernilai ekonomi lewat pola agroforestri. |
+| Masyarakat sebagai penggerak utama | Warga setempat bekerja di proyek, dibimbing ahli, dan ikut menerima manfaat dari hasil hutan. |
 | Tumbuh bersama lahan yang pulih | Usaha kami tumbuh bersama lahan yang pulih. Ke mana laba kami mengalir, bisa Anda periksa di pembukuan kami. |
 
 **Tombol:** Kenali Model Kami
@@ -112,24 +122,27 @@ Kami menyebutnya ekonomi berbasis ekologi: hutan yang dipulihkan juga menjadi su
 
 **Kartu 1: Akar Bambu**
 
-- **Label:** Agroforestri · Mencari lokasi pertama
-- **Teks:** Lahan terlantar yang rawan longsor kami ubah menjadi hutan komoditas. Bambu membantu mengikat tanah di lereng, katuk dan vanili memberi penghasilan, dan tanaman asli setempat memulihkan ekosistemnya. Warga sekitar bekerja di sana, dibimbing ahli agroforestri.
-- **Tombol:** Pelajari Akar Bambu
-- **Tautan kecil:** Tahu lahan rawan longsor di dekat Anda? Laporkan di sini.
+- **Label:** Agroforestri - Silvikultur
+- **Teks:** Mengembalikan lahan gundul, terutama di area perbukitan yang rawan longsor, menjadi hutan komoditas. Bambu, selain menyerap dan menahan air, juga membantu mengikat tanah di lereng. Katuk dan vanili* memberi penghasilan, dan tanaman asli setempat memulihkan ekosistemnya.
+- *Tanaman komoditas (selain bambu) akan disesuaikan dengan keadaan alami lahan tersebut dan kebutuhan masyarakat sekitar.
+- **Tombol:** Pelajari Akar Bambu (aktif setelah halaman Akar Bambu dibuat)
+- **Tautan kecil:** Tahu lahan rawan longsor di dekat Anda? Beritahu kami. Setiap kontribusi akan sangat berarti.
 
 **Kartu 2: Benih**
 
 - **Label:** Aplikasi web · Segera hadir
-- **Teks:** Ruang temu bagi para penggiat lingkungan. Dari hutan, laut, hingga sampah, Benih membantu komunitas saling menemukan dan menyelenggarakan kegiatan bersama.
+- **Teks:** Ruang temu bagi para penggiat lingkungan. Dari hutan, laut, hingga keseimbangan ruang hidup urban. Benih diharapkan akan menjadi sebuah platform di mana masyarakat, komunitas, dan badan usaha saling menemukan dan menyelenggarakan kegiatan bersama.
 - **Tombol:** Daftar untuk kabar peluncuran
 
 **Catatan desain:** label status ditulis jujur. Akar Bambu belum punya lokasi, jadi kartunya mengajak warga melapor, bukan berpura-pura proyek sudah berjalan. Kartu Benih memakai logo benih yang mulai tumbuh.
 
 ## 7. Transparansi radikal
 
-**Judul:** Setiap rupiah dan setiap pohon bisa Anda periksa.
+**Judul:** Transparansi Radikal sebagai signature Daya Reforestasi Indonesia
 
-**Teks:** Seluruh pembukuan dan capaian dampak kami terbuka untuk publik, termasuk pengeluaran yang belum berjalan sesuai rencana. Kepercayaan tidak kami minta. Kami tunjukkan buktinya.
+**Teks:** Dalam hal struktural, Daya Reforestasi Indonesia mengintegrasikan pemantauan ekosistem internal perusahaan dengan prinsip transparansi finansial radikal untuk memastikan setiap dana investasi dimanfaatkan secara efisien dan efektif, sehingga berdampak langsung pada target perbaikan lingkungan sekaligus memberikan imbal hasil yang berkelanjutan.
+
+Prinsip yang sama kami adopsi dalam pengelolaan setiap proyek yang dijalankan, di mana seluruh anggaran, biaya operasional, dan pendapatan manajemen dapat diakses secara terbuka oleh investor dan publik, didukung pemantauan ekosistem secara berkala.
 
 **Empat angka langsung (ditarik otomatis dari Buku Kas Publik):**
 
@@ -148,15 +161,15 @@ Kami menyebutnya ekonomi berbasis ekologi: hutan yang dipulihkan juga menjadi su
 
 ## 8. Kolaborasi
 
-**Judul:** Kami tidak memulai dari nol, dan tidak bekerja sendiri.
+**Judul:** Kami tidak memulai dari awal dan tidak bekerja sendiri.
 
-**Teks:** Banyak warga, badan usaha, dan organisasi non-profit sudah lebih dulu menjaga hutan Indonesia. Kami hadir untuk berjalan bersama mereka, bukan menggantikan.
+**Teks:** Warga masyarakat, badan usaha, dan organisasi non-profit sudah lebih dulu berkontribusi untuk kelestarian alam Indonesia. Kami hadir untuk berkontribusi bersama seluruh pihak yang memiliki kepekaan yang sama.
 
 **Tiga kolom:**
 
 | Untuk | Teks | Tombol |
 | --- | --- | --- |
-| Masyarakat | Laporkan lahan kritis, bekerja di proyek, atau kelola persemaian di desa Anda. | Laporkan Lahan |
+| Masyarakat | Berkontribusi menginformasikan lahan kritis, bekerja di proyek kami, serta berbagi ilmu dan informasi. | Saya ingin berkontribusi |
 | Badan usaha | Kemitraan penanaman dan pembelian hasil hutan, dengan laporan dampak yang bisa diperiksa siapa saja. | Ajukan Kemitraan |
 | Organisasi non-profit | Berbagi data, lokasi, dan keahlian. Terhubung dengan penggiat lain lewat Benih. | Mari Berkolaborasi |
 
@@ -164,7 +177,7 @@ Kami menyebutnya ekonomi berbasis ekologi: hutan yang dipulihkan juga menjadi su
 
 **Judul:** Lahan kritis di dekat Anda bisa menjadi hutan berikutnya.
 
-**Teks:** Laporkan lahan gundul atau rawan longsor. Tim kami akan memverifikasi laporan Anda dan meneliti cara terbaik untuk memulihkannya bersama warga.
+**Teks:** Infokan kepada kami keberadaan lahan gundul atau rawan longsor. Tim kami akan memverifikasi laporan Anda dan meneliti cara terbaik untuk memulihkannya bersama warga.
 
 **Tombol utama:** Laporkan Lahan
 

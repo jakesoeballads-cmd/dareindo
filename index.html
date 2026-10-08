@@ -92,11 +92,11 @@
   .gelap .lead{color:#C9D4CA}
   .geser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
   .geser p+p{margin-top:1.1rem}
-  .kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end}
+  .kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end;align-self:start;position:sticky;top:120px}
   .kontur path{fill:none;stroke:var(--kunyit);stroke-width:1.4;opacity:.9}
   .kontur path:nth-child(even){stroke:#7FA07F}
   .kontur text{font:500 11px var(--body);fill:#9FB3A2;font-variant-numeric:tabular-nums}
-  @media (max-width:860px){.geser{grid-template-columns:1fr}.kontur{justify-self:start;max-width:380px}}
+  @media (max-width:860px){.geser{grid-template-columns:1fr}.kontur{justify-self:start;max-width:380px;position:static}}
 
   /* 3 Krisis */
   .angka{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:2px solid var(--hutan)}
@@ -106,6 +106,12 @@
   .angka .ket{margin-top:.7rem;font-weight:500}
   .angka .sumber{margin-top:.5rem;font-size:.8rem;color:var(--tanah)}
   .angka .sumber a{text-decoration:none;border-bottom:1px solid currentColor}
+  .pernyataan{margin-top:1.6rem;font:400 clamp(1.5rem,3vw,2.2rem)/1.25 var(--display);max-width:26ch;color:var(--lumut)}
+  .filosofi{margin-top:2rem;columns:2 30ch;column-gap:clamp(32px,5vw,64px)}
+  .filosofi p{margin-bottom:1rem;break-inside:avoid}
+  .catatan{font-size:.85rem;color:var(--tanah)}
+  .on-dark .catatan{color:#C9D4CA}
+  .akar .isi p a{color:var(--tanah);text-decoration:none}
   .penutup{margin-top:2.6rem;font:400 1.35rem/1.4 var(--display);max-width:34ch}
   @media (max-width:760px){.angka{grid-template-columns:1fr}.angka > div,.angka > div + div{padding:1.4rem 0;border-left:0;border-bottom:1px solid var(--garis)}}
 
@@ -209,9 +215,8 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="label">PT Daya Reforestasi Indonesia</p>
       <h1>Tidak ada ekonomi tanpa ruang hidup yang lestari.</h1>
-      <p class="lead">Kami memulihkan lahan kritis menjadi hutan yang menghidupi warga di sekitarnya. Setiap rupiah dan setiap pohon kami buka untuk diperiksa publik.</p>
+      <p class="lead">Membangun hubungan harmonis antara manusia dan alam beserta seluruh penghuninya.</p>
       <div class="aksi">
         <a class="btn btn-utama" href="#proyek">Lihat Proyek Kami</a>
         <a class="btn btn-garis" href="#transparansi">Buka Pembukuan Kami</a>
@@ -231,8 +236,10 @@
   <div class="wrap geser">
     <div>
       <h2>Ekonomi bukan lagi sekadar angka.</h2>
-      <p class="lead" style="margin-top:1.6rem">Selama puluhan tahun, kemajuan diukur dari seberapa banyak yang bisa kita ambil dari alam. Hutan dihitung dalam meter kubik kayu. Lahan dihitung dalam ton panen per musim.</p>
-      <p class="lead">Hari ini ukurannya berubah. Ekonomi adalah nilai keseimbangan dan ukuran kelestarian: berapa lama tanah tetap subur, air tetap mengalir, dan sebuah desa tetap aman untuk ditinggali.</p>
+      <p class="lead" style="margin-top:1.6rem"><strong>PT Daya Reforestasi Indonesia</strong> merupakan perusahaan yang berfokus pada pengembangan usaha berbasis ekologi dengan perhatian utama terhadap pemulihan ekosistem, peningkatan kesadaran masyarakat, serta penciptaan ruang ekonomi yang tetap mempertimbangkan keberlangsungan lingkungan dan masyarakat.</p>
+      <p class="lead">Daya tidak memandang persoalan lingkungan sebagai persoalan yang berdiri sendiri. Kerusakan lingkungan berkaitan dengan cara manusia menggunakan sumber daya alam, bagaimana pembangunan dilakukan, bagaimana masyarakat memenuhi kebutuhan ekonominya, serta bagaimana kesadaran dan akses terhadap pengetahuan lingkungan dibangun.</p>
+      <p class="lead">Karena itu, Daya tidak hadir semata-mata untuk menanam pohon atau mengembalikan tutupan hijau. Fokus tersebut merupakan bagian dari gagasan yang lebih besar: <strong>membangun kembali hubungan yang lebih sehat dan harmonis antara manusia dengan alam di sekitarnya.</strong></p>
+      <p class="lead">Dalam menjalankan perannya, Daya menempatkan dirinya sebagai salah satu dari banyak pelaku usaha berbasis ekologis. Perusahaan tidak memosisikan diri sebagai satu-satunya pihak yang memiliki solusi, melainkan sebagai <strong>penggerak, fasilitator, dan ruang kolaborasi</strong> yang memungkinkan masyarakat umum, komunitas, ahli, enthusiast, institusi, dan berbagai pihak lainnya untuk ikut berkontribusi terhadap lingkungan.</p>
     </div>
     <svg class="kontur" id="kontur" viewBox="0 0 500 500" role="img" aria-label="Garis kontur sebuah bukit"></svg>
   </div>
@@ -241,9 +248,15 @@
 <!-- 3. Krisis -->
 <section class="band">
   <div class="wrap">
-    <h2>Ruang hidup kita menyusut setiap tahun.</h2>
-    <p class="lead" style="margin-top:1.4rem">Hutan terus dibuka untuk berbagai kebutuhan. Lahan hijau beralih fungsi. Setiap hektare yang hilang membawa pergi keanekaragaman hayati, sumber air, dan akar-akar yang selama ini menahan tanah di lereng.</p>
-    <p class="lead" style="margin-top:1rem">Akibatnya tidak berhenti di hutan. Ketika tanah kehilangan penahannya, hujan berubah menjadi longsor dan banjir yang menimpa rumah, sawah, dan jalan desa.</p>
+    <h2>Manusia dan Alam</h2>
+    <p class="pernyataan">Alam bukan sekadar sumber daya. Alam adalah syarat kehidupan.</p>
+    <div class="filosofi">
+      <p class="lead">Filosofi PT Daya Reforestasi Indonesia berangkat dari sebuah kesadaran sederhana: <strong>seluruh kebutuhan manusia berasal dari alam.</strong></p>
+      <p>Manusia memperoleh pangan, air, udara, energi, bahan bangunan, dan berbagai kebutuhan kehidupannya dari sistem alam. Namun dalam proses pembangunan, manusia sering menempatkan dirinya seolah-olah berada di luar alam dan memiliki hak untuk menguasainya.</p>
+      <p>Daya memandang bahwa manusia pada dasarnya adalah <strong>bagian dari alam</strong>. Kemampuan manusia untuk membangun, mengembangkan teknologi, dan mengubah lingkungan merupakan bentuk daya yang besar. Namun daya tersebut juga dapat berubah menjadi sumber kerusakan ketika digunakan tanpa batas dan tanpa mempertimbangkan keberadaan penghuni alam lainnya.</p>
+      <p>Karena itu, menjaga lingkungan bukan dipahami sebagai bentuk “kebaikan” manusia kepada alam. Menjaga lingkungan merupakan bagian dari tanggung jawab manusia sebagai salah satu penghuni alam.</p>
+      <p>Bagi Daya, keberlanjutan bukan berarti manusia berhenti menggunakan alam. Manusia akan selalu membutuhkan alam. Yang perlu diubah adalah <strong>cara manusia mengambil, mengolah, dan memanfaatkan sumber daya tersebut secara bertanggung jawab sehingga fungsi ekologisnya tetap dapat berlangsung.</strong></p>
+    </div>
     <div class="angka">
       <div>
         <b>175.400 ha</b>
@@ -261,7 +274,7 @@
         <p class="sumber">Menteri LHK (2020), via <a href="https://www.suarasurabaya.net/?p=478695">Suara Surabaya</a></p>
       </div>
     </div>
-    <p class="penutup">Di balik setiap angka ada desa yang hidupnya bergantung pada tanah yang sama.</p>
+    <p class="penutup">Di balik setiap angka terdapat masyarakat yang hidupnya bergantung pada tanah yang sama.</p>
   </div>
 </section>
 
@@ -293,8 +306,8 @@
       <p class="lead">Kami menyebutnya ekonomi berbasis ekologi: hutan yang dipulihkan juga menjadi sumber penghasilan yang adil bagi warga di sekitarnya.</p>
     </div>
     <ul class="prinsip">
-      <li><h3>Tanam yang menghidupi</h3><p>Tanaman asli penjaga tanah ditanam berdampingan dengan komoditas bernilai ekonomi lewat pola agroforestri.</p></li>
-      <li><h3>Warga sebagai mitra</h3><p>Warga setempat bekerja di proyek, dibimbing ahli, dan ikut menerima manfaat dari hasil hutan.</p></li>
+      <li><h3>Tanaman yang menghidupi</h3><p>Tanaman asli penjaga tanah ditanam berdampingan dengan komoditas bernilai ekonomi lewat pola agroforestri.</p></li>
+      <li><h3>Masyarakat sebagai penggerak utama</h3><p>Warga setempat bekerja di proyek, dibimbing ahli, dan ikut menerima manfaat dari hasil hutan.</p></li>
       <li><h3>Tumbuh bersama lahan yang pulih</h3><p>Usaha kami tumbuh bersama lahan yang pulih. Ke mana laba kami mengalir, bisa Anda periksa di pembukuan kami.</p></li>
     </ul>
   </div>
@@ -310,12 +323,14 @@
           <img src="https://images.unsplash.com/photo-1685604957746-fcce91338d81?w=1200&q=70&fm=jpg&fit=crop" alt="Jalan tanah di antara rumpun bambu tinggi" width="1200" height="675" loading="lazy">
         </figure>
         <div class="isi">
-          <span class="status">Agroforestri, mencari lokasi pertama</span>
+          <span class="status">Agroforestri dan silvikultur</span>
           <h3>Akar Bambu</h3>
-          <p>Lahan terlantar yang rawan longsor kami ubah menjadi hutan komoditas. Bambu membantu mengikat tanah di lereng, katuk dan vanili memberi penghasilan, dan tanaman asli setempat memulihkan ekosistemnya. Warga sekitar bekerja di sana, dibimbing ahli agroforestri.</p>
+          <p>Mengembalikan lahan gundul, terutama di area perbukitan yang rawan longsor, menjadi hutan komoditas. Bambu, selain menyerap dan menahan air, juga membantu mengikat tanah di lereng. Katuk dan vanili<a href="#catatan-komoditas" aria-label="lihat catatan">*</a> memberi penghasilan, dan tanaman asli setempat memulihkan ekosistemnya.</p>
+          <p class="catatan" id="catatan-komoditas">*Tanaman komoditas (selain bambu) akan disesuaikan dengan keadaan alami lahan tersebut dan kebutuhan masyarakat sekitar.</p>
           <div class="aksi">
-            <a class="btn btn-garis" href="#lapor">Tahu lahan rawan longsor? Laporkan</a>
+            <a class="btn btn-garis" href="#lapor">Tahu lahan rawan longsor? Beritahu kami</a>
           </div>
+          <p class="catatan">Setiap kontribusi akan sangat berarti.</p>
           <p class="credit">Foto ilustrasi: Hutan Surodadu, Mojokerto, Jawa Timur. Muhammad Faris Afif Putra / <a href="https://unsplash.com/photos/a-dirt-road-surrounded-by-tall-bamboo-trees-zAPdgbiVTz0">Unsplash</a></p>
         </div>
       </article>
@@ -330,7 +345,7 @@
           </svg>
           <span class="status">Aplikasi web, segera hadir</span>
           <h3>Benih</h3>
-          <p>Ruang temu bagi para penggiat lingkungan. Dari hutan, laut, hingga sampah, Benih membantu komunitas saling menemukan dan menyelenggarakan kegiatan bersama.</p>
+          <p>Ruang temu bagi para penggiat lingkungan. Dari hutan, laut, hingga keseimbangan ruang hidup urban. Benih diharapkan akan menjadi sebuah platform di mana masyarakat, komunitas, dan badan usaha saling menemukan dan menyelenggarakan kegiatan bersama.</p>
           <div class="aksi">
             <a class="btn btn-utama" href="mailto:halo@dareindo.com?subject=Daftar%20kabar%20peluncuran%20Benih">Daftar untuk kabar peluncuran</a>
           </div>
@@ -343,8 +358,9 @@
 <!-- 7. Transparansi radikal -->
 <section class="band gelap on-dark" id="transparansi">
   <div class="wrap">
-    <h2>Setiap rupiah dan setiap pohon bisa Anda periksa.</h2>
-    <p class="lead" style="margin-top:1.4rem">Seluruh pembukuan dan capaian dampak kami terbuka untuk publik, termasuk pengeluaran yang belum berjalan sesuai rencana. Kepercayaan tidak kami minta. Kami tunjukkan buktinya.</p>
+    <h2 style="max-width:24ch">Transparansi Radikal sebagai signature Daya Reforestasi Indonesia</h2>
+    <p class="lead" style="margin-top:1.4rem">Dalam hal struktural, Daya Reforestasi Indonesia mengintegrasikan pemantauan ekosistem internal perusahaan dengan prinsip transparansi finansial radikal untuk memastikan setiap dana investasi dimanfaatkan secara efisien dan efektif, sehingga berdampak langsung pada target perbaikan lingkungan sekaligus memberikan imbal hasil yang berkelanjutan.</p>
+    <p class="lead" style="margin-top:1rem">Prinsip yang sama kami adopsi dalam pengelolaan setiap proyek yang dijalankan, di mana seluruh anggaran, biaya operasional, dan pendapatan manajemen dapat diakses secara terbuka oleh investor dan publik, didukung pemantauan ekosistem secara berkala.</p>
 
     <div class="buku" aria-labelledby="buku-judul">
       <div class="buku-kepala">
@@ -369,10 +385,10 @@
 <!-- 8. Kolaborasi -->
 <section class="band" id="kolaborasi">
   <div class="wrap">
-    <h2 style="max-width:20ch">Kami tidak memulai dari nol, dan tidak bekerja sendiri.</h2>
-    <p class="lead" style="margin-top:1.4rem">Banyak warga, badan usaha, dan organisasi non-profit sudah lebih dulu menjaga hutan Indonesia. Kami hadir untuk berjalan bersama mereka, bukan menggantikan.</p>
+    <h2 style="max-width:20ch">Kami tidak memulai dari awal dan tidak bekerja sendiri.</h2>
+    <p class="lead" style="margin-top:1.4rem">Warga masyarakat, badan usaha, dan organisasi non-profit sudah lebih dulu berkontribusi untuk kelestarian alam Indonesia. Kami hadir untuk berkontribusi bersama seluruh pihak yang memiliki kepekaan yang sama.</p>
     <ul class="mitra">
-      <li><h3>Masyarakat</h3><p>Laporkan lahan kritis, bekerja di proyek, atau kelola persemaian di desa Anda.</p><a class="tautan" href="#lapor">Laporkan Lahan</a></li>
+      <li><h3>Masyarakat</h3><p>Berkontribusi menginformasikan lahan kritis, bekerja di proyek kami, serta berbagi ilmu dan informasi.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Saya%20ingin%20berkontribusi">Saya ingin berkontribusi</a></li>
       <li><h3>Badan usaha</h3><p>Kemitraan penanaman dan pembelian hasil hutan, dengan laporan dampak yang bisa diperiksa siapa saja.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Pengajuan%20kemitraan">Ajukan Kemitraan</a></li>
       <li><h3>Organisasi non-profit</h3><p>Berbagi data, lokasi, dan keahlian. Terhubung dengan penggiat lain lewat Benih.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Kolaborasi%20organisasi">Mari Berkolaborasi</a></li>
     </ul>
@@ -383,7 +399,7 @@
 <section class="band ajak on-dark" id="lapor">
   <div class="wrap">
     <h2>Lahan kritis di dekat Anda bisa menjadi hutan berikutnya.</h2>
-    <p class="lead" style="margin-top:1.4rem">Laporkan lahan gundul atau rawan longsor. Tim kami akan memverifikasi laporan Anda dan meneliti cara terbaik untuk memulihkannya bersama warga.</p>
+    <p class="lead" style="margin-top:1.4rem">Infokan kepada kami keberadaan lahan gundul atau rawan longsor. Tim kami akan memverifikasi laporan Anda dan meneliti cara terbaik untuk memulihkannya bersama warga.</p>
     <p class="lead" style="margin-top:1rem">Sertakan lokasi (atau titik Google Maps), foto lahan, dan perkiraan luasnya.</p>
     <div class="aksi">
       <a class="btn btn-utama" href="mailto:halo@dareindo.com?subject=Laporan%20lahan%20kritis&body=Lokasi%20(desa%2C%20kecamatan%2C%20kabupaten%20atau%20link%20Google%20Maps)%3A%0A%0APerkiraan%20luas%3A%0A%0AKondisi%20lahan%3A%0A%0A(Lampirkan%20foto%20lahan)">Laporkan Lahan</a>
