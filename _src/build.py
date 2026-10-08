@@ -14,6 +14,8 @@ Isi setiap halaman ada di _src/pages/<halaman>/<bahasa>.html:
     description: Satu kalimat untuk mesin pencari
     ---
     <section>...</section>
+Baris opsional "robots: noindex" di kepala menyembunyikan halaman dari
+mesin pencari (dipakai selama halaman masih draf).
 Gunakan {{base}} di depan tautan internal, misalnya href="{{base}}/benih/",
 agar tautan tetap di bahasa yang sama. Gaya dan skrip khusus halaman ada di
 style.css dan script.js di folder yang sama (dipakai semua bahasa).
@@ -27,7 +29,7 @@ SRC = pathlib.Path(__file__).resolve().parent
 ROOT = SRC.parent
 BAHASA = ["id", "en", "de"]  # bahasa pertama tampil di akar situs (/)
 DASAR = {"id": "", "en": "/en", "de": "/de"}
-HALAMAN = ["beranda", "akar-bambu", "benih", "transparansi", "kontribusi", "kontak"]
+HALAMAN = ["beranda", "akar-bambu", "benih", "transparansi", "kontribusi", "kontak", "privasi", "syarat"]
 DOMAIN = "https://dareindo.com"
 
 
@@ -78,6 +80,7 @@ def susun(halaman, bahasa):
         "{{deskripsi}}": html.escape(meta["description"], quote=True),
         "{{url}}": url,
         "{{alternatif}}": alternatif,
+        "{{robots}}": f'<meta name="robots" content="{meta["robots"]}">\n' if "robots" in meta else "",
         "{{gaya}}": f"<style>\n{gaya}\n</style>\n" if gaya else "",
         "{{menu}}": menu(t, bahasa, halaman),
         "{{isi}}": isi,
