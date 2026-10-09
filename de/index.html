@@ -22,9 +22,11 @@
 <link rel="stylesheet" href="/assets/situs.css">
 <style>
 /* 1 Hero */
-.hero{padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,112px)}
+.hero{padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,112px);background:var(--hutan);color:var(--putih)}
+.hero .lead{color:#C9D4CA}
+.hero .credit{color:#9FB3A2}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:end}
-.hero .label{font-size:.9rem;font-weight:600;color:var(--lumut);margin-bottom:1.4rem}
+.hero .label{font-size:.9rem;font-weight:600;color:var(--bambu-muda);margin-bottom:1.4rem}
 .hero h1{font-size:clamp(2.6rem,6.4vw,5.1rem);max-width:13ch}
 .hero .lead{margin-top:1.6rem;max-width:46ch}
 .hero .foto{aspect-ratio:4/5}
@@ -34,8 +36,8 @@
 .geser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
 .geser p+p{margin-top:1.1rem}
 .kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end;align-self:start;position:sticky;top:120px}
-.kontur path{fill:none;stroke:var(--kunyit);stroke-width:1.4;opacity:.9}
-.kontur path:nth-child(even){stroke:#7FA07F}
+.kontur path{fill:none;stroke:var(--bambu-muda);stroke-width:1.4;opacity:.9}
+.kontur path:nth-child(even){stroke:var(--bambu)}
 .kontur text{font:500 11px var(--body);fill:#9FB3A2;font-variant-numeric:tabular-nums}
 @media (max-width:860px){.geser{grid-template-columns:1fr}.kontur{justify-self:start;max-width:380px;position:static}}
 
@@ -58,7 +60,7 @@
 .ironi{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,80px);align-items:start}
 .ironi .foto{aspect-ratio:3/4}
 .ironi p{margin-top:1.1rem}
-blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--kunyit);font:400 clamp(1.6rem,3vw,2.2rem)/1.25 var(--display);max-width:22ch}
+blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bambu);font:400 clamp(1.6rem,3vw,2.2rem)/1.25 var(--display);max-width:22ch}
 @media (max-width:860px){.ironi{grid-template-columns:1fr}.ironi .foto{aspect-ratio:4/3;order:2}}
 
 /* 5 Jawaban */
@@ -81,7 +83,7 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--kun
 .proyek h3{font-size:2rem}
 .proyek .aksi{margin-top:auto;padding-top:.6rem;align-items:center;gap:20px}
 .benih .logo-benih{width:84px;height:84px}
-.benih .tautan{border-color:var(--kunyit)}
+.benih .tautan{border-color:var(--bambu-muda)}
 @media (max-width:860px){.proyek-grid{grid-template-columns:1fr}}
 
 
@@ -124,7 +126,7 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--kun
 <main id="top">
 
 <!-- 1. Hero -->
-<section class="hero">
+<section class="hero on-dark">
   <div class="wrap hero-grid">
     <div>
       <h1>Keine Wirtschaft ohne einen Lebensraum, der Bestand hat.</h1>
@@ -252,9 +254,9 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--kun
           <svg class="logo-benih" viewBox="0 0 84 84" role="img" aria-label="Benih-Logo: ein keimender Samen">
             <ellipse cx="42" cy="62" rx="15" ry="11" fill="#B88A5A"/>
             <path d="M33 60c5-3 13-3 18 0" stroke="#7A5C43" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <path d="M42 52V30" stroke="#E3A72F" stroke-width="3" stroke-linecap="round"/>
+            <path d="M42 52V30" stroke="#5FAE55" stroke-width="3" stroke-linecap="round"/>
             <path d="M42 36c-2-9-9-13-17-12 1 8 8 13 17 12z" fill="#A9CFA0"/>
-            <path d="M42 31c2-10 10-15 19-14-1 9-9 15-19 14z" fill="#E3A72F"/>
+            <path d="M42 31c2-10 10-15 19-14-1 9-9 15-19 14z" fill="#5FAE55"/>
           </svg>
           <span class="status">Web-App, demnächst verfügbar</span>
           <h3>Benih</h3>
