@@ -18,6 +18,10 @@ Gunakan {{base}} di depan tautan internal, misalnya href="{{base}}/benih/",
 agar tautan tetap di bahasa yang sama. Gaya dan skrip khusus halaman ada di
 style.css dan script.js di folder yang sama (dipakai semua bahasa).
 Teks menu, footer, dan teks di skrip ada di _src/teks.json dan assets/situs.js.
+
+Mode Segera Hadir: selama SEGERA_HADIR = True, dareindo.com hanya menampilkan
+_src/segera-hadir.html (di / dan sebagai 404.html) dan semua halaman lain tidak
+ditayangkan. Untuk membuka situs lengkap, ubah ke False lalu jalankan build lagi.
 """
 import html
 import json
@@ -29,6 +33,7 @@ BAHASA = ["id", "en", "de"]  # bahasa pertama tampil di akar situs (/)
 DASAR = {"id": "", "en": "/en", "de": "/de"}
 HALAMAN = ["beranda", "akar-bambu", "benih", "transparansi", "kontribusi", "kontak"]
 DOMAIN = "https://dareindo.com"
+SEGERA_HADIR = True  # True: situs publik hanya menampilkan halaman Segera Hadir
 
 
 def jalur(halaman):
@@ -96,10 +101,31 @@ def susun(halaman, bahasa):
 
 TEKS = json.loads((SRC / "teks.json").read_text())
 
+def tujuan(halaman, bahasa):
+    return ROOT / DASAR[bahasa].lstrip("/") / jalur(halaman).lstrip("/") / "index.html"
+
+
 if __name__ == "__main__":
+    segera = (SRC / "segera-hadir.html").read_text()
     for bahasa in BAHASA:
         for halaman in HALAMAN:
-            tujuan = ROOT / DASAR[bahasa].lstrip("/") / jalur(halaman).lstrip("/") / "index.html"
-            tujuan.parent.mkdir(parents=True, exist_ok=True)
-            tujuan.write_text(susun(halaman, bahasa))
-            print("ditulis", tujuan.relative_to(ROOT))
+            berkas = tujuan(halaman, bahasa)
+            if SEGERA_HADIR:
+                if berkas.exists() and berkas != ROOT / "index.html":
+                    berkas.unlink()
+                    print("dihapus", berkas.relative_to(ROOT))
+                    for folder in (berkas.parent, berkas.parent.parent):
+                        if folder != ROOT and folder.is_dir() and not any(folder.iterdir()):
+                            folder.rmdir()
+                continue
+            berkas.parent.mkdir(parents=True, exist_ok=True)
+            berkas.write_text(susun(halaman, bahasa))
+            print("ditulis", berkas.relative_to(ROOT))
+    halaman_404 = ROOT / "404.html"
+    if SEGERA_HADIR:
+        for berkas in (ROOT / "index.html", halaman_404):
+            berkas.write_text(segera)
+            print("ditulis", berkas.relative_to(ROOT), "(Segera Hadir)")
+    elif halaman_404.exists():
+        halaman_404.unlink()
+        print("dihapus 404.html")
