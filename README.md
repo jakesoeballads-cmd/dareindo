@@ -25,6 +25,10 @@ Folder `_dokumen` tidak ikut tampil di dareindo.com (folder berawalan `_` diabai
 
 Di Google Sheets: File → Bagikan → Publikasikan ke web → pilih tab **Ringkasan** → CSV, lalu ulangi untuk tab **Transaksi**. Tempel kedua tautan CSV di `BUKU_KAS` di bagian atas `assets/situs.js`. Beranda dan halaman Transparansi langsung membaca angka terbaru setiap kali dibuka.
 
+## Mode Segera Hadir
+
+Selama `SEGERA_HADIR = True` di `_src/build.py`, dareindo.com hanya menampilkan halaman Segera Hadir (`_src/segera-hadir.html`), dan halaman lain tidak ditayangkan. Sumber semua halaman tetap ada di `_src/`. Untuk membuka situs lengkap lagi, ubah ke `False`, jalankan `python3 _src/build.py`, lalu commit hasilnya.
+
 ## Mengubah isi halaman (3 bahasa)
 
 Semua halaman dibuat dari folder `_src/`, lalu hasilnya di-commit. Jangan edit `index.html`, `en/`, `de/`, atau folder halaman secara langsung.
