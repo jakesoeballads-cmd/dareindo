@@ -62,16 +62,15 @@
     d.appendChild(isi);
     buku.appendChild(d);
   }
-  // Layar lebar: halaman pertama di kiri, tiap lembar memuat dua halaman (depan dan belakang),
-  // halaman sisa (bila ganjil) di kanan. HP: satu halaman per lembar.
+  // Layar lebar: lembar pertama adalah sampul (belakangnya halaman judul), tiap lembar
+  // berikutnya memuat dua halaman, halaman sisa (bila ganjil) di kanan. HP: satu halaman per lembar.
   function susun() {
     mode = lebar.matches ? 'ganda' : 'tunggal';
     halaman.forEach(h => sumber.appendChild(h));
     buku.textContent = '';
-    buku.className = 'cerita-buku ' + mode;
     daun.length = 0;
     const urut = halaman.slice();
-    if (mode === 'ganda') dasar('kiri', urut.shift());
+    if (mode === 'ganda') dasar('kiri', null);
     dasar('kanan', mode === 'tunggal' || urut.length % 2 ? urut.pop() : null);
     const langkah = mode === 'ganda' ? 2 : 1;
     for (let i = 0; i < urut.length; i += langkah) {
@@ -99,6 +98,7 @@
       d.querySelector('.depan').setAttribute('aria-hidden', i === kini ? 'false' : 'true');
       d.querySelector('.belakang').setAttribute('aria-hidden', mode === 'ganda' && i === kini - 1 ? 'false' : 'true');
     });
+    buku.className = 'cerita-buku ' + mode + (kini === 0 ? ' tertutup' : '');
     if (langsung) lapis();
   }
   function ke(n) {
