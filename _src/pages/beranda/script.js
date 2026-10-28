@@ -31,7 +31,7 @@
   io.observe(svg);
 })();
 
-/* Buku antik (bagian 2): sampul dibuka, lalu lembar dibalik satu per satu */
+/* Buku antik (bagian 2): buku terbuka, lembar dibalik satu per satu */
 (function buku(){
   const el = document.querySelector('.cerita');
   if (!el) return;
@@ -43,6 +43,7 @@
   el.classList.add('cerita-js');
   const lebar = matchMedia('(min-width: 760px)');
   let daun = [], kini = 0, mode = '';
+  halaman[0].classList.add('pertama');
 
   function muka(sisi, isi) {
     const m = document.createElement('div');
@@ -50,24 +51,23 @@
     if (isi) m.appendChild(isi);
     return m;
   }
-  function kertas(kelas) {
+  function dasar(sisi, isi) {
     const d = document.createElement('div');
-    d.className = 'halaman ' + kelas;
-    return d;
+    d.className = 'dasar ' + sisi;
+    if (!isi) { isi = document.createElement('div'); isi.className = 'halaman'; }
+    d.appendChild(isi);
+    buku.appendChild(d);
   }
+  // Layar lebar: halaman pertama di kiri, lembar berisi dua halaman (depan dan belakang),
+  // halaman sisa di kanan. HP: satu halaman per lembar.
   function susun() {
     mode = lebar.matches ? 'ganda' : 'tunggal';
     halaman.forEach(h => sumber.appendChild(h));
     buku.textContent = '';
     buku.className = 'cerita-buku ' + mode;
-    const kiri = document.createElement('div'); kiri.className = 'dasar kiri';
-    const kanan = document.createElement('div'); kanan.className = 'dasar kanan';
-    kiri.appendChild(kertas('endpaper')); kanan.appendChild(kertas('endpaper'));
-    kiri.firstChild.style.cssText = kanan.firstChild.style.cssText = 'position:absolute;inset:0';
-    if (mode === 'ganda') buku.appendChild(kiri);
-    buku.appendChild(kanan);
-    // Dua halaman per lembar (depan dan belakang) di layar lebar, satu halaman per lembar di HP
-    const urut = mode === 'ganda' ? [halaman[0], kertas('endpaper'), ...halaman.slice(1)] : halaman;
+    const urut = halaman.slice();
+    if (mode === 'ganda') dasar('kiri', urut.shift());
+    dasar('kanan', mode === 'tunggal' || urut.length % 2 ? urut.pop() : null);
     daun = [];
     const langkah = mode === 'ganda' ? 2 : 1;
     for (let i = 0; i < urut.length; i += langkah) {
@@ -79,12 +79,9 @@
       buku.appendChild(d);
       daun.push(d);
     }
-    const pertama = halaman.find(h => h.classList.contains('isi'));
-    if (pertama) pertama.classList.add('pertama');
-    kini = Math.min(kini, maks());
+    kini = Math.min(kini, daun.length);
     tampil(true);
   }
-  function maks() { return mode === 'ganda' ? daun.length : daun.length - 1; }
   function lapis() {
     const n = daun.length;
     daun.forEach((d, i) => { d.style.zIndex = i < kini ? i + 1 : n - i + n; });
@@ -95,16 +92,13 @@
       if (!langsung && balik !== d.classList.contains('terbalik')) d.style.zIndex = 100;
       d.classList.toggle('terbalik', balik);
       d.classList.toggle('atas', i === kini);
-      const kiriTampak = mode === 'ganda' && i === kini - 1;
       d.querySelector('.depan').setAttribute('aria-hidden', i === kini ? 'false' : 'true');
-      d.querySelector('.belakang').setAttribute('aria-hidden', kiriTampak ? 'false' : 'true');
+      d.querySelector('.belakang').setAttribute('aria-hidden', mode === 'ganda' && i === kini - 1 ? 'false' : 'true');
     });
-    buku.classList.toggle('tertutup', kini === 0);
-    buku.classList.toggle('tamat', mode === 'ganda' && kini === daun.length);
     if (langsung) lapis();
   }
   function ke(n) {
-    n = Math.max(0, Math.min(maks(), n));
+    n = Math.max(0, Math.min(daun.length, n));
     if (n === kini) return;
     kini = n; tampil(false);
   }
@@ -112,8 +106,7 @@
     if (e.target.closest('a')) return;
     const r = buku.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width;
-    if (mode === 'ganda') ke(kini + (x < 0.5 && kini > 0 ? -1 : 1));
-    else ke(kini + (x < 0.3 && kini > 0 ? -1 : 1));
+    ke(kini + (x < (mode === 'ganda' ? 0.5 : 0.3) ? -1 : 1));
   });
   el.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') { ke(kini + 1); e.preventDefault(); }

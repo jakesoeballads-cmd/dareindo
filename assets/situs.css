@@ -193,3 +193,36 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--bambu);outline-o
   .menu .bahasa a{border-bottom:0;padding:.5rem .8rem}
 }
 .foto video{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Palet Pagi Bambu (dipilih Jake 2026-10-28): header putih, pita hijau muda, tombol hijau bambu.
+   Ditulis sebagai lapisan di atas gaya dasar; html di depan pemilih menaikkan prioritasnya. */
+:root{--pita:#EAF4E4;--pita-teks:#14301C;--pita-lead:#3C5A44;--pita-garis:#C9DEC0;--kepala:#FFFFFF;--kepala-teks:#14301C;--kepala-aksen:#2E7D32;--kaki:#DDEFD5;--kaki-teks:#2F4A36;--kaki-judul:#14301C;--tombol:#43A047;--tombol-teks:#FFFFFF;--tombol-hover:#388E3C;--kartu:#2E7D32;--kabut:#FFFFFF;--hutan:#14301C;--lumut:#2E7D32;--bambu-muda:#2E7D32}
+html body{background:var(--kabut)}
+html header{background:rgba(255,255,255,.96);color:var(--kepala-teks);border-bottom:1px solid var(--pita-garis)}
+html .merek span,html .menu a:hover,html .menu a[aria-current="page"]{color:var(--kepala-aksen)}
+html .menu a[aria-current="page"]{box-shadow:inset 0 -2px 0 var(--kepala-aksen)}
+html .menu-btn{color:var(--kepala-teks)}
+html .menu .bahasa{border-color:var(--pita-garis)}
+html .menu .bahasa a{color:#5E7565}
+html .menu .bahasa a[aria-current="true"]{background:var(--kepala-teks);color:#fff}
+@media (max-width:860px){html .menu{background:#fff;border-color:var(--pita-garis)}html .menu a{border-color:var(--pita-garis)}}
+html .btn-utama,html .menu .btn[aria-current="page"]{background:var(--tombol);color:var(--tombol-teks)}
+html .btn-utama:hover{background:var(--tombol-hover)}
+html .gelap{background:var(--pita);color:var(--pita-teks)}
+html .gelap .lead,html .gelap .daftar span,html .gelap .langkah span,html .on-dark.gelap .catatan{color:var(--pita-lead)}
+html .gelap .bagian,html .gelap .daftar li,html .gelap .langkah li{border-color:var(--pita-garis)}
+html .gelap .daftar,html .gelap .langkah{border-color:var(--pita-teks)}
+html .gelap.on-dark .btn-garis{border-color:var(--pita-teks);color:var(--pita-teks)}
+html .gelap.on-dark .btn-garis:hover{background:var(--pita-teks);color:#fff}
+html .gelap .tautan{border-color:var(--lumut)}
+html .gelap .proyek-kepala .status{color:var(--lumut)}
+html .kontur path{stroke:var(--lumut)}
+html .kontur path:nth-child(even){stroke:var(--tombol)}
+html .geser .kontur{opacity:.3}
+html .benih,html .ajak{background:var(--kartu)}
+html footer{background:var(--kaki);color:var(--kaki-teks)}
+html .kaki .slogan,html .kaki h4{color:var(--kaki-judul)}
+html .kaki{border-color:rgba(0,0,0,.12)}
+html .legal{color:var(--kaki-teks);opacity:.8}
+html .kaki a:hover{color:var(--kaki-judul)}
+html .cerita .cerita-buku{filter:drop-shadow(0 10px 20px rgba(0,40,20,.15))}
