@@ -33,7 +33,7 @@ BAHASA = ["id", "en", "de"]  # bahasa pertama tampil di akar situs (/)
 DASAR = {"id": "", "en": "/en", "de": "/de"}
 HALAMAN = ["beranda", "akar-bambu", "benih", "transparansi", "kontribusi", "kontak"]
 DOMAIN = "https://dareindo.com"
-SEGERA_HADIR = True  # True: situs publik hanya menampilkan halaman Segera Hadir
+SEGERA_HADIR = False  # True: situs publik hanya menampilkan halaman Segera Hadir
 
 
 def jalur(halaman):
