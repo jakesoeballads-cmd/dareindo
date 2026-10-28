@@ -128,3 +128,8 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bam
 .darurat{margin-top:1.6rem;font-size:.9rem;color:#DCE6DA;max-width:60ch}
 .darurat b{color:var(--putih)}
 .geser .kontur{position:absolute;right:0;top:50%;transform:translateY(-50%);opacity:.18;pointer-events:none;z-index:0;max-width:460px}
+
+/* latar meja kayu dengan lilin, lavender dan kain di sekitar buku */
+html .band.meja{background:#5A4636 url(/assets/buku/meja.jpg) center/cover no-repeat}
+.meja .kontur{display:none}
+@media (max-width:759px){html .band.meja{background-image:url(/assets/buku/meja-hp.jpg)}}
