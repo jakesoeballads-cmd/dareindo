@@ -20,12 +20,6 @@
 .halaman strong{font-weight:400;font-style:italic;color:#5A3A1E}
 .halaman.isi.pertama p::first-letter,.cerita-js .daun .isi.pertama p::first-letter{float:left;font:400 3.4em/.82 "IM Fell English",Georgia,serif;margin:.06em .1em 0 0;color:#6B3E1E}
 .halaman .nomor{position:absolute;bottom:18px;left:0;right:0;text-align:center;font:italic 400 .95rem "IM Fell English",Georgia,serif;color:#7A6447}
-.judul{align-items:center;text-align:center;gap:18px}
-.judul .bab{font:italic 400 1.05rem "IM Fell English",Georgia,serif;letter-spacing:.08em;color:#7A6447}
-.judul h2{font:400 clamp(1.7rem,3.2vw,2.5rem)/1.15 "IM Fell English",Georgia,serif;color:var(--tinta);max-width:12ch}
-.hiasan{font-size:1.6rem;color:#8B6A3E;line-height:1}
-.akhir{align-items:center;text-align:center;gap:12px}
-.akhir .tamat{font:italic 400 1.15rem "IM Fell English",Georgia,serif;color:#7A6447;letter-spacing:.06em}
 .sampul{background:radial-gradient(ellipse at 40% 35%,#7A5032 0%,#5B3A22 55%,#3E2614 100%);color:var(--emas);align-items:center;justify-content:center;gap:28px;text-align:center;padding:clamp(34px,5vw,56px) clamp(28px,4vw,48px);border-radius:3px 8px 8px 3px;box-shadow:inset 0 0 0 10px #4A2E19,inset 0 0 0 12px var(--emas),inset 0 0 0 17px #4A2E19,inset 0 0 0 18px #A88444,inset 14px 0 18px -6px rgba(0,0,0,.55)}
 .sampul .sampul-judul{font:400 clamp(1.8rem,3.4vw,2.6rem)/1.15 "IM Fell English",Georgia,serif;text-align:center!important;color:#E2C27E;text-shadow:0 1px 0 rgba(0,0,0,.6),0 -1px 0 rgba(255,230,170,.25);max-width:11ch}
 .sampul-ajak{font:italic 400 .9rem "IM Fell English",Georgia,serif;color:#BFA06A}
@@ -124,4 +118,25 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bam
 .ajak .lead{color:#DCE6DA}
 .darurat{margin-top:1.6rem;font-size:.9rem;color:#DCE6DA;max-width:60ch}
 .darurat b{color:var(--putih)}
-.geser .kontur{position:absolute;right:0;top:50%;transform:translateY(-50%);opacity:.18;pointer-events:none;z-index:0;max-width:460px}
+.geser /* Pilihan bentuk buku: data-gaya="kulit" (bawaan), "linen", "naskah", "eboni" */
+.cerita[data-gaya="linen"] .sampul{background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 3px),radial-gradient(ellipse at 40% 35%,#3F6B3F 0%,#2B4D2C 60%,#1C3520 100%);box-shadow:inset 18px 0 0 rgba(0,0,0,.25),inset 19px 0 0 rgba(255,255,255,.08),inset 14px 0 18px -6px rgba(0,0,0,.5)}
+.cerita[data-gaya="linen"] .sampul .sampul-judul{color:#E7CF8E;font-family:"EB Garamond",Georgia,serif;font-style:italic}
+.cerita[data-gaya="linen"] .sampul::before{content:"";width:64px;height:64px;border:2px solid #C9A45C;border-radius:50%;background:radial-gradient(circle,transparent 52%,rgba(201,164,92,.25) 53% 58%,transparent 59%)}
+.cerita[data-gaya="linen"] .sampul-ajak{color:#BFD2B4}
+.cerita[data-gaya="linen"] .halaman:not(.sampul):not(.endpaper){background-color:#F4ECD8;background-image:radial-gradient(ellipse at 50% 45%,#F7F0DF 0%,#EFE4C9 70%,#E2D2AC 100%)}
+.cerita[data-gaya="linen"] .endpaper{background:repeating-linear-gradient(45deg,#2E5130 0 6px,#29492B 6px 12px)}
+.cerita[data-gaya="naskah"] .sampul{background:radial-gradient(ellipse at 45% 40%,#C9A574 0%,#B08A5A 55%,#8E6B40 100%);color:#3A2716;box-shadow:inset 0 0 30px rgba(80,50,20,.45),inset 12px 0 14px -6px rgba(0,0,0,.4)}
+.cerita[data-gaya="naskah"] .sampul::after{content:"";position:absolute;top:0;bottom:0;right:22%;width:7px;background:repeating-linear-gradient(180deg,#E9DCC0 0 3px,#CDBB95 3px 6px);box-shadow:0 0 3px rgba(0,0,0,.35)}
+.cerita[data-gaya="naskah"] .sampul .sampul-judul{color:#3A2716;text-shadow:none;font-family:"IM Fell English",Georgia,serif;border-top:2px solid #3A2716;border-bottom:2px solid #3A2716;padding:14px 4px;position:relative;z-index:1;background:#D9BE8E}
+.cerita[data-gaya="naskah"] .sampul-ajak{color:#4A3420;position:relative;z-index:1}
+.cerita[data-gaya="naskah"] .halaman:not(.sampul):not(.endpaper){background-color:#E7D3A3;background-image:radial-gradient(ellipse at 50% 45%,#EEDDB2 0%,#E0C893 65%,#C9AA6B 100%);box-shadow:inset 0 0 26px rgba(120,80,30,.35)}
+.cerita[data-gaya="naskah"] .endpaper{background:linear-gradient(135deg,#B08A5A,#8E6B40)}
+.cerita[data-gaya="eboni"] .sampul{background:radial-gradient(ellipse at 40% 35%,#2E2A26 0%,#1C1916 60%,#0F0D0B 100%);box-shadow:inset 0 0 0 12px #1A1714,inset 0 0 0 13px #B8934B,inset 0 0 0 26px #1A1714,inset 0 0 0 27px #8C6E36,inset 14px 0 18px -6px rgba(0,0,0,.7)}
+.cerita[data-gaya="eboni"] .sampul::before,.cerita[data-gaya="eboni"] .sampul::after{content:"\2766";position:absolute;left:0;right:0;text-align:center;color:#B8934B;font-size:1.6rem}
+.cerita[data-gaya="eboni"] .sampul::before{top:42px}
+.cerita[data-gaya="eboni"] .sampul::after{bottom:42px;transform:rotate(180deg)}
+.cerita[data-gaya="eboni"] .sampul .sampul-judul{color:#D9B86A;letter-spacing:.02em}
+.cerita[data-gaya="eboni"] .sampul-ajak{color:#A89060}
+.cerita[data-gaya="eboni"] .halaman:not(.sampul):not(.endpaper){background-color:#F1E7D0}
+.cerita[data-gaya="eboni"] .endpaper{background:radial-gradient(circle at 50% 50%,#3A2F22 0 1px,transparent 2px) 0 0/14px 14px,#211C17}
+.kontur{position:absolute;right:0;top:50%;transform:translateY(-50%);opacity:.18;pointer-events:none;z-index:0;max-width:460px}
