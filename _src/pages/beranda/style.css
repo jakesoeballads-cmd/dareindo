@@ -53,6 +53,7 @@
 @media (max-width:860px){.kontur{display:none}}
 .judul{align-items:center;text-align:center}
 .judul h2{font:400 clamp(1.5rem,4.4vw,3.4rem)/1.12 "IM Fell English",Georgia,serif;color:var(--tinta);max-width:11ch}
+.judul .pernyataan-buku{margin-top:1.4rem;font-style:italic;font-size:clamp(1.05rem,1.6vw,1.25rem);text-align:center;max-width:24ch;color:#4A3B2A}
 
 .kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end;align-self:start;position:sticky;top:120px}
 .kontur path{fill:none;stroke:var(--bambu-muda);stroke-width:1.4;opacity:.9}
@@ -68,9 +69,6 @@
 .angka .ket{margin-top:.7rem;font-weight:500}
 .angka .sumber{margin-top:.5rem;font-size:.8rem;color:var(--tanah)}
 .angka .sumber a{text-decoration:none;border-bottom:1px solid currentColor}
-.pernyataan{margin-top:1.6rem;font:400 clamp(1.5rem,3vw,2.2rem)/1.25 var(--display);max-width:26ch;color:var(--lumut)}
-.filosofi{margin-top:2rem;columns:2 30ch;column-gap:clamp(32px,5vw,64px)}
-.filosofi p{margin-bottom:1rem;break-inside:avoid}
 .akar .isi p a{color:var(--tanah);text-decoration:none}
 .penutup{margin-top:2.6rem;font:400 1.35rem/1.4 var(--display);max-width:34ch}
 @media (max-width:760px){.angka{grid-template-columns:1fr}.angka > div,.angka > div + div{padding:1.4rem 0;border-left:0;border-bottom:1px solid var(--garis)}}

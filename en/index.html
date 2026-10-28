@@ -76,6 +76,7 @@
 @media (max-width:860px){.kontur{display:none}}
 .judul{align-items:center;text-align:center}
 .judul h2{font:400 clamp(1.5rem,4.4vw,3.4rem)/1.12 "IM Fell English",Georgia,serif;color:var(--tinta);max-width:11ch}
+.judul .pernyataan-buku{margin-top:1.4rem;font-style:italic;font-size:clamp(1.05rem,1.6vw,1.25rem);text-align:center;max-width:24ch;color:#4A3B2A}
 
 .kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end;align-self:start;position:sticky;top:120px}
 .kontur path{fill:none;stroke:var(--bambu-muda);stroke-width:1.4;opacity:.9}
@@ -91,9 +92,6 @@
 .angka .ket{margin-top:.7rem;font-weight:500}
 .angka .sumber{margin-top:.5rem;font-size:.8rem;color:var(--tanah)}
 .angka .sumber a{text-decoration:none;border-bottom:1px solid currentColor}
-.pernyataan{margin-top:1.6rem;font:400 clamp(1.5rem,3vw,2.2rem)/1.25 var(--display);max-width:26ch;color:var(--lumut)}
-.filosofi{margin-top:2rem;columns:2 30ch;column-gap:clamp(32px,5vw,64px)}
-.filosofi p{margin-bottom:1rem;break-inside:avoid}
 .akar .isi p a{color:var(--tanah);text-decoration:none}
 .penutup{margin-top:2.6rem;font:400 1.35rem/1.4 var(--display);max-width:34ch}
 @media (max-width:760px){.angka{grid-template-columns:1fr}.angka > div,.angka > div + div{padding:1.4rem 0;border-left:0;border-bottom:1px solid var(--garis)}}
@@ -207,6 +205,30 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bam
           <p>Daya sees itself as one of many ecology-based businesses. We do not claim to be the only ones with answers. We act as a <strong>driver, facilitator and space for collaboration</strong> where the public, communities, experts, enthusiasts, institutions and many others can contribute to the environment.</p>
           <span class="nomor">4</span>
         </div>
+        <div class="halaman judul">
+          <h2>People and Nature</h2>
+          <p class="pernyataan-buku">Nature is not just a resource. Nature is what makes life possible.</p>
+        </div>
+        <div class="halaman isi">
+          <p>The philosophy of PT Daya Reforestasi Indonesia starts from a simple realisation: <strong>everything people need comes from nature.</strong></p>
+          <span class="nomor">5</span>
+        </div>
+        <div class="halaman isi">
+          <p>Food, water, air, energy, building materials and so much else come from natural systems. Yet in the course of development, people often act as if they stood outside nature and had the right to rule over it.</p>
+          <span class="nomor">6</span>
+        </div>
+        <div class="halaman isi">
+          <p>Daya sees people as fundamentally <strong>part of nature</strong>. Our ability to build, develop technology and change our surroundings is a great power (in Indonesian, <em>daya</em>). But that power can also become a source of destruction when it is used without limits and without regard for the other inhabitants of nature.</p>
+          <span class="nomor">7</span>
+        </div>
+        <div class="halaman isi">
+          <p>So caring for the environment is not a “favour” people do for nature. It is part of our responsibility as one of nature’s inhabitants.</p>
+          <span class="nomor">8</span>
+        </div>
+        <div class="halaman isi">
+          <p>For Daya, sustainability does not mean that people stop using nature. People will always need nature. What has to change is <strong>how we take, process and use its resources, responsibly enough that its ecological functions can carry on.</strong></p>
+          <span class="nomor">9</span>
+        </div>
       </div>
     </div>
     <svg class="kontur" id="kontur" viewBox="0 0 500 500" role="img" aria-label="Contour lines of a hill"></svg>
@@ -216,15 +238,6 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bam
 <!-- 3. Krisis -->
 <section class="band">
   <div class="wrap">
-    <h2>People and Nature</h2>
-    <p class="pernyataan">Nature is not just a resource. Nature is what makes life possible.</p>
-    <div class="filosofi">
-      <p class="lead">The philosophy of PT Daya Reforestasi Indonesia starts from a simple realisation: <strong>everything people need comes from nature.</strong></p>
-      <p>Food, water, air, energy, building materials and so much else come from natural systems. Yet in the course of development, people often act as if they stood outside nature and had the right to rule over it.</p>
-      <p>Daya sees people as fundamentally <strong>part of nature</strong>. Our ability to build, develop technology and change our surroundings is a great power (in Indonesian, <em>daya</em>). But that power can also become a source of destruction when it is used without limits and without regard for the other inhabitants of nature.</p>
-      <p>So caring for the environment is not a “favour” people do for nature. It is part of our responsibility as one of nature’s inhabitants.</p>
-      <p>For Daya, sustainability does not mean that people stop using nature. People will always need nature. What has to change is <strong>how we take, process and use its resources, responsibly enough that its ecological functions can carry on.</strong></p>
-    </div>
     <div class="angka">
       <div>
         <b>175,400 ha</b>
@@ -461,8 +474,10 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bam
   const daun = [];
   const lebar = matchMedia('(min-width: 760px)');
   let kini = 0, mode = '';
-  const pertama = sumber.querySelector('.isi');
-  if (pertama) pertama.classList.add('pertama');
+  // Huruf awal besar pada paragraf pertama setiap bab
+  halaman.forEach((h, i) => {
+    if (h.classList.contains('isi') && i > 0 && halaman[i - 1].classList.contains('judul')) h.classList.add('pertama');
+  });
 
   function muka(sisi, isi) {
     const m = document.createElement('div');

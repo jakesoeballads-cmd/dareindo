@@ -44,8 +44,10 @@
   const daun = [];
   const lebar = matchMedia('(min-width: 760px)');
   let kini = 0, mode = '';
-  const pertama = sumber.querySelector('.isi');
-  if (pertama) pertama.classList.add('pertama');
+  // Huruf awal besar pada paragraf pertama setiap bab
+  halaman.forEach((h, i) => {
+    if (h.classList.contains('isi') && i > 0 && halaman[i - 1].classList.contains('judul')) h.classList.add('pertama');
+  });
 
   function muka(sisi, isi) {
     const m = document.createElement('div');
