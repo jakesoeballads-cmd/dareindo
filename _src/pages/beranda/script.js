@@ -41,9 +41,10 @@
   buku.className = 'cerita-buku';
   el.appendChild(buku);
   el.classList.add('cerita-js');
-  const lebar = matchMedia('(min-width: 760px)');
-  let daun = [], kini = 0, mode = '';
-  halaman[0].classList.add('pertama');
+  const daun = [];
+  let kini = 0;
+  const pertama = sumber.querySelector('.isi');
+  if (pertama) pertama.classList.add('pertama');
 
   function muka(sisi, isi) {
     const m = document.createElement('div');
@@ -58,28 +59,21 @@
     d.appendChild(isi);
     buku.appendChild(d);
   }
-  // Layar lebar: halaman pertama di kiri, lembar berisi dua halaman (depan dan belakang),
-  // halaman sisa di kanan. HP: satu halaman per lembar.
+  // Halaman pertama di kiri, tiap lembar memuat dua halaman (depan dan belakang),
+  // halaman sisa (bila ganjil) di kanan.
   function susun() {
-    mode = lebar.matches ? 'ganda' : 'tunggal';
-    halaman.forEach(h => sumber.appendChild(h));
-    buku.textContent = '';
-    buku.className = 'cerita-buku ' + mode;
     const urut = halaman.slice();
-    if (mode === 'ganda') dasar('kiri', urut.shift());
-    dasar('kanan', mode === 'tunggal' || urut.length % 2 ? urut.pop() : null);
-    daun = [];
-    const langkah = mode === 'ganda' ? 2 : 1;
-    for (let i = 0; i < urut.length; i += langkah) {
+    dasar('kiri', urut.shift());
+    dasar('kanan', urut.length % 2 ? urut.pop() : null);
+    for (let i = 0; i < urut.length; i += 2) {
       const d = document.createElement('div');
       d.className = 'daun';
       d.appendChild(muka('depan', urut[i]));
-      d.appendChild(muka('belakang', mode === 'ganda' ? urut[i + 1] : null));
+      d.appendChild(muka('belakang', urut[i + 1]));
       d.addEventListener('transitionend', e => { if (e.target === d && e.propertyName === 'transform') lapis(); });
       buku.appendChild(d);
       daun.push(d);
     }
-    kini = Math.min(kini, daun.length);
     tampil(true);
   }
   function lapis() {
@@ -93,7 +87,7 @@
       d.classList.toggle('terbalik', balik);
       d.classList.toggle('atas', i === kini);
       d.querySelector('.depan').setAttribute('aria-hidden', i === kini ? 'false' : 'true');
-      d.querySelector('.belakang').setAttribute('aria-hidden', mode === 'ganda' && i === kini - 1 ? 'false' : 'true');
+      d.querySelector('.belakang').setAttribute('aria-hidden', i === kini - 1 ? 'false' : 'true');
     });
     if (langsung) lapis();
   }
@@ -106,7 +100,7 @@
     if (e.target.closest('a')) return;
     const r = buku.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width;
-    ke(kini + (x < (mode === 'ganda' ? 0.5 : 0.3) ? -1 : 1));
+    ke(kini + (x < 0.5 ? -1 : 1));
   });
   el.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') { ke(kini + 1); e.preventDefault(); }
@@ -120,6 +114,5 @@
     if (Math.abs(dx) > 40) ke(kini + (dx < 0 ? 1 : -1));
     x0 = null;
   });
-  lebar.addEventListener('change', susun);
   susun();
 })();
