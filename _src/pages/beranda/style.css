@@ -11,6 +11,32 @@
 /* 2 Pergeseran */
 .geser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
 .geser p+p{margin-top:1.1rem}
+/* Buku: tulisan panjang dibaca per lembar */
+.cerita{outline:none;perspective:1800px}
+.cerita-lembaran{display:grid;position:relative}
+.lembar{grid-area:1/1;background:var(--kabut);color:var(--hutan);border-radius:3px 10px 10px 3px;padding:clamp(28px,4vw,52px) clamp(26px,4vw,48px) clamp(56px,6vw,72px);position:relative;box-shadow:inset 14px 0 18px -14px rgba(13,26,18,.35),0 1px 0 #E3E8DF,0 3px 0 #D3DACF,0 5px 0 #C3CCBF,0 18px 40px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:center;min-height:clamp(340px,42vw,460px)}
+.lembar p{font-size:clamp(1.05rem,1.6vw,1.22rem);line-height:1.7}
+.lembar strong{color:var(--lumut)}
+.lembar .nomor{position:absolute;bottom:22px;right:28px;font:400 .95rem var(--display);color:var(--tanah)}
+.sampul{background:var(--lumut);color:var(--kabut);justify-content:space-between;box-shadow:inset 16px 0 0 rgba(13,26,18,.28),0 3px 0 #C3CCBF,0 18px 40px rgba(0,0,0,.35)}
+.sampul h2{font-size:clamp(2.1rem,4.4vw,3.3rem);max-width:12ch;color:var(--putih)}
+.cerita-merek{font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--bambu-muda)}
+.cerita-ajak{font-size:.95rem;color:#DCE6DA}
+.cerita-kendali{display:none;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
+.cerita-kendali button{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--kabut);background:transparent;color:var(--kabut);font:600 .95rem var(--body);cursor:pointer}
+.cerita-kendali button:hover:not(:disabled){background:var(--kabut);color:var(--hutan)}
+.cerita-kendali button:disabled{opacity:.35;cursor:default}
+.cerita-kendali button,.cerita-posisi{white-space:nowrap}
+@media (max-width:480px){.cerita-kendali{gap:8px}.cerita-kendali button{padding:0 12px;font-size:.85rem}.cerita-posisi{font-size:.85rem}}
+.cerita-posisi{font-variant-numeric:tabular-nums;color:#C9D4CA;font-size:.95rem}
+.cerita:focus-visible .lembar.aktif{outline:3px solid var(--bambu);outline-offset:4px}
+/* tanpa JavaScript: lembar tampil berurutan */
+.cerita:not(.cerita-js) .cerita-lembaran{display:block}
+.cerita:not(.cerita-js) .lembar{margin-bottom:16px;min-height:0}
+.cerita-js .cerita-kendali{display:flex}
+.cerita-js .lembar{transform-origin:left center;transition:transform .9s cubic-bezier(.45,.05,.25,1),box-shadow .9s;backface-visibility:hidden;cursor:pointer}
+.cerita-js .lembar.terbalik{transform:rotateY(-178deg);pointer-events:none}
+@media (prefers-reduced-motion:reduce){.cerita-js .lembar{transition:opacity .2s}.cerita-js .lembar.terbalik{transform:none;opacity:0}}
 .kontur{width:100%;aspect-ratio:1/1;max-width:520px;justify-self:end;align-self:start;position:sticky;top:120px}
 .kontur path{fill:none;stroke:var(--bambu-muda);stroke-width:1.4;opacity:.9}
 .kontur path:nth-child(even){stroke:var(--bambu)}

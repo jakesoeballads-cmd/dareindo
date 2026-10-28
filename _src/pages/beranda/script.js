@@ -30,3 +30,47 @@
   }, { threshold: .35 });
   io.observe(svg);
 })();
+
+/* Buku (bagian 2): tulisan panjang dibuka per lembar */
+(function buku(){
+  const el = document.querySelector('.cerita');
+  if (!el) return;
+  const lembar = [...el.querySelectorAll('.lembar')];
+  const sebelum = el.querySelector('.cerita-sebelum');
+  const berikut = el.querySelector('.cerita-berikut');
+  const posisi = el.querySelector('.cerita-posisi');
+  let kini = 0;
+  el.classList.add('cerita-js');
+  lembar.forEach((l, i) => { l.style.zIndex = lembar.length - i; });
+  function tampil() {
+    lembar.forEach((l, i) => {
+      l.classList.toggle('terbalik', i < kini);
+      l.classList.toggle('aktif', i === kini);
+      l.setAttribute('aria-hidden', i === kini ? 'false' : 'true');
+    });
+    sebelum.disabled = kini === 0;
+    berikut.disabled = kini === lembar.length - 1;
+    posisi.textContent = `${el.dataset.labelHalaman} ${kini + 1} / ${lembar.length}`;
+  }
+  function ke(n) { kini = Math.max(0, Math.min(lembar.length - 1, n)); tampil(); }
+  sebelum.addEventListener('click', () => ke(kini - 1));
+  berikut.addEventListener('click', () => ke(kini + 1));
+  lembar.forEach(l => l.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    const r = l.getBoundingClientRect();
+    ke(e.clientX - r.left < r.width * 0.3 ? kini - 1 : kini + 1);
+  }));
+  el.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { ke(kini + 1); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { ke(kini - 1); e.preventDefault(); }
+  });
+  let x0 = null;
+  el.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  el.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) ke(kini + (dx < 0 ? 1 : -1));
+    x0 = null;
+  });
+  tampil();
+})();
