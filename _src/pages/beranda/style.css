@@ -132,4 +132,3 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bam
 /* latar meja kayu dengan lilin, lavender dan kain di sekitar buku */
 html .band.meja{background:#5A4636 url(/assets/buku/meja.jpg) center/cover no-repeat}
 .meja .kontur{display:none}
-@media (max-width:759px){html .band.meja{background-image:url(/assets/buku/meja-hp.jpg)}}
