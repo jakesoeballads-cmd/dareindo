@@ -30,3 +30,100 @@
   }, { threshold: .35 });
   io.observe(svg);
 })();
+
+/* Buku antik (bagian 2): buku terbuka, lembar dibalik satu per satu */
+(function buku(){
+  const el = document.querySelector('.cerita');
+  if (!el) return;
+  const sumber = el.querySelector('.cerita-halaman');
+  const halaman = [...sumber.children];
+  const buku = document.createElement('div');
+  buku.className = 'cerita-buku';
+  el.appendChild(buku);
+  el.classList.add('cerita-js');
+  const daun = [];
+  const lebar = matchMedia('(min-width: 760px)');
+  let kini = 0, mode = '';
+  // Huruf awal besar pada paragraf pertama setiap bab
+  halaman.forEach((h, i) => {
+    if (h.classList.contains('isi') && i > 0 && halaman[i - 1].classList.contains('judul')) h.classList.add('pertama');
+  });
+
+  function muka(sisi, isi) {
+    const m = document.createElement('div');
+    m.className = 'muka ' + sisi;
+    if (isi) m.appendChild(isi);
+    return m;
+  }
+  function dasar(sisi, isi) {
+    const d = document.createElement('div');
+    d.className = 'dasar ' + sisi;
+    if (!isi) { isi = document.createElement('div'); isi.className = 'halaman'; }
+    d.appendChild(isi);
+    buku.appendChild(d);
+  }
+  // Layar lebar: lembar pertama adalah sampul (belakangnya halaman judul), tiap lembar
+  // berikutnya memuat dua halaman, halaman sisa (bila ganjil) di kanan. HP: satu halaman per lembar.
+  function susun() {
+    mode = lebar.matches ? 'ganda' : 'tunggal';
+    halaman.forEach(h => sumber.appendChild(h));
+    buku.textContent = '';
+    daun.length = 0;
+    const urut = halaman.slice();
+    if (mode === 'ganda') dasar('kiri', null);
+    dasar('kanan', mode === 'tunggal' || urut.length % 2 ? urut.pop() : null);
+    const langkah = mode === 'ganda' ? 2 : 1;
+    for (let i = 0; i < urut.length; i += langkah) {
+      const d = document.createElement('div');
+      d.className = 'daun';
+      d.appendChild(muka('depan', urut[i]));
+      d.appendChild(muka('belakang', mode === 'ganda' ? urut[i + 1] : null));
+      d.addEventListener('transitionend', e => { if (e.target === d && e.propertyName === 'transform') lapis(); });
+      buku.appendChild(d);
+      daun.push(d);
+    }
+    kini = Math.min(kini, daun.length);
+    tampil(true);
+  }
+  function lapis() {
+    const n = daun.length;
+    daun.forEach((d, i) => { d.style.zIndex = i < kini ? i + 1 : n - i + n; });
+  }
+  function tampil(langsung) {
+    daun.forEach((d, i) => {
+      const balik = i < kini;
+      if (!langsung && balik !== d.classList.contains('terbalik')) d.style.zIndex = 100;
+      d.classList.toggle('terbalik', balik);
+      d.classList.toggle('atas', i === kini);
+      d.querySelector('.depan').setAttribute('aria-hidden', i === kini ? 'false' : 'true');
+      d.querySelector('.belakang').setAttribute('aria-hidden', mode === 'ganda' && i === kini - 1 ? 'false' : 'true');
+    });
+    buku.className = 'cerita-buku ' + mode + (kini === 0 ? ' tertutup' : '');
+    if (langsung) lapis();
+  }
+  function ke(n) {
+    n = Math.max(0, Math.min(daun.length, n));
+    if (n === kini) return;
+    kini = n; tampil(false);
+  }
+  buku.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    const r = buku.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    ke(kini + (x < (mode === 'ganda' ? 0.5 : 0.3) ? -1 : 1));
+  });
+  el.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { ke(kini + 1); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { ke(kini - 1); e.preventDefault(); }
+  });
+  let x0 = null;
+  buku.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  buku.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) ke(kini + (dx < 0 ? 1 : -1));
+    x0 = null;
+  });
+  lebar.addEventListener('change', susun);
+  susun();
+})();
