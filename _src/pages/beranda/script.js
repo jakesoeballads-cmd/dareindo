@@ -105,7 +105,13 @@
     n = Math.max(0, Math.min(daun.length, n));
     if (n === kini) return;
     kini = n; tampil(false);
+    if (kini === daun.length) yAkhir = scrollY;
   }
+  // Setelah halaman terakhir, buku menutup kembali ke sampul begitu pembaca lanjut menggulir
+  let yAkhir = 0;
+  addEventListener('scroll', () => {
+    if (kini === daun.length && daun.length && Math.abs(scrollY - yAkhir) > 120) ke(0);
+  }, { passive: true });
   buku.addEventListener('click', e => {
     if (e.target.closest('a')) return;
     const r = buku.getBoundingClientRect();
