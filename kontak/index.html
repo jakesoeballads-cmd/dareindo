@@ -60,7 +60,7 @@
   <div class="wrap">
     <p class="label">Kontak &amp; Perusahaan</p>
     <h1>Mari bicara.</h1>
-    <p class="lead">Untuk kemitraan, pertanyaan soal pembukuan, liputan media, atau informasi lahan, semuanya bisa dimulai dari satu alamat: <a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a></p>
+    <p class="lead">Untuk kemitraan, pertanyaan soal pembukuan, liputan media, atau informasi lahan, semuanya bisa dimulai dari satu alamat: <a class="tautan" href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></p>
   </div>
 </section>
 
@@ -69,11 +69,11 @@
   <div class="bagian">
     <h2>Sesuai keperluan Anda</h2>
     <ul class="keperluan">
-      <li><h3>Kemitraan</h3><p>Kemitraan penanaman, investasi dampak, dan pembelian hasil hutan untuk badan usaha.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Pengajuan%20kemitraan">Ajukan kemitraan</a></li>
+      <li><h3>Kemitraan</h3><p>Kemitraan penanaman, investasi dampak, dan pembelian hasil hutan untuk badan usaha.</p><a class="tautan" href="mailto:contribute@dareindo.com?subject=Pengajuan%20kemitraan">Ajukan kemitraan</a></li>
       <li><h3>Informasi lahan</h3><p>Lahan gundul atau rawan longsor di sekitar Anda. Lebih mudah lewat formulir kami.</p><a class="tautan" href="/kontribusi/#lahan">Beritahu kami</a></li>
-      <li><h3>Pembukuan</h3><p>Pertanyaan tentang angka di Buku Kas Publik, atau permintaan salinan bukti transaksi.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Pertanyaan%20Buku%20Kas%20Publik">Tanyakan pembukuan</a></li>
-      <li><h3>Media</h3><p>Wawancara, liputan, dan permintaan data untuk pemberitaan.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Permintaan%20media">Hubungi untuk media</a></li>
-      <li><h3>Komunitas &amp; organisasi</h3><p>Berbagi data, lokasi, dan keahlian, atau bergabung dengan Benih.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Kolaborasi%20organisasi">Mari berkolaborasi</a></li>
+      <li><h3>Pembukuan</h3><p>Pertanyaan tentang angka di Buku Kas Publik, atau permintaan salinan bukti transaksi.</p><a class="tautan" href="mailto:contribute@dareindo.com?subject=Pertanyaan%20Buku%20Kas%20Publik">Tanyakan pembukuan</a></li>
+      <li><h3>Media</h3><p>Wawancara, liputan, dan permintaan data untuk pemberitaan.</p><a class="tautan" href="mailto:contribute@dareindo.com?subject=Permintaan%20media">Hubungi untuk media</a></li>
+      <li><h3>Komunitas &amp; organisasi</h3><p>Berbagi data, lokasi, dan keahlian, atau bergabung dengan Benih.</p><a class="tautan" href="mailto:contribute@dareindo.com?subject=Kolaborasi%20organisasi">Mari berkolaborasi</a></li>
       <li><h3>Kontributor</h3><p>Ikut bekerja di proyek, membantu survei, atau berbagi keahlian sesuai waktu Anda.</p><a class="tautan" href="/kontribusi/#kontributor">Daftar sebagai kontributor</a></li>
     </ul>
   </div>
@@ -115,7 +115,7 @@
       <dt>Bentuk usaha</dt><dd>Perseroan terbatas (PT)</dd>
       <dt>NIB</dt><dd class="kosong">Segera diumumkan</dd>
       <dt>Alamat terdaftar</dt><dd class="kosong">Segera diumumkan</dd>
-      <dt>Email</dt><dd><a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a></dd>
+      <dt>Email</dt><dd><a class="tautan" href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></dd>
       <dt>Situs</dt><dd>dareindo.com</dd>
     </dl>
   </div>
@@ -134,7 +134,7 @@
       <div>
         <h4>Kontak</h4>
         <ul>
-          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li><a href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></li>
           <li>Alamat terdaftar: segera diumumkan</li>
           <li><a href="/kontak/">Kontak &amp; Perusahaan</a></li>
         </ul>
@@ -165,7 +165,7 @@ document.getElementById('form-kontak').addEventListener('submit', e => {
   if (!v('nama') || !v('pesan-isi')) { galat.textContent = t('isi_nama_pesan'); galat.hidden = false; return; }
   galat.hidden = true;
   const dari = v('nama') + (v('lembaga') ? ' (' + v('lembaga') + ')' : '');
-  location.href = 'mailto:halo@dareindo.com?subject=' + encodeURIComponent(v('keperluan') + ': ' + dari) +
+  location.href = 'mailto:contribute@dareindo.com?subject=' + encodeURIComponent(v('keperluan') + ': ' + dari) +
                   '&body=' + encodeURIComponent(v('pesan-isi') + '\n\n' + dari);
 });
 </script>

@@ -21,10 +21,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=EB+Garamond:ital@0;1&family=IM+Fell+English:ital@0;1&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/situs.css">
 <style>
-.proyek-kepala{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,7vw,88px)}
-.proyek-kepala .foto{aspect-ratio:4/3}
+.proyek-kepala{padding-block:clamp(32px,5vw,64px)}
+.proyek-kepala .foto{aspect-ratio:16/9}
 .proyek-kepala h1{font-size:clamp(2.4rem,5vw,3.8rem)}
-.proyek-kepala .lead{margin-top:1.2rem}
+.proyek-kepala .lead{margin-top:1rem;max-width:46ch}
+@media (max-width:640px){.proyek-kepala .foto{aspect-ratio:4/5}}
 .proyek-kepala .status{margin-bottom:1rem;color:var(--tanah)}
 .gelap .proyek-kepala .status{color:var(--bambu-muda)}
 .tanaman{display:grid;grid-template-columns:repeat(2,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan)}
@@ -37,7 +38,7 @@
 .angka-proyek dd{font:400 clamp(1.4rem,2.6vw,1.9rem)/1.2 var(--display);font-variant-numeric:tabular-nums;margin-top:.3rem}
 .angka-proyek dd.kosong{color:#A9B3A6}
 .logo-benih{width:120px;height:120px}
-@media (max-width:860px){.proyek-kepala{grid-template-columns:1fr}.tanaman,.angka-proyek{grid-template-columns:1fr}}
+@media (max-width:860px){.tanaman,.angka-proyek{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -67,17 +68,11 @@
 <section id="akar-bambu">
   <div class="wrap">
     <div class="proyek-kepala">
-      <div>
-        <span class="status">Auf der Suche nach dem ersten Standort</span>
-        <h1>Akar Bambu</h1>
-        <p class="lead">Kahle Flächen, besonders an rutschgefährdeten Hängen, werden wieder zu einem Nutzwald, den die Menschen vor Ort pflegen und ernten.</p>
-        <div class="aksi">
-          <a class="btn btn-utama" href="/de/kontribusi/#lahan">Hinweis auf Land in Ihrer Nähe geben</a>
-        </div>
-      </div>
-      <figure>
-        <div class="foto">
-          <video src="/assets/video/akar-bambu.mp4" poster="/assets/video/akar-bambu.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Ein Bambushain, dessen Blätter sich im Wind wiegen"></video>
+      <figure class="foto tumpang">
+        <video src="/assets/video/akar-bambu.mp4" poster="/assets/video/akar-bambu.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Ein Bambushain, dessen Blätter sich im Wind wiegen"></video>
+        <div class="tumpang-isi">
+          <h1>Akar Bambu</h1>
+          <p class="lead">Kahle Flächen, besonders an rutschgefährdeten Hängen, werden wieder zu einem Nutzwald, den die Menschen vor Ort pflegen und ernten.</p>
         </div>
       </figure>
     </div>
@@ -91,10 +86,10 @@
     </div>
 
     <div class="bagian">
-      <h2>Unsere Antwort: ein Nutzwald</h2>
+      <h2>Akar Bambu will Nutzwälder schaffen und vermehren</h2>
       <div>
-        <p class="lead">Wir pflanzen in Agroforstwirtschaft: Bodenschützende Pflanzen wachsen neben Kulturen, die geerntet und verkauft werden können.</p>
-        <p>Das Ergebnis ist kein Wald, der vor den Menschen abgezäunt wird, sondern einer, von dem sie leben können. Je mehr sich das Land erholt, desto mehr gibt es zu teilen.</p>
+        <p class="lead">Wir pflanzen in Agroforst- und Waldbausystemen: Bodenschützende Pflanzen wachsen neben Nutzpflanzen, die geerntet werden können und wirtschaftlichen Wert haben.</p>
+        <p>Das Ergebnis ist kein Wald, der vor den Menschen abgezäunt wird, sondern einer, von dem sie leben können. Je mehr sich das Land erholt, desto mehr kann genutzt werden.</p>
       </div>
     </div>
 
@@ -114,8 +109,9 @@
     <div class="bagian">
       <h2>Die Rolle der Menschen vor Ort</h2>
       <div>
-        <p class="lead">Die Menschen vor Ort arbeiten im Projekt mit, sie schauen nicht nur zu. Sie werden von Agroforst-Fachleuten angeleitet und für Pflanzen, Pflege und Ernte bezahlt.</p>
-        <p>Löhne werden im Öffentlichen Kassenbuch nach Rolle, nicht nach Namen erfasst. So kann jeder prüfen, wie viel im Feld ankommt, ohne dass persönliche Daten offengelegt werden.</p>
+        <p class="lead">Als diejenigen, die das Land am besten kennen und vom Projekt profitieren, spielen die Menschen vor Ort die Hauptrolle.</p>
+        <p>Sie arbeiten nicht nur im Projekt mit (angeleitet von Agroforst-Fachleuten) und werden für Pflanzen, Pflege und Ernte bezahlt, sondern entscheiden auch bei technischen Fragen vor Ort mit.</p>
+        <p>Löhne und alle Geldflüsse werden im Öffentlichen Kassenbuch nach Rolle, nicht nach Namen erfasst. So kann jeder prüfen, wie viel im Feld ankommt, ohne dass persönliche Daten offengelegt werden.</p>
       </div>
     </div>
 
@@ -130,14 +126,6 @@
           <li><b>Pflege</b><span>Durch lokale Arbeitskräfte unter fachlicher Anleitung.</span></li>
           <li><b>Ernte</b><span>Waldprodukte werden verkauft, und die Menschen vor Ort profitieren mit.</span></li>
         </ol>
-      </div>
-    </div>
-
-    <div class="bagian">
-      <h2>Standort</h2>
-      <div>
-        <p class="kosong-info"><b>Noch kein Standort.</b> Der erste Standort von Akar Bambu wird aus Hinweisen aus der Bevölkerung ausgewählt. Sobald er feststeht, erscheint hier eine Karte.</p>
-        <p><a class="tautan" href="/de/kontribusi/#lahan">Kennen Sie rutschgefährdetes Land? Sagen Sie es uns</a></p>
       </div>
     </div>
 
@@ -163,8 +151,8 @@
         </ul>
         <div class="aksi">
           <a class="btn btn-utama" href="/de/kontribusi/">Mitmachen</a>
-          <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Partnerschaft%20Akar%20Bambu">Partnerschaft anfragen</a>
-          <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Kauf%20von%20Ernte%20Akar%20Bambu">Ernte kaufen</a>
+          <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Partnerschaft%20Akar%20Bambu">Partnerschaft anfragen</a>
+          <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Kauf%20von%20Ernte%20Akar%20Bambu">Ernte kaufen</a>
         </div>
       </div>
     </div>
@@ -183,7 +171,7 @@
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li><a href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></li>
           <li>Eingetragene Anschrift: wird bekanntgegeben</li>
           <li><a href="/de/kontak/">Kontakt &amp; Unternehmen</a></li>
         </ul>

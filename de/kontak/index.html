@@ -60,7 +60,7 @@
   <div class="wrap">
     <p class="label">Kontakt &amp; Unternehmen</p>
     <h1>Sprechen wir miteinander.</h1>
-    <p class="lead">Partnerschaften, Fragen zu unseren Büchern, Presseanfragen oder Hinweise auf Flächen: Alles beginnt bei einer Adresse: <a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a></p>
+    <p class="lead">Partnerschaften, Fragen zu unseren Büchern, Presseanfragen oder Hinweise auf Flächen: Alles beginnt bei einer Adresse: <a class="tautan" href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></p>
   </div>
 </section>
 
@@ -69,11 +69,11 @@
   <div class="bagian">
     <h2>Worum geht es?</h2>
     <ul class="keperluan">
-      <li><h3>Partnerschaften</h3><p>Pflanzpartnerschaften, Impact-Investitionen und der Kauf von Waldprodukten für Unternehmen.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Partnerschaftsanfrage">Partnerschaft anfragen</a></li>
+      <li><h3>Partnerschaften</h3><p>Pflanzpartnerschaften, Impact-Investitionen und der Kauf von Waldprodukten für Unternehmen.</p><a class="tautan" href="mailto:contribute@dareindo.com?subject=Partnerschaftsanfrage">Partnerschaft anfragen</a></li>
       <li><h3>Hinweise auf Flächen</h3><p>Kahle oder rutschgefährdete Flächen in Ihrer Nähe. Am einfachsten über unser Formular.</p><a class="tautan" href="/de/kontribusi/#lahan">Hinweis geben</a></li>
-      <li><h3>Buchhaltung</h3><p>Fragen zu Zahlen im Öffentlichen Kassenbuch oder Anfragen nach Belegkopien.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Frage%20zum%20Kassenbuch">Frage zur Buchhaltung</a></li>
-      <li><h3>Presse</h3><p>Interviews, Berichterstattung und Datenanfragen.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Presseanfrage">Pressekontakt</a></li>
-      <li><h3>Gruppen &amp; Organisationen</h3><p>Daten, Standorte und Fachwissen teilen oder bei Benih mitmachen.</p><a class="tautan" href="mailto:halo@dareindo.com?subject=Zusammenarbeit%20Organisation">Zusammenarbeiten</a></li>
+      <li><h3>Buchhaltung</h3><p>Fragen zu Zahlen im Öffentlichen Kassenbuch oder Anfragen nach Belegkopien.</p><a class="tautan" href="mailto:contribute@dareindo.com?subject=Frage%20zum%20Kassenbuch">Frage zur Buchhaltung</a></li>
+      <li><h3>Presse</h3><p>Interviews, Berichterstattung und Datenanfragen.</p><a class="tautan" href="mailto:contribute@dareindo.com?subject=Presseanfrage">Pressekontakt</a></li>
+      <li><h3>Gruppen &amp; Organisationen</h3><p>Daten, Standorte und Fachwissen teilen oder bei Benih mitmachen.</p><a class="tautan" href="mailto:contribute@dareindo.com?subject=Zusammenarbeit%20Organisation">Zusammenarbeiten</a></li>
       <li><h3>Mitwirkende</h3><p>In einem Projekt mitarbeiten, bei Erkundungen helfen oder Fachwissen teilen, wann es Ihnen passt.</p><a class="tautan" href="/de/kontribusi/#kontributor">Als Mitwirkende registrieren</a></li>
     </ul>
   </div>
@@ -115,7 +115,7 @@
       <dt>Rechtsform</dt><dd>Indonesische Kapitalgesellschaft (PT)</dd>
       <dt>Unternehmensnr. (NIB)</dt><dd class="kosong">Wird bekanntgegeben</dd>
       <dt>Eingetragene Anschrift</dt><dd class="kosong">Wird bekanntgegeben</dd>
-      <dt>Email</dt><dd><a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a></dd>
+      <dt>Email</dt><dd><a class="tautan" href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></dd>
       <dt>Website</dt><dd>dareindo.com</dd>
     </dl>
   </div>
@@ -134,7 +134,7 @@
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li><a href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></li>
           <li>Eingetragene Anschrift: wird bekanntgegeben</li>
           <li><a href="/de/kontak/">Kontakt &amp; Unternehmen</a></li>
         </ul>
@@ -165,7 +165,7 @@ document.getElementById('form-kontak').addEventListener('submit', e => {
   if (!v('nama') || !v('pesan-isi')) { galat.textContent = t('isi_nama_pesan'); galat.hidden = false; return; }
   galat.hidden = true;
   const dari = v('nama') + (v('lembaga') ? ' (' + v('lembaga') + ')' : '');
-  location.href = 'mailto:halo@dareindo.com?subject=' + encodeURIComponent(v('keperluan') + ': ' + dari) +
+  location.href = 'mailto:contribute@dareindo.com?subject=' + encodeURIComponent(v('keperluan') + ': ' + dari) +
                   '&body=' + encodeURIComponent(v('pesan-isi') + '\n\n' + dari);
 });
 </script>

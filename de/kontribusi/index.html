@@ -170,11 +170,11 @@
       <div class="aksi" style="margin-top:0">
         <button type="submit" class="btn btn-utama">Per E-Mail senden</button>
       </div>
-      <p class="catatan">Die Schaltfläche öffnet Ihr E-Mail-Programm mit allen Angaben, adressiert an halo@dareindo.com.</p>
+      <p class="catatan">Die Schaltfläche öffnet Ihr E-Mail-Programm mit allen Angaben, adressiert an contribute@dareindo.com.</p>
       <p class="darurat-kecil"><b>Sehen Sie gerade Anzeichen eines Erdrutsches?</b> Wenden Sie sich sofort an die örtliche Katastrophenschutzbehörde (BPBD) oder wählen Sie 112. Dieses Formular ist kein Notdienst.</p>
 
       <div id="cadangan" hidden>
-        <div class="pesan-form">Keine E-Mail geöffnet? Kopieren Sie den Text unten und senden Sie ihn an <a class="tautan" href="mailto:halo@dareindo.com">halo@dareindo.com</a>.</div>
+        <div class="pesan-form">Keine E-Mail geöffnet? Kopieren Sie den Text unten und senden Sie ihn an <a class="tautan" href="mailto:contribute@dareindo.com">contribute@dareindo.com</a>.</div>
         <textarea id="teks-laporan" readonly aria-label="Zu sendender Text" style="margin-top:1rem"></textarea>
         <div class="aksi" style="margin-top:1rem"><button type="button" class="btn btn-garis" id="tombol-salin">Text kopieren</button></div>
       </div>
@@ -227,7 +227,7 @@
     <div class="pesan-form" id="k-galat" role="alert" hidden></div>
     <div class="aksi" style="margin-top:0">
       <button type="submit" class="btn btn-utama">Per E-Mail anmelden</button>
-      <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Anmeldung%20als%20Mitwirkende">Eigene E-Mail schreiben</a>
+      <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Anmeldung%20als%20Mitwirkende">Eigene E-Mail schreiben</a>
     </div>
   </form>
 </section>
@@ -236,8 +236,8 @@
   <h2>Partnerschaften für Unternehmen und Organisationen.</h2>
   <p class="lead">Pflanzpartnerschaften, Impact-Investitionen, der Kauf von Waldprodukten oder das Teilen von Daten und Fachwissen, mit Wirkungsberichten, die jeder prüfen kann.</p>
   <div class="aksi">
-    <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Partnerschaftsanfrage">Partnerschaft anfragen</a>
-    <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Zusammenarbeit%20Organisation">Als Organisation zusammenarbeiten</a>
+    <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Partnerschaftsanfrage">Partnerschaft anfragen</a>
+    <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Zusammenarbeit%20Organisation">Als Organisation zusammenarbeiten</a>
   </div>
 </section>
 
@@ -261,7 +261,7 @@
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li><a href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></li>
           <li>Eingetragene Anschrift: wird bekanntgegeben</li>
           <li><a href="/de/kontak/">Kontakt &amp; Unternehmen</a></li>
         </ul>
@@ -289,7 +289,7 @@ const $ = id => document.getElementById(id);
 /* Label kolom diambil dari halaman, jadi email ikut bahasa halaman. */
 const label = id => (document.querySelector(`label[for="${id}"]`)?.textContent || id).replace(/\s*\(.*\)\s*$/, '').trim();
 const kirimEmail = (subjek, isi) => {
-  location.href = 'mailto:halo@dareindo.com?subject=' + encodeURIComponent(subjek) + '&body=' + encodeURIComponent(isi);
+  location.href = 'mailto:contribute@dareindo.com?subject=' + encodeURIComponent(subjek) + '&body=' + encodeURIComponent(isi);
 };
 const susun = baris => baris.filter(([, v]) => v && v.trim()).map(([k, v]) => `${k}: ${v.trim()}`).join('\n\n');
 
