@@ -21,10 +21,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=EB+Garamond:ital@0;1&family=IM+Fell+English:ital@0;1&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/situs.css">
 <style>
-.proyek-kepala{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,7vw,88px)}
-.proyek-kepala .foto{aspect-ratio:4/3}
+.proyek-kepala{padding-block:clamp(32px,5vw,64px)}
+.proyek-kepala .foto{aspect-ratio:16/9}
 .proyek-kepala h1{font-size:clamp(2.4rem,5vw,3.8rem)}
-.proyek-kepala .lead{margin-top:1.2rem}
+.proyek-kepala .lead{margin-top:1rem;max-width:46ch}
+@media (max-width:640px){.proyek-kepala .foto{aspect-ratio:4/5}}
 .proyek-kepala .status{margin-bottom:1rem;color:var(--tanah)}
 .gelap .proyek-kepala .status{color:var(--bambu-muda)}
 .tanaman{display:grid;grid-template-columns:repeat(2,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan)}
@@ -37,7 +38,7 @@
 .angka-proyek dd{font:400 clamp(1.4rem,2.6vw,1.9rem)/1.2 var(--display);font-variant-numeric:tabular-nums;margin-top:.3rem}
 .angka-proyek dd.kosong{color:#A9B3A6}
 .logo-benih{width:120px;height:120px}
-@media (max-width:860px){.proyek-kepala{grid-template-columns:1fr}.tanaman,.angka-proyek{grid-template-columns:1fr}}
+@media (max-width:860px){.tanaman,.angka-proyek{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -67,17 +68,11 @@
 <section id="akar-bambu">
   <div class="wrap">
     <div class="proyek-kepala">
-      <div>
-        <span class="status">Looking for our first site</span>
-        <h1>Akar Bambu</h1>
-        <p class="lead">Turning bare land, especially on landslide-prone hillsides, back into a productive forest that local people tend and harvest.</p>
-        <div class="aksi">
-          <a class="btn btn-utama" href="/en/kontribusi/#lahan">Tell us about land near you</a>
-        </div>
-      </div>
-      <figure>
-        <div class="foto">
-          <video src="/assets/video/akar-bambu.mp4" poster="/assets/video/akar-bambu.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A bamboo grove with leaves swaying in the wind"></video>
+      <figure class="foto tumpang">
+        <video src="/assets/video/akar-bambu.mp4" poster="/assets/video/akar-bambu.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A bamboo grove with leaves swaying in the wind"></video>
+        <div class="tumpang-isi">
+          <h1>Akar Bambu</h1>
+          <p class="lead">Turning bare land, especially on landslide-prone hillsides, back into a productive forest that local people tend and harvest.</p>
         </div>
       </figure>
     </div>
@@ -91,10 +86,10 @@
     </div>
 
     <div class="bagian">
-      <h2>Our answer: a productive forest</h2>
+      <h2>Akar Bambu aims to create and expand productive forests</h2>
       <div>
-        <p class="lead">We plant using agroforestry: plants that protect the soil grow alongside crops that can be harvested and sold.</p>
-        <p>The result is not a forest fenced off from local people, but a forest that supports them. The more the land recovers, the more there is to share.</p>
+        <p class="lead">We plant using agroforestry and silviculture, where plants that protect the soil grow alongside commodity crops that can be harvested and have economic value.</p>
+        <p>The result is not a forest fenced off from local people, but a forest that supports them. The more the land recovers, the more there is to use.</p>
       </div>
     </div>
 
@@ -114,8 +109,9 @@
     <div class="bagian">
       <h2>The role of local people</h2>
       <div>
-        <p class="lead">Local people work on the project; they are not bystanders. They are guided by agroforestry experts and paid to plant, tend and harvest.</p>
-        <p>Wages are recorded in the Public Cash Book by role, not by name, so anyone can check how much reaches the field without revealing anyone’s personal data.</p>
+        <p class="lead">As the people who know the land best and who will benefit from the project, local residents play the leading role.</p>
+        <p>Besides working on the project (guided by agroforestry experts) and being paid to plant, tend and harvest, local people take part in technical decisions in the field.</p>
+        <p>Wages and all money flows are recorded in the Public Cash Book by role, not by name, so anyone can check how much reaches the field without revealing anyone’s personal data.</p>
       </div>
     </div>
 
@@ -130,14 +126,6 @@
           <li><b>Care</b><span>Done by local workers guided by experts.</span></li>
           <li><b>Harvest</b><span>Forest products are sold, and local people share in the benefits.</span></li>
         </ol>
-      </div>
-    </div>
-
-    <div class="bagian">
-      <h2>Location</h2>
-      <div>
-        <p class="kosong-info"><b>No site yet.</b> The first Akar Bambu site will be chosen from tip-offs sent in by the public. A map will appear here once it has been decided.</p>
-        <p><a class="tautan" href="/en/kontribusi/#lahan">Know of landslide-prone land? Tell us</a></p>
       </div>
     </div>
 
@@ -163,8 +151,8 @@
         </ul>
         <div class="aksi">
           <a class="btn btn-utama" href="/en/kontribusi/">Contribute</a>
-          <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Akar%20Bambu%20partnership">Propose a Partnership</a>
-          <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Buying%20Akar%20Bambu%20produce">Buy the Harvest</a>
+          <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Akar%20Bambu%20partnership">Propose a Partnership</a>
+          <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Buying%20Akar%20Bambu%20produce">Buy the Harvest</a>
         </div>
       </div>
     </div>
@@ -183,7 +171,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li><a href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></li>
           <li>Registered address: to be announced</li>
           <li><a href="/en/kontak/">Contact &amp; Company</a></li>
         </ul>

@@ -21,10 +21,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=EB+Garamond:ital@0;1&family=IM+Fell+English:ital@0;1&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/situs.css">
 <style>
-.proyek-kepala{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,7vw,88px)}
-.proyek-kepala .foto{aspect-ratio:4/3}
+.proyek-kepala{padding-block:clamp(32px,5vw,64px)}
+.proyek-kepala .foto{aspect-ratio:16/9}
 .proyek-kepala h1{font-size:clamp(2.4rem,5vw,3.8rem)}
-.proyek-kepala .lead{margin-top:1.2rem}
+.proyek-kepala .lead{margin-top:1rem;max-width:46ch}
+@media (max-width:640px){.proyek-kepala .foto{aspect-ratio:4/5}}
 .proyek-kepala .status{margin-bottom:1rem;color:var(--tanah)}
 .gelap .proyek-kepala .status{color:var(--bambu-muda)}
 .tanaman{display:grid;grid-template-columns:repeat(2,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan)}
@@ -37,7 +38,7 @@
 .angka-proyek dd{font:400 clamp(1.4rem,2.6vw,1.9rem)/1.2 var(--display);font-variant-numeric:tabular-nums;margin-top:.3rem}
 .angka-proyek dd.kosong{color:#A9B3A6}
 .logo-benih{width:120px;height:120px}
-@media (max-width:860px){.proyek-kepala{grid-template-columns:1fr}.tanaman,.angka-proyek{grid-template-columns:1fr}}
+@media (max-width:860px){.tanaman,.angka-proyek{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -67,17 +68,11 @@
 <section id="akar-bambu">
   <div class="wrap">
     <div class="proyek-kepala">
-      <div>
-        <span class="status">Mencari lokasi pertama</span>
-        <h1>Akar Bambu</h1>
-        <p class="lead">Mengembalikan lahan gundul, terutama di perbukitan yang rawan longsor, menjadi hutan komoditas yang dirawat dan dipanen bersama warga.</p>
-        <div class="aksi">
-          <a class="btn btn-utama" href="/kontribusi/#lahan">Beritahu kami lahan di dekat Anda</a>
-        </div>
-      </div>
-      <figure>
-        <div class="foto">
-          <video src="/assets/video/akar-bambu.mp4" poster="/assets/video/akar-bambu.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Rumpun bambu dengan daun yang bergoyang tertiup angin"></video>
+      <figure class="foto tumpang">
+        <video src="/assets/video/akar-bambu.mp4" poster="/assets/video/akar-bambu.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Rumpun bambu dengan daun yang bergoyang tertiup angin"></video>
+        <div class="tumpang-isi">
+          <h1>Akar Bambu</h1>
+          <p class="lead">Mengembalikan lahan gundul, terutama di perbukitan yang rawan longsor, menjadi hutan komoditas yang dirawat dan dipanen bersama warga sekitar.</p>
         </div>
       </figure>
     </div>
@@ -91,10 +86,10 @@
     </div>
 
     <div class="bagian">
-      <h2>Jawaban kami: hutan komoditas</h2>
+      <h2>Akar Bambu bertujuan menciptakan dan menambah hutan komoditas</h2>
       <div>
-        <p class="lead">Kami menanam dengan pola agroforestri: tanaman penjaga tanah tumbuh berdampingan dengan tanaman yang bisa dipanen dan dijual.</p>
-        <p>Hasilnya bukan hutan yang dipagari dari warga, tetapi hutan yang menghidupi warga di sekitarnya. Semakin pulih lahannya, semakin besar pula hasil yang bisa dibagi.</p>
+        <p class="lead">Kami menanam dengan pola agroforestri-silvikultur, di mana tanaman penjaga tanah tumbuh berdampingan dengan tanaman komoditas yang bisa dipanen dan bernilai ekonomi.</p>
+        <p>Hasilnya bukan hutan yang dipagari dari warga, tetapi hutan yang menghidupi warga di sekitarnya. Semakin pulih lahannya, semakin besar pula hasil yang bisa dimanfaatkan.</p>
       </div>
     </div>
 
@@ -114,8 +109,9 @@
     <div class="bagian">
       <h2>Peran warga</h2>
       <div>
-        <p class="lead">Warga setempat adalah pekerja proyek, bukan penonton. Mereka dibimbing ahli agroforestri dan dibayar untuk menanam, merawat, dan memanen.</p>
-        <p>Upah dicatat di Buku Kas Publik per peran, bukan per nama, sehingga siapa saja bisa memeriksa berapa yang sampai ke lapangan tanpa membuka data pribadi siapa pun.</p>
+        <p class="lead">Sebagai pihak yang paling mengetahui tentang lahan yang akan dijadikan lokasi proyek dan sebagai penerima manfaat, warga setempat adalah pemeran utama.</p>
+        <p>Selain sebagai pekerja proyek (dibimbing ahli agroforestri) yang dibayar untuk menanam, merawat, dan memanen, warga sekitar dilibatkan dalam hal pengambilan keputusan terkait teknis di lapangan.</p>
+        <p>Sementara upah dan semua sirkulasi dana dicatat di Buku Kas Publik per peran, bukan per nama, sehingga siapa saja bisa memeriksa berapa yang sampai ke lapangan tanpa membuka data pribadi siapa pun.</p>
       </div>
     </div>
 
@@ -130,14 +126,6 @@
           <li><b>Perawatan</b><span>Dikerjakan pekerja lokal yang dibimbing ahli.</span></li>
           <li><b>Panen</b><span>Hasil hutan dijual, warga ikut menerima manfaat.</span></li>
         </ol>
-      </div>
-    </div>
-
-    <div class="bagian">
-      <h2>Lokasi</h2>
-      <div>
-        <p class="kosong-info"><b>Belum ada lokasi.</b> Lokasi pertama Akar Bambu akan dipilih dari informasi warga. Peta lokasi akan tampil di sini setelah lokasi pertama ditetapkan.</p>
-        <p><a class="tautan" href="/kontribusi/#lahan">Tahu lahan rawan longsor? Beritahu kami</a></p>
       </div>
     </div>
 
@@ -163,8 +151,8 @@
         </ul>
         <div class="aksi">
           <a class="btn btn-utama" href="/kontribusi/">Kontribusi</a>
-          <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Kemitraan%20Akar%20Bambu">Ajukan Kemitraan</a>
-          <a class="btn btn-garis" href="mailto:halo@dareindo.com?subject=Pembelian%20hasil%20panen%20Akar%20Bambu">Beli Hasil Panen</a>
+          <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Kemitraan%20Akar%20Bambu">Ajukan Kemitraan</a>
+          <a class="btn btn-garis" href="mailto:contribute@dareindo.com?subject=Pembelian%20hasil%20panen%20Akar%20Bambu">Beli Hasil Panen</a>
         </div>
       </div>
     </div>
@@ -183,7 +171,7 @@
       <div>
         <h4>Kontak</h4>
         <ul>
-          <li><a href="mailto:halo@dareindo.com">halo@dareindo.com</a></li>
+          <li><a href="mailto:contribute@dareindo.com">contribute@dareindo.com</a></li>
           <li>Alamat terdaftar: segera diumumkan</li>
           <li><a href="/kontak/">Kontak &amp; Perusahaan</a></li>
         </ul>

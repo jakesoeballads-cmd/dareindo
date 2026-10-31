@@ -2,7 +2,7 @@ const $ = id => document.getElementById(id);
 /* Label kolom diambil dari halaman, jadi email ikut bahasa halaman. */
 const label = id => (document.querySelector(`label[for="${id}"]`)?.textContent || id).replace(/\s*\(.*\)\s*$/, '').trim();
 const kirimEmail = (subjek, isi) => {
-  location.href = 'mailto:halo@dareindo.com?subject=' + encodeURIComponent(subjek) + '&body=' + encodeURIComponent(isi);
+  location.href = 'mailto:contribute@dareindo.com?subject=' + encodeURIComponent(subjek) + '&body=' + encodeURIComponent(isi);
 };
 const susun = baris => baris.filter(([, v]) => v && v.trim()).map(([k, v]) => `${k}: ${v.trim()}`).join('\n\n');
 

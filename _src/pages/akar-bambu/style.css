@@ -1,7 +1,8 @@
-.proyek-kepala{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,7vw,88px)}
-.proyek-kepala .foto{aspect-ratio:4/3}
+.proyek-kepala{padding-block:clamp(32px,5vw,64px)}
+.proyek-kepala .foto{aspect-ratio:16/9}
 .proyek-kepala h1{font-size:clamp(2.4rem,5vw,3.8rem)}
-.proyek-kepala .lead{margin-top:1.2rem}
+.proyek-kepala .lead{margin-top:1rem;max-width:46ch}
+@media (max-width:640px){.proyek-kepala .foto{aspect-ratio:4/5}}
 .proyek-kepala .status{margin-bottom:1rem;color:var(--tanah)}
 .gelap .proyek-kepala .status{color:var(--bambu-muda)}
 .tanaman{display:grid;grid-template-columns:repeat(2,1fr);gap:0;list-style:none;border-top:2px solid var(--hutan)}
@@ -14,4 +15,4 @@
 .angka-proyek dd{font:400 clamp(1.4rem,2.6vw,1.9rem)/1.2 var(--display);font-variant-numeric:tabular-nums;margin-top:.3rem}
 .angka-proyek dd.kosong{color:#A9B3A6}
 .logo-benih{width:120px;height:120px}
-@media (max-width:860px){.proyek-kepala{grid-template-columns:1fr}.tanaman,.angka-proyek{grid-template-columns:1fr}}
+@media (max-width:860px){.tanaman,.angka-proyek{grid-template-columns:1fr}}
