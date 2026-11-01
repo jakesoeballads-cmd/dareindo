@@ -220,6 +220,15 @@ html .kontur path{stroke:var(--lumut)}
 html .kontur path:nth-child(even){stroke:var(--tombol)}
 html .geser .kontur{opacity:.3}
 html .benih,html .ajak{background:var(--kartu)}
+/* 2026-11-01: hijau tua di kartu Benih dan ajakan diganti hijau muda, teks gelap */
+:root{--kartu:#CFE8C3}
+html .benih,html .ajak{color:var(--pita-teks)}
+html .ajak .lead,html .darurat,html .benih .catatan{color:var(--pita-lead)}
+html .darurat b{color:var(--pita-teks)}
+html .benih .status{color:var(--lumut)}
+html .benih .tautan,html .ajak .tautan{border-color:var(--lumut)}
+html .ajak.on-dark .btn-garis,html .benih.on-dark .btn-garis{border-color:var(--pita-teks);color:var(--pita-teks)}
+html .ajak.on-dark .btn-garis:hover,html .benih.on-dark .btn-garis:hover{background:var(--pita-teks);color:#fff}
 html footer{background:var(--kaki);color:var(--kaki-teks)}
 html .kaki .slogan,html .kaki h4{color:var(--kaki-judul)}
 html .kaki{border-color:rgba(0,0,0,.12)}
