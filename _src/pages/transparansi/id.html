@@ -7,6 +7,7 @@ description: Badan usaha yang bertekad menjadi yang pertama di Indonesia menganu
     <h1>Seluruh pembukuan kami terbuka untuk Anda.</h1>
     <p class="lead">Setiap rupiah yang masuk dan keluar dicatat di Buku Kas Publik, lengkap dengan bukti, dan tampil di halaman ini setelah diperiksa orang kedua.</p>
     <ul class="lompat">
+      <li><a href="#dasbor">Dasbor</a></li>
       <li><a href="#ringkasan">Ringkasan keuangan</a></li>
       <li><a href="#per-proyek">Arus dana per proyek</a></li>
       <li><a href="#dampak">Laporan dampak</a></li>
@@ -28,6 +29,31 @@ description: Badan usaha yang bertekad menjadi yang pertama di Indonesia menganu
 </section>
 
 <div class="wrap">
+
+  <div class="bagian" id="dasbor" style="grid-template-columns:minmax(0,1fr)">
+    <div>
+      <h2>Dasbor Buku Kas</h2>
+      <p class="muted">Gambaran cepat dari Buku Kas Publik. Hanya data yang sudah diverifikasi orang kedua yang dihitung.</p>
+    </div>
+    <div>
+      <div class="metrik">
+        <div class="kartu-metrik"><span>Saldo kas</span><b class="kosong" data-kunci="saldo">Menunggu</b><small>Sejak awal pencatatan</small></div>
+        <div class="kartu-metrik"><span>Uang masuk</span><b class="kosong" id="metrik-masuk">Menunggu</b><small class="metrik-bulan">Bulan terakhir tercatat</small></div>
+        <div class="kartu-metrik"><span>Uang keluar</span><b class="kosong" id="metrik-keluar">Menunggu</b><small class="metrik-bulan">Bulan terakhir tercatat</small></div>
+        <div class="kartu-metrik"><span>Pohon ditanam</span><b class="kosong" data-kunci="pohon">Menunggu</b><small>Terverifikasi di lapangan</small></div>
+      </div>
+      <div class="grafik-grid">
+        <figure class="grafik">
+          <figcaption><b>Ke mana uang keluar</b><span>Porsi biaya proyek, operasional, dan pajak sejak awal pencatatan.</span></figcaption>
+          <div class="grafik-isi" id="grafik-alokasi"><p class="kosong-info">Grafik tampil setelah entri pertama diverifikasi.</p></div>
+        </figure>
+        <figure class="grafik">
+          <figcaption><b>Arus kas per bulan</b><span>Uang masuk dan keluar dalam enam bulan terakhir yang tercatat.</span></figcaption>
+          <div class="grafik-isi" id="grafik-arus"><p class="kosong-info">Grafik tampil setelah entri pertama diverifikasi.</p></div>
+        </figure>
+      </div>
+    </div>
+  </div>
 
   <div class="bagian" id="ringkasan" style="grid-template-columns:minmax(0,1fr)">
     <div>

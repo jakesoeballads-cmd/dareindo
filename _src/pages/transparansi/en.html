@@ -7,6 +7,7 @@ description: A business that aims to be the first in Indonesia to practise Radic
     <h1>All our books are open to you.</h1>
     <p class="lead">Every rupiah that comes in or goes out is recorded in the Public Cash Book with its receipt, and appears on this page once a second person has checked it.</p>
     <ul class="lompat">
+      <li><a href="#dasbor">Dashboard</a></li>
       <li><a href="#ringkasan">Financial summary</a></li>
       <li><a href="#per-proyek">Money flow per project</a></li>
       <li><a href="#dampak">Impact report</a></li>
@@ -28,6 +29,31 @@ description: A business that aims to be the first in Indonesia to practise Radic
 </section>
 
 <div class="wrap">
+
+  <div class="bagian" id="dasbor" style="grid-template-columns:minmax(0,1fr)">
+    <div>
+      <h2>Cash Book dashboard</h2>
+      <p class="muted">A quick view of the Public Cash Book. Only entries checked by a second person are counted.</p>
+    </div>
+    <div>
+      <div class="metrik">
+        <div class="kartu-metrik"><span>Cash balance</span><b class="kosong" data-kunci="saldo">Pending</b><small>Since records began</small></div>
+        <div class="kartu-metrik"><span>Money in</span><b class="kosong" id="metrik-masuk">Pending</b><small class="metrik-bulan">Latest recorded month</small></div>
+        <div class="kartu-metrik"><span>Money out</span><b class="kosong" id="metrik-keluar">Pending</b><small class="metrik-bulan">Latest recorded month</small></div>
+        <div class="kartu-metrik"><span>Trees planted</span><b class="kosong" data-kunci="pohon">Pending</b><small>Verified in the field</small></div>
+      </div>
+      <div class="grafik-grid">
+        <figure class="grafik">
+          <figcaption><b>Where the money goes</b><span>Share of project costs, operating costs and tax since records began.</span></figcaption>
+          <div class="grafik-isi" id="grafik-alokasi"><p class="kosong-info">The chart appears once the first entry is verified.</p></div>
+        </figure>
+        <figure class="grafik">
+          <figcaption><b>Cash flow per month</b><span>Money in and out over the last six recorded months.</span></figcaption>
+          <div class="grafik-isi" id="grafik-arus"><p class="kosong-info">The chart appears once the first entry is verified.</p></div>
+        </figure>
+      </div>
+    </div>
+  </div>
 
   <div class="bagian" id="ringkasan" style="grid-template-columns:minmax(0,1fr)">
     <div>
