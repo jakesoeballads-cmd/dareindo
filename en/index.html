@@ -114,6 +114,7 @@
 .ironi{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,80px);align-items:start}
 .ironi .foto{aspect-ratio:3/4}
 .ironi p{margin-top:1.1rem}
+.ironi .tumpang-isi .penutup{margin:0;color:#fff;font-size:clamp(1.15rem,2vw,1.4rem);max-width:none;text-shadow:0 1px 8px rgba(0,0,0,.35)}
 blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bambu);font:400 clamp(1.6rem,3vw,2.2rem)/1.25 var(--display);max-width:22ch}
 @media (max-width:860px){.ironi{grid-template-columns:1fr}.ironi .foto{aspect-ratio:4/3;order:2}}
 
@@ -159,6 +160,10 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bam
 html .band.meja{background:#5A4636 url(/assets/buku/meja.jpg) center/cover no-repeat;margin-block:clamp(40px,7vw,96px)}
 html .band.meja+.band{padding-top:0}
 .meja .kontur{display:none}
+
+/* Kartu Benih: video di atas, teks di bawah (2026-11-01) */
+.benih .foto{aspect-ratio:16/9;border-radius:0}
+.benih .aksi{flex-wrap:wrap}
 </style>
 </head>
 <body>
@@ -328,7 +333,6 @@ html .band.meja+.band{padding-top:0}
         <p class="sumber">Minister of Forestry (2026), via <a href="https://katadata.co.id/ekonomi-hijau/investasi-hijau/6a031f216f213/menhut-ajak-investor-global-danai-rehabilitasi-12-juta-hektare-lahan-kritis">Katadata</a></p>
       </div>
     </div>
-    <p class="penutup">Behind every number are people whose lives depend on that same land.</p>
   </div>
 </section>
 
@@ -336,8 +340,9 @@ html .band.meja+.band{padding-top:0}
 <section class="band" style="padding-top:0">
   <div class="wrap ironi">
     <figure>
-      <div class="foto">
+      <div class="foto tumpang">
         <video src="/assets/video/menanam.mp4" poster="/assets/video/menanam.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Hands planting a seedling in red, straw-covered soil"></video>
+        <div class="tumpang-isi"><p class="penutup">Behind every number are people whose lives depend on that same land.</p></div>
       </div>
     </figure>
     <div>
@@ -389,20 +394,14 @@ html .band.meja+.band{padding-top:0}
         </div>
       </article>
       <article class="proyek benih on-dark">
+        <div class="foto"><video src="/assets/video/benih.mp4" poster="/assets/video/benih.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Preview of the Benih web app"></video></div>
         <div class="isi">
-          <svg class="logo-benih" viewBox="0 0 84 84" role="img" aria-label="Benih logo: a seed starting to sprout">
-            <ellipse cx="42" cy="62" rx="15" ry="11" fill="#B88A5A"/>
-            <path d="M33 60c5-3 13-3 18 0" stroke="#7A5C43" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <path d="M42 52V30" stroke="#5FAE55" stroke-width="3" stroke-linecap="round"/>
-            <path d="M42 36c-2-9-9-13-17-12 1 8 8 13 17 12z" fill="#A9CFA0"/>
-            <path d="M42 31c2-10 10-15 19-14-1 9-9 15-19 14z" fill="#5FAE55"/>
-          </svg>
-          <span class="status">Web app, coming soon</span>
           <h3>Benih</h3>
           <p>A meeting place for people who work for the environment, from forests and oceans to balanced urban living. <em>Benih</em> (“seed”) aims to become a platform where individuals, communities and businesses find each other and organise activities together.</p>
           <div class="aksi">
             <a class="btn btn-utama" href="mailto:contribute@dareindo.com?subject=Benih%20launch%20updates">Get launch updates</a>
             <a class="tautan" href="/en/benih/">More about Benih</a>
+            <a class="tautan" href="https://benih.earth">Visit benih.earth</a>
           </div>
         </div>
       </article>

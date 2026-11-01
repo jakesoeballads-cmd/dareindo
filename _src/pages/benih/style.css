@@ -1,5 +1,5 @@
 .proyek-kepala{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,7vw,88px)}
-.proyek-kepala .foto{aspect-ratio:4/3}
+.proyek-kepala .foto{aspect-ratio:16/9}
 .proyek-kepala h1{font-size:clamp(2.4rem,5vw,3.8rem)}
 .proyek-kepala .lead{margin-top:1.2rem}
 .proyek-kepala .status{margin-bottom:1rem;color:var(--tanah)}
