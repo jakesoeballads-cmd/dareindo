@@ -138,12 +138,6 @@ html .band.meja{background:#5A4636 url(/assets/buku/meja.jpg) center/cover no-re
 html .band.meja+.band{padding-top:0}
 .meja .kontur{display:none}
 
-/* Kartu Benih dengan video latar (2026-11-01) */
-html .benih{position:relative;background:#14301C;color:#fff;min-height:520px}
-.benih .latar{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.benih::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,22,13,.94),rgba(8,22,13,.8) 55%,rgba(8,22,13,.7))}
-.benih .isi{position:relative;z-index:1}
-html .benih h3,html .benih p{color:#fff}
-html .benih .status{color:#D4E8CC}
-html .benih .tautan{border-color:#9ACB8B;color:#fff}
+/* Kartu Benih: video di atas, teks di bawah (2026-11-01) */
+.benih .foto{aspect-ratio:16/9;border-radius:0}
 .benih .aksi{flex-wrap:wrap}
