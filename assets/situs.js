@@ -17,6 +17,11 @@ const BAHASA = ['id', 'en', 'de'].includes(document.documentElement.lang) ? docu
 const LOKAL = { id: 'id-ID', en: 'en-GB', de: 'de-DE' }[BAHASA];
 const TEKS = {
   id: {
+    biaya_proyek: 'Biaya proyek',
+    biaya_operasional: 'Biaya operasional',
+    pajak: 'Pajak',
+    masuk: 'Uang masuk',
+    keluar: 'Uang keluar',
     diambil: 'Diambil langsung dari Buku Kas Publik, dibuka {tgl}.',
     gagal_muat: 'Data belum bisa dimuat. Coba muat ulang halaman ini.',
     tidak_cocok: 'Tidak ada transaksi yang cocok.',
@@ -32,6 +37,11 @@ const TEKS = {
     tersalin: 'Tersalin',
   },
   en: {
+    biaya_proyek: 'Project costs',
+    biaya_operasional: 'Operating costs',
+    pajak: 'Tax',
+    masuk: 'Money in',
+    keluar: 'Money out',
     diambil: 'Taken directly from the Public Cash Book, opened {tgl}.',
     gagal_muat: 'The data could not be loaded. Try reloading this page.',
     tidak_cocok: 'No matching transactions.',
@@ -47,6 +57,11 @@ const TEKS = {
     tersalin: 'Copied',
   },
   de: {
+    biaya_proyek: 'Projektkosten',
+    biaya_operasional: 'Betriebskosten',
+    pajak: 'Steuern',
+    masuk: 'Eingänge',
+    keluar: 'Ausgänge',
     diambil: 'Direkt aus dem Öffentlichen Kassenbuch, abgerufen am {tgl}.',
     gagal_muat: 'Die Daten konnten nicht geladen werden. Bitte laden Sie die Seite neu.',
     tidak_cocok: 'Keine passenden Buchungen.',

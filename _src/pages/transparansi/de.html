@@ -7,6 +7,7 @@ description: Ein Unternehmen, das als erstes in Indonesien Radikale Transparenz 
     <h1>Unsere gesamte Buchhaltung ist für Sie offen.</h1>
     <p class="lead">Jede Rupiah, die ein- oder ausgeht, wird mit Beleg im Öffentlichen Kassenbuch erfasst und erscheint hier, sobald eine zweite Person sie geprüft hat.</p>
     <ul class="lompat">
+      <li><a href="#dasbor">Dashboard</a></li>
       <li><a href="#ringkasan">Finanzübersicht</a></li>
       <li><a href="#per-proyek">Mittelfluss je Projekt</a></li>
       <li><a href="#dampak">Wirkungsbericht</a></li>
@@ -28,6 +29,31 @@ description: Ein Unternehmen, das als erstes in Indonesien Radikale Transparenz 
 </section>
 
 <div class="wrap">
+
+  <div class="bagian" id="dasbor" style="grid-template-columns:minmax(0,1fr)">
+    <div>
+      <h2>Kassenbuch-Dashboard</h2>
+      <p class="muted">Ein schneller Überblick über das Öffentliche Kassenbuch. Gezählt werden nur Einträge, die eine zweite Person geprüft hat.</p>
+    </div>
+    <div>
+      <div class="metrik">
+        <div class="kartu-metrik"><span>Kassenbestand</span><b class="kosong" data-kunci="saldo">Ausstehend</b><small>Seit Beginn der Aufzeichnung</small></div>
+        <div class="kartu-metrik"><span>Eingänge</span><b class="kosong" id="metrik-masuk">Ausstehend</b><small class="metrik-bulan">Letzter erfasster Monat</small></div>
+        <div class="kartu-metrik"><span>Ausgänge</span><b class="kosong" id="metrik-keluar">Ausstehend</b><small class="metrik-bulan">Letzter erfasster Monat</small></div>
+        <div class="kartu-metrik"><span>Gepflanzte Bäume</span><b class="kosong" data-kunci="pohon">Ausstehend</b><small>Vor Ort geprüft</small></div>
+      </div>
+      <div class="grafik-grid">
+        <figure class="grafik">
+          <figcaption><b>Wohin das Geld fließt</b><span>Anteil von Projektkosten, Betriebskosten und Steuern seit Beginn der Aufzeichnung.</span></figcaption>
+          <div class="grafik-isi" id="grafik-alokasi"><p class="kosong-info">Die Grafik erscheint, sobald der erste Eintrag geprüft ist.</p></div>
+        </figure>
+        <figure class="grafik">
+          <figcaption><b>Geldfluss pro Monat</b><span>Eingänge und Ausgänge der letzten sechs erfassten Monate.</span></figcaption>
+          <div class="grafik-isi" id="grafik-arus"><p class="kosong-info">Die Grafik erscheint, sobald der erste Eintrag geprüft ist.</p></div>
+        </figure>
+      </div>
+    </div>
+  </div>
 
   <div class="bagian" id="ringkasan" style="grid-template-columns:minmax(0,1fr)">
     <div>

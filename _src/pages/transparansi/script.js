@@ -6,6 +6,13 @@ const persen = s => {
   const t = String(s).trim(), n = parseFloat(t.replace(',', '.').replace(/[^\d.-]/g, ''));
   return isFinite(n) ? (t.includes('%') ? n : n * 100) : 0;
 };
+/* Tanggal dari Google Sheets bisa "1/10/2026" atau "2026-10-01"; kunci bulan = "2026-10". */
+const kunciBulan = t => {
+  let m = t.match(/^(\d{4})-(\d{1,2})/); if (m) return `${m[1]}-${m[2].padStart(2, '0')}`;
+  m = t.match(/^\d{1,2}[\/.-](\d{1,2})[\/.-](\d{4})/); if (m) return `${m[2]}-${m[1].padStart(2, '0')}`;
+  return '';
+};
+const namaBulan = (k, gaya = 'long') => new Date(k + '-01T00:00:00').toLocaleDateString(LOKAL, { month: gaya, year: 'numeric' });
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
 
 /* Arus dana per proyek & dampak: dari tab Ringkasan */
@@ -31,8 +38,8 @@ ringkasanSiap.then(rows => {
 });
 
 /* Tabel transaksi: dari tab Transaksi, hanya baris Terverifikasi */
-(async function transaksi(){
-  if (!BUKU_KAS.transaksi) return;
+const transaksiSiap = (async function transaksi(){
+  if (!BUKU_KAS.transaksi) return null;
   const tbody = document.getElementById('tabel-transaksi');
   const info = document.getElementById('jumlah-transaksi');
   let data;
@@ -49,15 +56,8 @@ ringkasanSiap.then(rows => {
                    proyek: (r[K.proyek] || '').trim(), ket: r[K.ket] || '', jml: rupiah(r[K.jml]), tautan: (r[K.tautan] || '').trim() }));
   } catch (e) {
     tbody.innerHTML = `<tr><td colspan="8" class="muted">${esc(t('gagal_muat'))}</td></tr>`;
-    return;
+    return null;
   }
-  /* Tanggal dari Google Sheets bisa "1/10/2026" atau "2026-10-01"; kunci bulan = "2026-10". */
-  const kunciBulan = t => {
-    let m = t.match(/^(\d{4})-(\d{1,2})/); if (m) return `${m[1]}-${m[2].padStart(2, '0')}`;
-    m = t.match(/^\d{1,2}[\/.-](\d{1,2})[\/.-](\d{4})/); if (m) return `${m[2]}-${m[1].padStart(2, '0')}`;
-    return '';
-  };
-  const namaBulan = k => new Date(k + '-01T00:00:00').toLocaleDateString(LOKAL, { month: 'long', year: 'numeric' });
   const isiPilihan = (id, nilai, label) => {
     const sel = document.getElementById(id);
     [...new Set(nilai.filter(Boolean))].sort().forEach(v => sel.add(new Option(label(v), v)));
@@ -85,4 +85,76 @@ ringkasanSiap.then(rows => {
   }
   ['cari', 'saring-bulan', 'saring-proyek'].forEach(id => document.getElementById(id).addEventListener('input', gambar));
   gambar();
+  return data;
 })();
+
+/* Dasbor: kartu metrik dan dua grafik. Semuanya dari data Terverifikasi; tanpa data, tetap kosong. */
+const ringkas = n => new Intl.NumberFormat(LOKAL, { notation: 'compact', maximumFractionDigits: 1 }).format(n);
+const svg = (w, h, isi) => `<svg viewBox="0 0 ${w} ${h}" role="img">${isi}</svg>`;
+
+/* Donat alokasi uang keluar, dari tab Ringkasan */
+ringkasanSiap.then(rows => {
+  if (!rows) return;
+  const nilai = label => {
+    const r = rows.find(r => (r[0] || '').trim().toLowerCase() === label.toLowerCase());
+    return r ? rupiah(r[1]) : 0;
+  };
+  const bagian = [
+    [t('biaya_proyek'), nilai('Biaya proyek (langsung ke lapangan)'), '#2E7D32'],
+    [t('biaya_operasional'), nilai('Biaya operasional'), '#9ACB8B'],
+    [t('pajak'), nilai('Pajak'), '#B88A5A'],
+  ];
+  const total = bagian.reduce((a, b) => a + b[1], 0);
+  if (!total) return;
+  const R = 70, K = 2 * Math.PI * R;
+  let geser = 0;
+  const lingkar = bagian.filter(b => b[1]).map(([, v, warna]) => {
+    const panjang = v / total * K;
+    const c = `<circle cx="100" cy="100" r="${R}" fill="none" stroke="${warna}" stroke-width="28" stroke-dasharray="${panjang} ${K - panjang}" stroke-dashoffset="${-geser}" transform="rotate(-90 100 100)"/>`;
+    geser += panjang;
+    return c;
+  }).join('');
+  document.getElementById('grafik-alokasi').innerHTML =
+    `<div style="max-width:220px;margin:0 auto;width:100%">${svg(200, 200, lingkar)}</div>` +
+    `<ul class="legenda">${bagian.map(([n, v, w]) => `<li><i style="background:${w}"></i>${esc(n)}<b>${new Intl.NumberFormat(LOKAL, { style: 'percent', maximumFractionDigits: 1 }).format(v / total)}</b></li>`).join('')}</ul>`;
+});
+
+/* Kartu uang masuk/keluar bulan terakhir dan batang arus kas enam bulan, dari tab Transaksi */
+transaksiSiap.then(data => {
+  if (!data || !data.length) return;
+  const perBulan = {};
+  data.forEach(d => {
+    const k = kunciBulan(d.tgl); if (!k) return;
+    const b = perBulan[k] ||= { masuk: 0, keluar: 0 };
+    if (d.jenis === 'Masuk') b.masuk += d.jml; else if (d.jenis === 'Keluar') b.keluar += d.jml;
+  });
+  const bulan = Object.keys(perBulan).sort();
+  if (!bulan.length) return;
+  const akhir = bulan[bulan.length - 1];
+  const isiKartu = (id, n) => { const el = document.getElementById(id); el.textContent = 'Rp ' + rp(n); el.classList.remove('kosong'); };
+  isiKartu('metrik-masuk', perBulan[akhir].masuk);
+  isiKartu('metrik-keluar', perBulan[akhir].keluar);
+  document.querySelectorAll('.metrik-bulan').forEach(el => el.textContent = namaBulan(akhir));
+
+  /* Enam bulan berturut-turut sampai bulan terakhir, termasuk bulan tanpa transaksi */
+  const enam = [];
+  for (let i = 5; i >= 0; i--) {
+    const d = new Date(akhir + '-01T00:00:00'); d.setMonth(d.getMonth() - i);
+    enam.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`);
+  }
+  const maks = Math.max(1, ...enam.map(k => Math.max(perBulan[k]?.masuk || 0, perBulan[k]?.keluar || 0)));
+  const W = 600, H = 240, kiri = 56, bawah = 28, atas = 10, tinggi = H - bawah - atas, lebar = (W - kiri) / 6;
+  let isi = '';
+  [0, .5, 1].forEach(f => {
+    const y = atas + tinggi * (1 - f);
+    isi += `<line x1="${kiri}" x2="${W}" y1="${y}" y2="${y}" stroke="#E3E8DF"/><text x="${kiri - 8}" y="${y + 4}" text-anchor="end">${ringkas(maks * f)}</text>`;
+  });
+  enam.forEach((k, i) => {
+    const b = perBulan[k] || { masuk: 0, keluar: 0 }, x = kiri + i * lebar + lebar * .2, bw = lebar * .28;
+    const batang = (v, dx, warna) => { const h = v / maks * tinggi; return `<rect x="${x + dx}" y="${atas + tinggi - h}" width="${bw}" height="${h}" rx="3" fill="${warna}"><title>${esc(namaBulan(k))}: Rp ${rp(v)}</title></rect>`; };
+    isi += batang(b.masuk, 0, '#2E7D32') + batang(b.keluar, bw + 4, '#B88A5A') +
+      `<text x="${x + bw + 2}" y="${H - 8}" text-anchor="middle">${esc(namaBulan(k, 'short'))}</text>`;
+  });
+  document.getElementById('grafik-arus').innerHTML = svg(W, H, isi) +
+    `<ul class="legenda baris-legenda"><li><i style="background:#2E7D32"></i>${esc(t('masuk'))}</li><li><i style="background:#B88A5A"></i>${esc(t('keluar'))}</li></ul>`;
+});
