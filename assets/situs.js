@@ -6,8 +6,8 @@
    tempel tautan CSV setiap tab di bawah ini. Kosong = tampil "Menunggu".
    Beranda dan halaman Transparansi sama-sama membaca dari sini. */
 const BUKU_KAS = {
-  ringkasan: "",  // tab "Ringkasan"
-  transaksi: "",  // tab "Transaksi"
+  ringkasan: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRFEwURfoZRNWM6t6sdLNmnYUJZv95Q8LGlpEDwdcxDd0BqPUvZhbA9CKNrwwjyn6XOewac-6QvbUHC/pub?gid=1024019384&single=true&output=csv",  // tab "Ringkasan"
+  transaksi: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRFEwURfoZRNWM6t6sdLNmnYUJZv95Q8LGlpEDwdcxDd0BqPUvZhbA9CKNrwwjyn6XOewac-6QvbUHC/pub?gid=1267839354&single=true&output=csv",  // tab "Transaksi"
 };
 
 /* ---------- Bahasa ----------
