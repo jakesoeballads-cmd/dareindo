@@ -14,7 +14,9 @@
       "kontak_perusahaan": "Kontak &amp; Perusahaan",
       "jelajahi": "Jelajahi",
       "transparansi": "Transparansi",
-      "kontribusi": "Kontribusi"
+      "kontribusi": "Kontribusi",
+      "privasi": "Kebijakan Privasi",
+      "syarat": "Syarat Penggunaan"
     }
   },
   "en": {
@@ -32,7 +34,9 @@
       "kontak_perusahaan": "Contact &amp; Company",
       "jelajahi": "Explore",
       "transparansi": "Transparency",
-      "kontribusi": "Contribute"
+      "kontribusi": "Contribute",
+      "privasi": "Privacy Policy",
+      "syarat": "Terms of Use"
     }
   },
   "de": {
@@ -50,7 +54,9 @@
       "kontak_perusahaan": "Kontakt &amp; Unternehmen",
       "jelajahi": "Entdecken",
       "transparansi": "Transparenz",
-      "kontribusi": "Mitmachen"
+      "kontribusi": "Mitmachen",
+      "privasi": "Datenschutz",
+      "syarat": "Nutzungsbedingungen"
     }
   }
 }
