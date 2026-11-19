@@ -31,7 +31,7 @@ SRC = pathlib.Path(__file__).resolve().parent
 ROOT = SRC.parent
 BAHASA = ["id", "en", "de"]  # bahasa pertama tampil di akar situs (/)
 DASAR = {"id": "", "en": "/en", "de": "/de"}
-HALAMAN = ["beranda", "akar-bambu", "benih", "transparansi", "kontribusi", "kontak"]
+HALAMAN = ["beranda", "akar-bambu", "benih", "transparansi", "kontribusi", "kontak", "privasi", "syarat"]
 DOMAIN = "https://dareindo.com"
 SEGERA_HADIR = False  # True: situs publik hanya menampilkan halaman Segera Hadir
 
