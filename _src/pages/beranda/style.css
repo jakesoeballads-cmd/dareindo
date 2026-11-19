@@ -126,11 +126,6 @@ blockquote{margin:2.4rem 0 0;padding-left:1.4rem;border-left:4px solid var(--bam
 @media (max-width:860px){.mitra{grid-template-columns:1fr}}
 
 /* 9 CTA */
-.ajak{background:var(--lumut);color:var(--kabut)}
-.ajak h2{max-width:20ch}
-.ajak .lead{color:#DCE6DA}
-.darurat{margin-top:1.6rem;font-size:.9rem;color:#DCE6DA;max-width:60ch}
-.darurat b{color:var(--putih)}
 .geser .kontur{position:absolute;right:0;top:50%;transform:translateY(-50%);opacity:.18;pointer-events:none;z-index:0;max-width:460px}
 
 /* latar meja kayu dengan lilin, lavender dan kain di sekitar buku */
