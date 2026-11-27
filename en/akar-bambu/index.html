@@ -273,7 +273,7 @@ ringkasanSiap.then(rows => {
     if (!r) return;
     dl.querySelectorAll('[data-proyek-kol]').forEach(dd => {
       const v = (r[+dd.dataset.proyekKol] || '').trim();
-      if (v) { dd.textContent = v; dd.classList.remove('kosong'); }
+      if (v) { dd.textContent = angkaLokal(v); dd.classList.remove('kosong'); }
     });
   });
 });
