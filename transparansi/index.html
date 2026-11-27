@@ -336,8 +336,8 @@ ringkasanSiap.then(rows => {
     for (const r of rows.slice(i + 1)) { if (!(r[0] || '').trim()) break; proyek.push(r); }
     if (proyek.length) document.getElementById('tabel-proyek').innerHTML = proyek.map(r => {
       const porsi = (r[4] || '').trim(), p = Math.min(100, Math.max(0, persen(porsi)));
-      return `<tr><td>${esc(r[0])}</td><td class="angka-sel">${esc(r[1] || '')}</td><td class="angka-sel">${esc(r[2] || '')}</td>` +
-        `<td><div style="display:flex;gap:10px;align-items:center"><div class="batang" style="flex:1"><i style="width:${p}%"></i></div><span>${esc(porsi)}</span></div></td></tr>`;
+      return `<tr><td>${esc(istilah(r[0]))}</td><td class="angka-sel">${esc(angkaLokal(r[1]))}</td><td class="angka-sel">${esc(angkaLokal(r[2]))}</td>` +
+        `<td><div style="display:flex;gap:10px;align-items:center"><div class="batang" style="flex:1"><i style="width:${p}%"></i></div><span>${esc(/\d/.test(porsi) ? new Intl.NumberFormat(LOKAL, { style: 'percent', maximumFractionDigits: 1 }).format(persen(porsi) / 100) : porsi)}</span></div></td></tr>`;
     }).join('');
   }
   const j = rows.findIndex(r => (r[3] || '').trim() === 'Indikator' && (r[6] || '').trim() === 'Terverifikasi');
@@ -345,7 +345,7 @@ ringkasanSiap.then(rows => {
     const dampak = [];
     for (const r of rows.slice(j + 1)) { if (!(r[3] || '').trim()) break; dampak.push(r); }
     if (dampak.length) document.getElementById('daftar-dampak').innerHTML = dampak.map(r =>
-      `<div><dt>${esc(r[3])}</dt><dd>${esc(r[6] || '0')}<small>${esc(r[4] || '')}</small></dd></div>`).join('');
+      `<div><dt>${esc(istilah(r[3]))}</dt><dd>${esc(angkaLokal(r[6] || '0'))}<small>${esc(istilah(r[4]))}</small></dd></div>`).join('');
   }
 });
 
@@ -375,7 +375,7 @@ const transaksiSiap = (async function transaksi(){
     [...new Set(nilai.filter(Boolean))].sort().forEach(v => sel.add(new Option(label(v), v)));
   };
   isiPilihan('saring-bulan', data.map(d => kunciBulan(d.tgl)), namaBulan);
-  isiPilihan('saring-proyek', data.map(d => d.proyek), v => v);
+  isiPilihan('saring-proyek', data.map(d => d.proyek), istilah);
 
   const amanUrl = u => /^https:\/\//.test(u) ? u : '';
   function gambar(){
@@ -383,11 +383,11 @@ const transaksiSiap = (async function transaksi(){
     const b = document.getElementById('saring-bulan').value;
     const p = document.getElementById('saring-proyek').value;
     const hasil = data.filter(d => (!b || kunciBulan(d.tgl) === b) && (!p || d.proyek === p) &&
-      (!q || [d.bukti, d.kat, d.ket, d.proyek].join(' ').toLowerCase().includes(q)));
+      (!q || [d.bukti, d.kat, istilah(d.kat), d.ket, d.proyek, istilah(d.proyek)].join(' ').toLowerCase().includes(q)));
     tbody.innerHTML = hasil.length ? hasil.map(d => {
       const u = amanUrl(d.tautan);
       return `<tr><td style="white-space:nowrap">${esc(d.tgl)}</td><td>${esc(d.bukti)}</td>` +
-        `<td class="${d.jenis === 'Masuk' ? 'jenis-masuk' : 'jenis-keluar'}">${esc(d.jenis)}</td><td>${esc(d.kat)}</td><td>${esc(d.proyek)}</td>` +
+        `<td class="${d.jenis === 'Masuk' ? 'jenis-masuk' : 'jenis-keluar'}">${esc(istilah(d.jenis))}</td><td>${esc(istilah(d.kat))}</td><td>${esc(istilah(d.proyek))}</td>` +
         `<td>${esc(d.ket)}</td><td class="angka-sel">${d.jenis === 'Keluar' ? '−' : ''}${rp(d.jml)}</td>` +
         `<td>${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t('lihat'))}</a>` : '<span class="muted">-</span>'}</td></tr>`;
     }).join('') : `<tr><td colspan="8" class="muted">${esc(t('tidak_cocok'))}</td></tr>`;
